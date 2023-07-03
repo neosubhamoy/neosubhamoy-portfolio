@@ -1,0 +1,16 @@
+{
+  "name": "neosubhamoy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./htdocs/assets/style.css --watch"
+  },
+  "keywords": [],
+  "author": "neo_subhamoy",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
