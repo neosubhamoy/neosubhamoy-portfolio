@@ -10,6 +10,7 @@ module.exports = {
     colors: {
       bg_primary: '#0F172A',
       bg_secondary: '#1E293B',
+      bg_third: '#26334A',
       accent_primary: '#38BDF8',
       accent_secondary: '#FFFFFF',
       accent_three: '#D9D9D9',
