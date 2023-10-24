@@ -1,3 +1,27 @@
+<?php
+require './core/connection.php';
+
+$sql = "SELECT DISTINCT year FROM projects ORDER BY year DESC";
+$result = $conn -> query($sql);
+
+if ($result) {
+    // create a array of all unique years
+    $years = array();
+    while ($row = $result -> fetch_assoc()) {
+        $years[] = $row['year'];
+    }
+
+    $result -> free();
+}
+
+//function to fetch all projects of the given year
+function fetch_projects_by_year($conn, $year) {
+    $sql = "SELECT * FROM projects WHERE year = $year ORDER BY id DESC";
+    $result = $conn -> query($sql);
+    return $result;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +41,8 @@
                 <h2 class="text-lg mt-3 mb-1 lg:mt-2 lg:mb-1 lg:whitespace-nowrap">I'm just obsessed with <span class="text-accent_primary font-bold">side projects</span> and <span class="text-accent_primary font-bold">open-source</span> stuffs</h2>
                 <h3 class="text-lg mt-1 mb-3 lg:mt-1 lg:mb-2 lg:whitespace-nowrap">You can <span class="text-accent_primary font-bold">explore</span> some of <span class="text-accent_primary font-bold">them</span> below</h3>
                 <div class="w-full flex justify-start items-center my-7 lg:my-6">
-                    <button class="px-5 py-1 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="location.href='contact.php'"><i class="fa-brands fa-github text-bg_primary"></i> Github</button>
-                    <button class="group px-5 py-1 bg-bg_secondary text-accent_secondary_transparent rounded-full font-light hover:bg-bg_third hover:text-accent_secondary mx-7 transition transform duration-500"><i class="fa-solid fa-magnifying-glass text-accent_primary mr-2"></i> Search a project . . . <span class="text-bg_primary bg-accent_secondary_transparent text-xs font-normal px-1 rounded-sm mr-1 ml-3 group-hover:bg-accent_secondary transition transform duration-500">ALT</span>+<span class="text-bg_primary bg-accent_secondary_transparent text-xs font-normal px-1 rounded-sm mx-1 group-hover:bg-accent_secondary transition transform duration-500">K</span></button>
+                    <button class="px-5 py-1 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('https://github.com/neosubhamoy', '_blank')"><i class="fa-brands fa-github text-bg_primary"></i> Github</button>
+                    <button class="group px-5 py-1 bg-bg_secondary text-accent_secondary_transparent rounded-full font-light hover:bg-bg_third hover:text-accent_secondary hover:rounded-lg mx-7 transition transform duration-500"><i class="fa-solid fa-magnifying-glass text-accent_primary mr-2"></i> Search a project . . . <span class="text-bg_primary bg-accent_secondary_transparent text-[10px] font-normal px-1 rounded-sm mr-1 ml-3 group-hover:bg-accent_secondary transition transform duration-500">ALT</span>+<span class="text-bg_primary bg-accent_secondary_transparent text-[10px] font-normal px-1 rounded-sm mx-1 group-hover:bg-accent_secondary transition transform duration-500">K</span></button>
                 </div>
             </div>
             <div class="heroimage w-full h-full flex justify-center lg:justify-end items-center">
@@ -28,35 +52,97 @@
                 <div class="absolute bg-accent_primary w-[70px] h-[70px] rounded-full shadow-[0px_0px_120px_20px] shadow-accent_primary_transparent lg:blur-2xl mr-0 mb-[2rem] lg:mb-0 lg:mr-[12.5rem] lg:mt-[3.5rem]"></div>
             </div>
         </div>
-        <div class="projectssection w-full flex justify-between items-center">
+        <div class="projectssection w-full flex justify-between items-start mt-32">
             <div class="lefttimeline">
+                <h4 class="text-2xl font-bold mb-10">Projects by <span class="text-accent_primary">Timeline</span></h4>
+                <div class="timeline">
+                <?php
 
+                foreach ($years as $selectedYear) {
+                    $projects = fetch_projects_by_year($conn, $selectedYear);
+
+                    if($projects) {
+
+                        echo <<<HTML
+                        <div class='year flex items-center'>
+                        HTML;
+
+                        //apply different styling for first iteration
+                        if($selectedYear === reset($years)) {
+                            echo <<<HTML
+                            <i class='fa-solid fa-circle fa-beat-fade text-xs text-accent_primary shadow-[0px_0px_15px] shadow-accent_primary rounded-2xl mr-3'></i>
+                            HTML;
+                        }
+                        else {
+                            echo <<<HTML
+                            <i class='fa-regular fa-circle text-xs text-accent_primary mr-3'></i>
+                            HTML;
+                        }
+
+                        echo <<<HTML
+                        <h6 class='text-xl font-bold'>$selectedYear</h6>
+                        </div>
+                        <div class='yearbox flex'>
+                        HTML;
+
+                        //apply different styling for last iteration
+                        if ($selectedYear === end($years)) {
+                            echo <<<HTML
+                            <div class='timelinebarcont w-2 border-l-bg_primary border-l-[1px] ml-[0.30rem]'></div>
+                            HTML;
+                        }
+                        else {
+                            echo <<<HTML
+                            <div class='timelinebarcont w-2 border-l-accent_primary border-l-[1px] ml-[0.30rem]'></div>
+                            HTML;
+                        }
+
+                        echo <<<HTML
+                        <div class='yearlyprojects flex flex-col'>
+                        HTML;
+
+                        //fetch all projects by year and show it
+                        while ($project = $projects -> fetch_assoc()) {
+                            echo "
+                            <a class='projectitem my-2 ml-7 last:mb-3' href='".$project['link']."' target='_blank'>".$project['name']."</a>
+                            ";
+                        }
+
+                        echo <<<HTML
+                        </div>
+                        </div>
+                        HTML;
+                    }
+                }
+
+                ?>
+                </div>
             </div>
             <div class="rightfeatured">
                 <h5 class="text-xl font-bold mb-5">My Profiles</h5>
                 <div class="w-full flex flex-col justify-center items-center mb-12">
-                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-1">
+                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500">
                         <div class="wrapper w-[50px] rounded-lg overflow-hidden"><img src="./assets/images/neosubhamoy.jpg" alt="neosubhamoy"></div>
                         <div class="w-ful ml-7">
                             <h6 class="text-base font-bold my-1">Subhamoy Biswas</h6>
                             <p class="text-xs text-accent_three my-1">Personal Profile</p>
                         </div>
                     </div>
-                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-1">
+                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500">
                         <div class="wrapper w-[50px] rounded-lg overflow-hidden"><img src="./assets/images/techishfellow.jpg" alt="techishfellow"></div>
                         <div class="w-ful ml-7">
-                            <h6 class="text-base font-bold my-1">The Techishfellow</h6>
+                            <h6 class="text-base font-bold my-1">The TechishFellow</h6>
                             <p class="text-xs text-accent_three my-1">Digital Product Publisher</p>
                         </div>
                     </div>
                 </div>
                 <h5 class="text-xl font-bold mb-5">Featured Projects</h5>
                 <div class="w-full flex flex-col justify-center items-center mb-12">
-                    <div class="w-full">
-                        <img src="./assets/images/fantasywalls.jpg" alt="fantasywalls">
+                    <div class="w-[250px] rounded-lg overflow-hidden my-3">
+                        <img class="opacity-[0.75]" src="./assets/images/fantasywalls.jpg" alt="fantasywalls">
                     </div>
-                    <div class="w-full">
-                        <img src="./assets/images/prourl.jpg" alt="prourl">
+                    <div class="w-[250px] rounded-lg overflow-hidden my-3">
+                        <img class="opacity-[0.75]" src="./assets/images/prourl.jpg" alt="prourl">
                     </div>
                 </div>
                 <h5 class="text-xl font-bold mb-5">Currently Working On</h5>

@@ -61,3 +61,20 @@ background: #38BDF8;
     opacity: 0;
     transition: opacity 500ms;
 }
+
+/* .z-20 rect {
+    transition: fill 0.3s ease-in-out;
+}
+
+.z-20 rect:hover {
+    fill: red;
+}
+
+.z-20 path:hover + .z-20 rect {
+    fill: red;
+}
+
+.z-20 g:hover + .z-20 rect {
+    fill: red;
+} */
+
