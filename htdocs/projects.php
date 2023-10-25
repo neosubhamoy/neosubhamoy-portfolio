@@ -121,14 +121,14 @@ function fetch_projects_by_year($conn, $year) {
             <div class="rightfeatured">
                 <h5 class="text-xl font-bold mb-5">My Profiles</h5>
                 <div class="w-full flex flex-col justify-center items-center mb-12">
-                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500">
+                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500" onclick="window.open('https://github.com/neosubhamoy')">
                         <div class="wrapper w-[50px] rounded-lg overflow-hidden"><img src="./assets/images/neosubhamoy.jpg" alt="neosubhamoy"></div>
                         <div class="w-ful ml-7">
                             <h6 class="text-base font-bold my-1">Subhamoy Biswas</h6>
                             <p class="text-xs text-accent_three my-1">Personal Profile</p>
                         </div>
                     </div>
-                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500">
+                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500" onclick="window.open('https://github.com/techishfellow')">
                         <div class="wrapper w-[50px] rounded-lg overflow-hidden"><img src="./assets/images/techishfellow.jpg" alt="techishfellow"></div>
                         <div class="w-ful ml-7">
                             <h6 class="text-base font-bold my-1">The TechishFellow</h6>
@@ -138,10 +138,20 @@ function fetch_projects_by_year($conn, $year) {
                 </div>
                 <h5 class="text-xl font-bold mb-5">Featured Projects</h5>
                 <div class="w-full flex flex-col justify-center items-center mb-12">
-                    <div class="w-[250px] rounded-lg overflow-hidden my-3">
+                    <div class="group w-[250px] rounded-lg overflow-hidden my-3 relative border-accent_three hover:border-[3px] transition-[border-width] transform duration-100">
+                        <div class="overlay absolute w-full h-full bg-gradient-to-r from-bg_third z-20 flex-col p-3 hidden group-hover:flex">
+                            <h6 class="text-xl mb-1">FantasyWalls</h6>
+                            <p class="text-xs font-[300] mb-4 text-accent_three">An open-souced community crafted wallpaper collection app</p>
+                            <a class="text-sm font-[300] bg-gradient-to-r from-accent_secondary_transparent border-[1px] border-accent_secondary px-3 py-[0.15rem] w-fit rounded-full hover:rounded" href="https://techishfellow.weebly.com/fantasywalls-official.html" target="_blank">View Now</a>
+                        </div>
                         <img class="opacity-[0.75]" src="./assets/images/fantasywalls.jpg" alt="fantasywalls">
                     </div>
-                    <div class="w-[250px] rounded-lg overflow-hidden my-3">
+                    <div class="group w-[250px] rounded-lg overflow-hidden my-3 relative border-accent_three hover:border-[3px] transition-[border-width] transform duration-100">
+                        <div class="overlay absolute w-full h-full bg-gradient-to-r from-bg_third z-20 flex-col p-3 hidden group-hover:flex">
+                            <h6 class="text-xl mb-1">ProURL</h6>
+                            <p class="text-xs font-[300] mb-4 text-accent_three">All in one link shortener and management tool webapp</p>
+                            <a class="text-sm font-[300] bg-gradient-to-r from-accent_secondary_transparent border-[1px] border-accent_secondary px-3 py-[0.15rem] w-fit rounded-full hover:rounded" href="https://prourl.eu.org" target="_blank">View Now</a>
+                        </div>
                         <img class="opacity-[0.75]" src="./assets/images/prourl.jpg" alt="prourl">
                     </div>
                 </div>
