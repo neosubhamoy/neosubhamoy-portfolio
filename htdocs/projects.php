@@ -20,6 +20,13 @@ function fetch_projects_by_year($conn, $year) {
     $result = $conn -> query($sql);
     return $result;
 }
+
+//function to fetch top 2 featured projects for sidebar
+function fetch_featured_projects_sidebar($conn) {
+    $sql = "SELECT * FROM featured_projects LIMIT 2";
+    $result = $conn -> query($sql);
+    return $result;
+}
 ?>
 
 <!DOCTYPE html>
@@ -138,22 +145,26 @@ function fetch_projects_by_year($conn, $year) {
                 </div>
                 <h5 class="text-xl font-bold mb-5">Featured Projects</h5>
                 <div class="w-full flex flex-col justify-center items-center mb-12">
-                    <div class="group w-[250px] rounded-lg overflow-hidden my-3 relative border-accent_three hover:border-[3px] transition-[border-width] transform duration-100">
-                        <div class="overlay absolute w-full h-full bg-gradient-to-r from-bg_third z-20 flex-col p-3 hidden group-hover:flex">
-                            <h6 class="text-xl mb-1">FantasyWalls</h6>
-                            <p class="text-xs font-[300] mb-4 text-accent_three">An open-souced community crafted wallpaper collection app</p>
-                            <a class="text-sm font-[300] bg-gradient-to-r from-accent_secondary_transparent border-[1px] border-accent_secondary px-3 py-[0.15rem] w-fit rounded-full hover:rounded" href="https://techishfellow.weebly.com/fantasywalls-official.html" target="_blank">View Now</a>
-                        </div>
-                        <img class="opacity-[0.75]" src="./assets/images/fantasywalls.jpg" alt="fantasywalls">
-                    </div>
-                    <div class="group w-[250px] rounded-lg overflow-hidden my-3 relative border-accent_three hover:border-[3px] transition-[border-width] transform duration-100">
-                        <div class="overlay absolute w-full h-full bg-gradient-to-r from-bg_third z-20 flex-col p-3 hidden group-hover:flex">
-                            <h6 class="text-xl mb-1">ProURL</h6>
-                            <p class="text-xs font-[300] mb-4 text-accent_three">All in one link shortener and management tool webapp</p>
-                            <a class="text-sm font-[300] bg-gradient-to-r from-accent_secondary_transparent border-[1px] border-accent_secondary px-3 py-[0.15rem] w-fit rounded-full hover:rounded" href="https://prourl.eu.org" target="_blank">View Now</a>
-                        </div>
-                        <img class="opacity-[0.75]" src="./assets/images/prourl.jpg" alt="prourl">
-                    </div>
+                    <?php
+
+                    $featured_projects = fetch_featured_projects_sidebar($conn);
+
+                    if($featured_projects -> num_rows > 0){
+                        while($featured_item = $featured_projects -> fetch_assoc()) {
+                            echo "
+                            <div class='group w-[250px] rounded-lg overflow-hidden my-3 relative border-accent_three hover:border-[3px] transition-[border-width] transform duration-100'>
+                                <div class='overlay absolute w-full h-full bg-gradient-to-r from-bg_third z-20 flex-col p-3 hidden group-hover:flex'>
+                                    <h6 class='text-xl mb-1'>".$featured_item['name']."</h6>
+                                    <p class='text-xs font-[300] mb-4 text-accent_three'>".$featured_item['description']."</p>
+                                    <a class='text-sm font-[300] bg-gradient-to-r from-accent_secondary_transparent border-[1px] border-accent_secondary px-3 py-[0.15rem] w-fit rounded-full hover:rounded' href='".$featured_item['link']."' target='_blank'>View Now</a>
+                                </div>
+                                <img class='opacity-[0.75]' src='".$featured_item['thumbnail']."' alt='".strtolower($featured_item['name'])."'>
+                            </div>
+                            ";
+                        }
+                    }
+
+                    ?>
                 </div>
                 <h5 class="text-xl font-bold mb-5">Currently Working On</h5>
                 <div class="w-full flex flex-col justify-center flex-wrap mb-12">
