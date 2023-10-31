@@ -1,3 +1,8 @@
+<?php
+require './core/connection.php';
+require './core/query_functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

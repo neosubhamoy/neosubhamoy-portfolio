@@ -15,13 +15,19 @@
         </div>
         <div class="w-[50%] lg:w-[25%] flex flex-col justify-start items-start mb-10 lg:mb-0">
             <h6 class="font-bold mb-8">Featured</h6>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Featured Project 1</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Featured 2</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Featured Content 3</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Featured Project</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Featured Project</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Featured Content 6</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Featured 7</a>
+            <?php
+
+            $featured_projects_footer = fetch_featured_projects($conn);
+
+            if($featured_projects_footer -> num_rows > 0) {
+                while($featured_footer_item = $featured_projects_footer -> fetch_assoc()) {
+                    echo "
+                    <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' href='".$featured_footer_item['link']."' target='_blank'>".$featured_footer_item['name']."</a>
+                    ";
+                }
+            }
+
+            ?>
         </div>
         <div class="w-[50%] lg:w-[25%] flex flex-col justify-start items-start mb-10 lg:mb-0">
             <h6 class="font-bold mb-8">Follow Me On</h6>
