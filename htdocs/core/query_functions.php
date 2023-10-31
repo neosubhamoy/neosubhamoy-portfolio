@@ -1,5 +1,4 @@
 <?php
-
 //function to create an array of all unique project years
 function create_project_years_array($conn) {
     $sql = "SELECT DISTINCT year FROM projects ORDER BY year DESC";
@@ -22,7 +21,7 @@ function fetch_projects_by_year($conn, $year) {
     return $result;
 }
 
-//function to fetch top 2 featured projects for sidebar
+//function to fetch all featured projects
 function fetch_featured_projects($conn) {
     $sql = "SELECT * FROM featured_projects";
     $result = $conn -> query($sql);
