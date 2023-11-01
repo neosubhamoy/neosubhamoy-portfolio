@@ -17,7 +17,7 @@
             <h6 class="font-bold mb-8">Featured</h6>
             <?php
 
-            $featured_projects_footer = fetch_featured_projects($conn);
+            $featured_projects_footer = fetch_all_records($conn, "featured_projects");
 
             if($featured_projects_footer -> num_rows > 0) {
                 while($featured_footer_item = $featured_projects_footer -> fetch_assoc()) {

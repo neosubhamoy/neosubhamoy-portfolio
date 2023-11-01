@@ -123,7 +123,7 @@ $years = create_project_years_array($conn);
                 <div class="w-full flex flex-col justify-center items-center mb-12">
                     <?php
 
-                    $featured_projects = fetch_featured_projects($conn);
+                    $featured_projects = fetch_all_records($conn,"featured_projects");
 
                     if($featured_projects -> num_rows > 0){
                         //show top 2 featured projects for sidebar
@@ -152,12 +152,21 @@ $years = create_project_years_array($conn);
                     ?>
                 </div>
                 <h5 class="text-xl font-bold mb-5">Currently Working On</h5>
-                <div class="w-full flex flex-col justify-center flex-wrap mb-12">
-                    <div class="w-fit my-[0.30rem] text-sm font-bold bg-bg_secondary px-3 py-1 rounded-full"><i class="fa-brands fa-react text-base mr-1 text-[#38BDF8]"></i> React Web Development</div>
-                    <div class="w-fit my-[0.30rem] text-sm font-bold bg-bg_secondary px-3 py-1 rounded-full"><i class="fa-brands fa-android text-base mr-1 text-[#3FF989]"></i> Android OS & Apps</div>
-                    <div class="w-fit my-[0.30rem] text-sm font-bold bg-bg_secondary px-3 py-1 rounded-full"><i class="fa-brands fa-python text-base mr-1 text-[#CD6CFB]"></i> Automation & Python</div>
-                    <div class="w-fit my-[0.30rem] text-sm font-bold bg-bg_secondary px-3 py-1 rounded-full"><i class="fa-brands fa-js text-base mr-1 text-[#DCDF3F]"></i> Javascript Library</div>
-                    <div class="w-fit my-[0.30rem] text-sm font-bold bg-bg_secondary px-3 py-1 rounded-full"><i class="fa-solid fa-robot text-base mr-1 text-[#EC4B4B]"></i> AI & ML</div>
+                <div class="w-full flex flex-col justify-center flex-wrap mb-24">
+                    <?php
+
+                    $working_on = fetch_all_records($conn, "working_on");
+
+                    if($working_on -> num_rows > 0) {
+                        //show all currently working on topics
+                        while($working_on_topic = $working_on -> fetch_assoc()) {
+                            echo"
+                            <div class='w-fit my-[0.30rem] text-sm font-bold bg-bg_secondary px-3 py-1 rounded-full'><i class='".$working_on_topic['icon']."'></i> ".$working_on_topic['title']."</div>
+                            ";
+                        }
+                    }
+
+                    ?>
                 </div>
             </div>
         </div>

@@ -1,4 +1,11 @@
 <?php
+//function to fetch all records of the given table
+function fetch_all_records($conn, $table_name) {
+    $sql = "SELECT * FROM $table_name";
+    $result = $conn -> query($sql);
+    return $result;
+}
+
 //function to create an array of all unique project years
 function create_project_years_array($conn) {
     $sql = "SELECT DISTINCT year FROM projects ORDER BY year DESC";
@@ -17,13 +24,6 @@ function create_project_years_array($conn) {
 //function to fetch all projects of the given year
 function fetch_projects_by_year($conn, $year) {
     $sql = "SELECT * FROM projects WHERE year = $year ORDER BY id DESC";
-    $result = $conn -> query($sql);
-    return $result;
-}
-
-//function to fetch all featured projects
-function fetch_featured_projects($conn) {
-    $sql = "SELECT * FROM featured_projects";
     $result = $conn -> query($sql);
     return $result;
 }
