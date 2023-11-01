@@ -20,6 +20,7 @@
             $featured_projects_footer = fetch_all_records($conn, "featured_projects");
 
             if($featured_projects_footer -> num_rows > 0) {
+                //show all featured projects
                 while($featured_footer_item = $featured_projects_footer -> fetch_assoc()) {
                     echo "
                     <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' href='".$featured_footer_item['link']."' target='_blank'>".$featured_footer_item['name']."</a>
@@ -31,12 +32,20 @@
         </div>
         <div class="w-[50%] lg:w-[25%] flex flex-col justify-start items-start mb-10 lg:mb-0">
             <h6 class="font-bold mb-8">Follow Me On</h6>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="https://instagram.com/neo_subhamoy" target="_blank">Instagram</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="https://twitter.com/neo_subhamoy" target="_blank">Twitter</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="https://www.linkedin.com/in/neo-subhamoy" target="_blank">Linkedin</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="https://github.com/neosubhamoy" target="_blank">Github</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="https://www.facebook.com/profile.php?id=100076097318726" target="_blank">Facebook</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="https://mastodon.social/@neo_subhamoy" target="_blank">Mastodon</a>
+            <?php
+
+            $socials = fetch_all_records($conn, "socials");
+
+            if($socials -> num_rows > 0) {
+                //show all social links
+                while($social = $socials -> fetch_assoc()) {
+                    echo "
+                    <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' href='".$social['link']."' target='_blank'>".$social['platform']."</a>
+                    ";
+                }
+            }
+
+            ?>
         </div>
     </div>
     <hr class="opacity-20 mt-16 mb-5">

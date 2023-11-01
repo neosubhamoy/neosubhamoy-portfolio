@@ -161,7 +161,7 @@ $years = create_project_years_array($conn);
                         //show all currently working on topics
                         while($working_on_topic = $working_on -> fetch_assoc()) {
                             echo"
-                            <div class='w-fit my-[0.30rem] text-sm font-bold bg-bg_secondary px-3 py-1 rounded-full'><i class='".$working_on_topic['icon']."'></i> ".$working_on_topic['title']."</div>
+                            <div class='w-fit my-[0.30rem] text-sm font-bold bg-bg_secondary px-3 py-1 rounded-full'><i class='text-base mr-1 ".$working_on_topic['icon']."' style='color: ".$working_on_topic['icon_color']."'></i> ".$working_on_topic['title']."</div>
                             ";
                         }
                     }
