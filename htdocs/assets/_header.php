@@ -58,12 +58,20 @@ function isPageActive($pageName) {
         <div class="mobilemenufooter w-full flex flex-col mb-20">
             <button class="mx-6 px-7 py-2 border-[2px] border-accent_primary rounded-lg hover:rounded-lg hover:shadow-lg hover:shadow-accent_primary_transparent transition transform duration-500" onclick="location.href='contact.php'">Let's Talk</button>
             <div class="flex justify-center items-center mt-7 text-xl">
-                <i class="fa-brands fa-facebook text-accent_primary mx-2" onclick="window.open('https://www.facebook.com/profile.php?id=100076097318726')"></i>
-                <i class="fa-brands fa-instagram text-accent_primary mx-2" onclick="window.open('https://instagram.com/neo_subhamoy')"></i>
-                <i class="fa-brands fa-twitter text-accent_primary mx-2" onclick="window.open('https://twitter.com/neo_subhamoy')"></i>
-                <i class="fa-brands fa-linkedin text-accent_primary mx-2" onclick="window.open('https://www.linkedin.com/in/neo-subhamoy')"></i>
-                <i class="fa-brands fa-github text-accent_primary mx-2" onclick="window.open('https://github.com/neosubhamoy')"></i>
-                <i class="fa-brands fa-mastodon text-accent_primary mx-2" onclick="window.open('https://mastodon.social/@neo_subhamoy')"></i>
+                <?php
+
+                $header_socials = fetch_all_records($conn, "socials");
+
+                if($header_socials -> num_rows > 0) {
+                    //show all social links
+                    while($header_social = $header_socials -> fetch_assoc()) {
+                        echo "
+                        <i class='text-accent_primary mx-2 ".$header_social['icon']."' onclick=\"window.open('".$header_social['link']."')\"></i>
+                        ";
+                    }
+                }
+
+                ?>
             </div>
         </div>
     </div>

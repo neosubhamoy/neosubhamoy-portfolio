@@ -34,13 +34,13 @@
             <h6 class="font-bold mb-8">Follow Me On</h6>
             <?php
 
-            $socials = fetch_all_records($conn, "socials");
-
-            if($socials -> num_rows > 0) {
+            $footer_socials = fetch_all_records($conn, "socials");
+            
+            if($footer_socials -> num_rows > 0) {
                 //show all social links
-                while($social = $socials -> fetch_assoc()) {
+                while($footer_social = $footer_socials -> fetch_assoc()) {
                     echo "
-                    <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' href='".$social['link']."' target='_blank'>".$social['platform']."</a>
+                    <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' href='".$footer_social['link']."' target='_blank'>".$footer_social['platform']."</a>
                     ";
                 }
             }
