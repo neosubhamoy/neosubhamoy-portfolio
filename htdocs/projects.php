@@ -18,26 +18,26 @@ $years = create_project_years_array($conn);
     <?php require 'assets/_header.php';?>
     <div class="projectsbox w-full px-4 lg:px-[4.5rem]">
         <div class="herosection w-full flex flex-col-reverse justify-center lg:flex-row lg:justify-between items-center mb-3">
-            <div class="herotitle w-fit px-2 lg:px-0 lg:mt-16 lg:mb-10 2xl:mt-24 2xl:mb-32">
-                <p class="text-2xl my-3 lg:my-2">My Projects  🎉</p>
-                <h1 class="text-3xl mt-1 mb-4 lg:mt-2 lg:mb-3 whitespace-nowrap font-bold">Work, <span class="text-accent_primary">Hobby</span> & <span class="text-accent_primary">Open Source</span></h1>
+            <div class="herotitle w-full px-2 lg:px-0 lg:mt-16 lg:mb-10 2xl:mt-24 2xl:mb-32">
+                <p class="text-xl lg:text-2xl my-3 lg:my-2">My Projects  🎉</p>
+                <h1 class="text-2xl lg:text-3xl mt-1 mb-4 lg:mt-2 lg:mb-3 whitespace-nowrap font-bold">Work, <span class="text-accent_primary">Hobby</span> & <span class="text-accent_primary">Open Source</span></h1>
                 <h2 class="text-lg mt-3 mb-1 lg:mt-2 lg:mb-1 lg:whitespace-nowrap">I'm just obsessed with <span class="text-accent_primary font-bold">side projects</span> and <span class="text-accent_primary font-bold">open-source</span> stuffs</h2>
                 <h3 class="text-lg mt-1 mb-3 lg:mt-1 lg:mb-2 lg:whitespace-nowrap">You can <span class="text-accent_primary font-bold">explore</span> some of <span class="text-accent_primary font-bold">them</span> below</h3>
-                <div class="w-full flex justify-start items-center my-7 lg:my-6">
-                    <button class="px-5 py-1 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('<?php echo fetch_social_link($conn, 'Github') ?>', '_blank')"><i class="text-bg_primary <?php echo fetch_social_icon($conn, 'Github') ?>"></i> Github</button>
-                    <button class="group px-5 py-1 bg-bg_secondary text-accent_secondary_transparent rounded-full font-light hover:bg-bg_third hover:text-accent_secondary hover:rounded-lg mx-7 transition transform duration-500"><i class="fa-solid fa-magnifying-glass text-accent_primary mr-2"></i> Search a project . . . <span class="text-bg_primary bg-accent_secondary_transparent text-[10px] font-normal px-1 rounded-sm mr-1 ml-3 group-hover:bg-accent_secondary transition transform duration-500">ALT</span>+<span class="text-bg_primary bg-accent_secondary_transparent text-[10px] font-normal px-1 rounded-sm mx-1 group-hover:bg-accent_secondary transition transform duration-500">K</span></button>
+                <div class="w-full flex flex-col-reverse justify-start my-7 lg:my-6 lg:flex-row lg:items-center">
+                    <button class="w-fit px-5 py-1 my-2 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('<?php echo fetch_social_link($conn, 'Github') ?>', '_blank')"><i class="text-bg_primary <?php echo fetch_social_icon($conn, 'Github') ?>"></i> Github</button>
+                    <button class="group w-fit px-5 py-1 my-2 bg-bg_secondary text-accent_secondary_transparent rounded-full font-light hover:bg-bg_third hover:text-accent_secondary hover:rounded-lg lg:mx-7 transition transform duration-500"><i class="fa-solid fa-magnifying-glass text-accent_primary mr-2"></i> Search a project . . . <span class="text-bg_primary bg-accent_secondary_transparent text-[10px] font-normal px-1 rounded-sm mr-1 ml-3 group-hover:bg-accent_secondary transition transform duration-500">ALT</span>+<span class="text-bg_primary bg-accent_secondary_transparent text-[10px] font-normal px-1 rounded-sm mx-1 group-hover:bg-accent_secondary transition transform duration-500">K</span></button>
                 </div>
             </div>
-            <div class="heroimage w-full h-full flex justify-center lg:justify-end items-center">
+            <div class="heroimage w-full h-full flex justify-center lg:justify-end items-center mt-10 lg:mt-0">
                 <div class="wrapper w-[250px] lg:w-[350px] mb-20 mt-10 lg:mb-0 lg:mt-16 lg:mr-10 z-20">
                     <img src="./assets/images/projects-heroimage.svg" alt="heroimage">
                 </div>
                 <div class="absolute bg-accent_primary w-[70px] h-[70px] rounded-full shadow-[0px_0px_120px_20px] shadow-accent_primary_transparent lg:blur-2xl mr-0 mb-[2rem] lg:mb-0 lg:mr-[12.5rem] lg:mt-[3.5rem]"></div>
             </div>
         </div>
-        <div class="projectssection w-full flex justify-between items-start mt-32">
+        <div class="projectssection w-full flex justify-between items-start my-32 px-2 lg:px-0">
             <div class="lefttimeline">
-                <h4 class="text-2xl font-bold mb-10">Projects by <span class="text-accent_primary">Timeline</span></h4>
+                <h4 class="text-2xl font-bold mb-10">Projects <span class="text-accent_primary">Timeline</span> by Year</h4>
                 <div class="timeline">
                 <?php
 
@@ -101,7 +101,7 @@ $years = create_project_years_array($conn);
                 ?>
                 </div>
             </div>
-            <div class="rightfeatured">
+            <div class="rightfeatured hidden lg:block">
                 <h5 class="text-xl font-bold mb-5">My Profiles</h5>
                 <div class="w-full flex flex-col justify-center items-center mb-12">
                     <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500" onclick="window.open('https://github.com/neosubhamoy')">
@@ -152,7 +152,7 @@ $years = create_project_years_array($conn);
                     ?>
                 </div>
                 <h5 class="text-xl font-bold mb-5">Currently Working On</h5>
-                <div class="w-full flex flex-col justify-center flex-wrap mb-24">
+                <div class="w-full flex flex-col justify-center flex-wrap mb-12">
                     <?php
 
                     $working_on = fetch_all_records($conn, "working_on");
