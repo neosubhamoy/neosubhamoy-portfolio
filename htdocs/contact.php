@@ -14,7 +14,7 @@ require './core/query_functions.php';
 </head>
 <body class="font-lexend bg-bg_primary text-accent_secondary">
     <?php require 'assets/_header.php';?>
-    <div class="homebox w-full">
+    <div class="contactbox w-full px-4 lg:px-[4.5rem]">
 
     </div>
     <?php require 'assets/_footer.php';?>
