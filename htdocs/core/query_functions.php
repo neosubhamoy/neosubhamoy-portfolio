@@ -27,4 +27,27 @@ function fetch_projects_by_year($conn, $year) {
     $result = $conn -> query($sql);
     return $result;
 }
+
+//function to fetch social link of the given platform
+function fetch_social_link($conn, $platform_name) {
+    $sql = "SELECT link FROM socials WHERE platform = '$platform_name'";
+    $result = $conn -> query($sql);
+    if($result -> num_rows > 0){
+        $row = $result -> fetch_assoc();
+        return $row['link'];
+    }
+    else {
+        return "#";
+    }
+}
+
+//function to fetch social icon of the given platform
+function fetch_social_icon($conn, $platform_name) {
+    $sql = "SELECT icon FROM socials WHERE platform = '$platform_name'";
+    $result = $conn -> query($sql);
+    if($result -> num_rows > 0){
+        $row = $result -> fetch_assoc();
+        return $row['icon'];
+    }
+}
 ?>
