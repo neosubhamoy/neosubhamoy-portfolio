@@ -538,6 +538,11 @@ video {
   position: relative;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -548,6 +553,10 @@ video {
 
 .bottom-\[5\.5rem\] {
   bottom: 5.5rem;
+}
+
+.bottom-\[7vh\] {
+  bottom: 7vh;
 }
 
 .left-0 {
@@ -564,6 +573,10 @@ video {
 
 .left-\[3\.2rem\] {
   left: 3.2rem;
+}
+
+.left-\[50vw\] {
+  left: 50vw;
 }
 
 .right-0 {
@@ -612,6 +625,10 @@ video {
 
 .z-\[100\] {
   z-index: 100;
+}
+
+.z-\[50\] {
+  z-index: 50;
 }
 
 .mx-1 {
@@ -1133,6 +1150,10 @@ video {
   padding: 0.75rem;
 }
 
+.p-\[0\.30rem\] {
+  padding: 0.30rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1166,6 +1187,11 @@ video {
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+}
+
+.px-\[0\.80rem\] {
+  padding-left: 0.80rem;
+  padding-right: 0.80rem;
 }
 
 .py-1 {
@@ -1348,8 +1374,25 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-\[0px_0px_30px\] {
+  --tw-shadow: 0px 0px 30px;
+  --tw-shadow-colored: 0px 0px 30px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0px_0px_20px\] {
+  --tw-shadow: 0px 0px 20px;
+  --tw-shadow-colored: 0px 0px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-accent_primary {
   --tw-shadow-color: #38BDF8;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-accent_primary_extratransparent {
+  --tw-shadow-color: rgba(56, 189, 248, 0.15);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1448,6 +1491,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:shadow-\[0px_0px_30px\]:hover {
+  --tw-shadow: 0px 0px 30px;
+  --tw-shadow-colored: 0px 0px 30px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .hover\:shadow-accent_primary_transparent:hover {
   --tw-shadow-color: rgba(56, 189, 248, 0.30);
   --tw-shadow: var(--tw-shadow-colored);
@@ -1455,6 +1504,11 @@ video {
 
 .hover\:shadow-accent_secondary_transparent:hover {
   --tw-shadow-color: rgba(255, 255, 255, 0.30);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:shadow-accent_primary_extratransparent:hover {
+  --tw-shadow-color: rgba(56, 189, 248, 0.15);
   --tw-shadow: var(--tw-shadow-colored);
 }
 

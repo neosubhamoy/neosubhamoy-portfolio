@@ -16,7 +16,8 @@ module.exports = {
       accent_three: '#D9D9D9',
       accent_four: '#ACCBDE',
       accent_primary_transparent: 'rgba(56, 189, 248, 0.30)',
-      accent_secondary_transparent: 'rgba(255, 255, 255, 0.30)'
+      accent_secondary_transparent: 'rgba(255, 255, 255, 0.30)',
+      accent_primary_extratransparent: 'rgba(56, 189, 248, 0.15)',
     },
     extend: {},
   },
