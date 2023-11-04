@@ -219,11 +219,10 @@ require './core/query_functions.php';
         </div>
     </div>
     <?php require 'assets/_footer.php';?>
-    <script>
-        window.addEventListener("load", function(){
-         $('#preloader').addClass('hidden');
-        });
-
+    <script type="text/javascript" src="./assets/js/preloader-config.js"></script>
+    <script type="text/javascript" src="./assets/js/floatingbar-config.js"></script>
+    <script type="text/javascript">
+        //---hello textbox (hero-section) config
         const texts = ["Namaste! 🙏", "Hello! 👋", "Konnichiwa! 😄", "Anyeonghaseyo! 😊", "Hola! 😃", "Bonjour! 😄", "Zdravstvuyte! 🙂", "Marhabaan! 😊", "Olá! 😃", "Salve! 🤠"];
         const textContainer = document.getElementById("helloContainer");
 
@@ -238,6 +237,7 @@ require './core/query_functions.php';
         }
         animateText();
 
+        //---about me card hover animation config
         const handleOnMouseMove = e => {
             const { currentTarget: target } = e;
             const rect = target.getBoundingClientRect(),
@@ -251,24 +251,6 @@ require './core/query_functions.php';
         for(const card of document.querySelectorAll(".aboutcontainer")){
             card.onmousemove = e => handleOnMouseMove(e);
         }
-
-        let lastScrollTop = 0;
-
-        window.addEventListener("scroll", function () {
-            const st = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (st > lastScrollTop) {
-            // Scrolling down
-            document.getElementById("floating-bar").classList.add("floatingbar-slide-down");
-            document.getElementById("floating-bar").classList.remove("floatingbar-slide-up");
-            } else {
-            // Scrolling up
-            document.getElementById("floating-bar").classList.remove("floatingbar-slide-down");
-            document.getElementById("floating-bar").classList.add("floatingbar-slide-up");
-            }
-
-            lastScrollTop = st <= 0 ? 0 : st;
-        });
     </script>
 </body>
 </html>
