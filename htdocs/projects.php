@@ -16,6 +16,13 @@ $years = create_project_years_array($conn);
 </head>
 <body class="font-lexend bg-bg_primary text-accent_secondary">
     <div id="preloader" class="absolute top-0 right-0 h-full w-screen z-[100] flex justify-center items-center bg-bg_primary overflow-hidden"><div class="spinner border-[5px] border-accent_secondary_transparent border-t-[5px] border-t-accent_primary rounded-[50%] h-[50px] w-[50px] animate-spin"></div></div>
+    <div id="floating-bar" class="fixed inset-x-0 bottom-[7vh] z-[50] flex justify-center items-center">
+        <div id="searchbar" class="searchbar bg-bg_secondary rounded-full p-[0.30rem] flex items-center cursor-pointer mx-2 hover:shadow-[0px_0px_30px] hover:shadow-accent_primary_extratransparent transition transform duration-300">
+            <button class="bg-accent_primary px-3 py-2 rounded-full"><i class="fa-solid fa-magnifying-glass text-bg_primary"></i></button>
+            <p class="ml-3 mr-4 text-accent_three">SEARCH</p>
+        </div>
+        <button id="sharebutton" class="sharebutton bg-accent_primary px-[0.80rem] py-2 rounded-full mx-2 hover:shadow-[0px_0px_30px] hover:shadow-accent_primary_transparent transition transform duration-300"><i class="fa-solid fa-share-nodes text-bg_primary"></i></button>
+    </div>
     <?php require 'assets/_header.php';?>
     <div class="projectsbox w-full px-4 lg:px-[4.5rem]">
         <div class="herosection w-full flex flex-col-reverse justify-center lg:flex-row lg:justify-between items-center mb-3">
@@ -173,10 +180,7 @@ $years = create_project_years_array($conn);
         </div>
     </div>
     <?php require 'assets/_footer.php';?>
-    <script>
-        window.addEventListener("load", function(){
-         $('#preloader').addClass('hidden');
-        });
-    </script>
+    <script type="text/javascript" src="./assets/js/preloader-config.js"></script>
+    <script type="text/javascript" src="./assets/js/floatingbar-config.js"></script>
 </body>
 </html>
