@@ -87,3 +87,40 @@ background: #38BDF8;
     transform: translateY(-10%);
     transition: transform 0.5s ease-in-out;
 }
+
+.floatingbar-click-slide-up {
+    transform: translateY(-55vh);
+    transition: transform 0.5s ease-in-out;
+}
+
+.floatingbar-click-slide-down {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.searchbar-click-increase-width {
+    animation: increaseSearchbarWidth 0.5s ease-in-out;
+    width: 40vw;
+}
+
+.searchbar-click-decrease-width {
+    animation: decreaseSearchbarWidth 0.5s ease-in-out;
+    width: fit-content;
+}
+
+@keyframes increaseSearchbarWidth {
+    from {
+      width: 10vw;
+    }
+    to {
+      width: 40vw;
+    }
+}
+@keyframes decreaseSearchbarWidth {
+    from {
+      width: 40vw;
+    }
+    to {
+      width: 10vw;
+    }
+}
