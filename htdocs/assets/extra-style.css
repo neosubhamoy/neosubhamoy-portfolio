@@ -78,6 +78,8 @@ background: #38BDF8;
     fill: red;
 } */
 
+/* --- floatingbar styling --- */
+
 .floatingbar-slide-down {
     transform: translateY(20vh);
     transition: transform 0.5s ease-in-out;
@@ -89,7 +91,7 @@ background: #38BDF8;
 }
 
 .floatingbar-click-slide-up {
-    transform: translateY(-55vh);
+    transform: translateY(-70vh);
     transition: transform 0.5s ease-in-out;
 }
 
@@ -101,11 +103,13 @@ background: #38BDF8;
 .searchbar-click-increase-width {
     animation: increaseSearchbarWidth 0.5s ease-in-out;
     width: 40vw;
+    transition: width 1s ease-in-out;
 }
 
 .searchbar-click-decrease-width {
     animation: decreaseSearchbarWidth 0.5s ease-in-out;
     width: fit-content;
+    transition: width 1s ease-in-out;
 }
 
 @keyframes increaseSearchbarWidth {
@@ -116,6 +120,7 @@ background: #38BDF8;
       width: 40vw;
     }
 }
+
 @keyframes decreaseSearchbarWidth {
     from {
       width: 40vw;
@@ -123,4 +128,38 @@ background: #38BDF8;
     to {
       width: 10vw;
     }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .searchbar-click-increase-width {
+        animation: increaseSearchbarWidth 0.5s ease-in-out;
+        width: 80vw;
+        transition: width 1s ease-in-out;
+    }
+    
+    .searchbar-click-decrease-width {
+        animation: decreaseSearchbarWidth 0.5s ease-in-out;
+        width: fit-content;
+        transition: width 1s ease-in-out;
+    }
+
+    @keyframes increaseSearchbarWidth {
+        from {
+            width: 10vw;
+        }
+        to {
+            width: 80vw;
+        }
+    }
+
+    @keyframes decreaseSearchbarWidth {
+        from {
+          width: 80vw;
+        }
+        to {
+          width: 30vw;
+        }
+    }
+
 }
