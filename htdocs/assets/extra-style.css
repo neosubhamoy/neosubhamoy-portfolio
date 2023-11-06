@@ -163,3 +163,17 @@ background: #38BDF8;
     }
 
 }
+
+.flotingbar-window-wrapper-show {
+    animation: blurWindowWrapper 0.5s ease-in-out;
+    backdrop-filter: blur(16px);
+}
+
+@keyframes blurWindowWrapper {
+    from {
+        backdrop-filter: blur(0px);
+    }
+    to {
+        backdrop-filter: blur(16px);
+    }
+}
