@@ -6,6 +6,7 @@ const closeBtn = document.getElementById("closebutton");
 const searchTxt = document.getElementById("searchtext");
 const searchInput = document.getElementById("searchinput");
 const windowWrapper = document.getElementById("floatingwindowwrapper");
+const searchWin = document.getElementById("searchwindow");
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function () {
@@ -27,7 +28,7 @@ window.addEventListener("scroll", function () {
 });
 
 // function to open floating search window
-function activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper) {
+function activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin) {
     floatingBar.classList.remove("floatingbar-click-slide-down");
     floatingBar.classList.add("floatingbar-click-slide-up");
     searchBar.classList.remove("searchbar-click-decrease-width");
@@ -40,10 +41,11 @@ function activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, 
     document.body.classList.add("overflow-hidden");
     windowWrapper.classList.remove("hidden");
     windowWrapper.classList.add("flotingbar-window-wrapper-show");
+    searchWin.classList.add("floatingsearch-window-show");
 }
 
 // function to close floating search window
-function close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper) {
+function close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin) {
     floatingBar.classList.remove("floatingbar-click-slide-up");
     floatingBar.classList.add("floatingbar-click-slide-down");
     searchBar.classList.remove("searchbar-click-increase-width");
@@ -55,29 +57,30 @@ function close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, sea
     document.body.classList.remove("overflow-hidden");
     windowWrapper.classList.remove("flotingbar-window-wrapper-show");
     windowWrapper.classList.add("hidden");
+    searchWin.classList.remove("floatingsearch-window-show");
 }
 
 // when the search icon is clicked
 searchBar.addEventListener("click", function () {
-    activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper);
+    activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin);
 });
 
 // when ALT + K shortcut key is pressed
 document.addEventListener("keydown", function(event) {
     if (event.altKey && event.key === "k") {
-        activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper);
+        activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin);
     }
 });
 
 // when close button is clicked
 closeBtn.addEventListener("click", function () {
-    close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper);
+    close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin);
 });
 
 // when ESC key is pressed
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
-        close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper);
+        close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin);
     }
 });
 

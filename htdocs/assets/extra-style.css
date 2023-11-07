@@ -177,3 +177,21 @@ background: #38BDF8;
         backdrop-filter: blur(16px);
     }
 }
+
+.floatingsearch-window-show {
+    display: flex;
+    animation: searchWindowShow 0.5s ease-in-out;
+}
+
+@keyframes searchWindowShow {
+    from {
+        width: 25vw;
+        min-height: 30vh;
+        opacity: 0;
+    }
+    to {
+        width: 44vw;
+        min-height: 60vh;
+        opacity: 1;
+    }
+}
