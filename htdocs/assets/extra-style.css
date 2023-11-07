@@ -186,12 +186,28 @@ background: #38BDF8;
 @keyframes searchWindowShow {
     from {
         width: 25vw;
-        min-height: 30vh;
+        height: 30vh;
         opacity: 0;
     }
     to {
         width: 44vw;
-        min-height: 60vh;
+        height: 60vh;
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    @keyframes searchWindowShow {
+        from {
+            width: 25vw;
+            height: 30vh;
+            opacity: 0;
+        }
+        to {
+            width: 90vw;
+            height: 60vh;
+            opacity: 1;
+        }
     }
 }
