@@ -75,7 +75,7 @@ function isPageActive($pageName) {
             </div>
         </div>
     </div>
-    <script>
+    <script type="text/javascript">
         function showNavslider(){
             $('#slidercontainer').removeClass('hidden');
             $('#slidercontainer').addClass('flex');
