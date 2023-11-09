@@ -1,5 +1,6 @@
 <?php
 require './core/connection.php';
+require './core/host_config.php';
 require './core/query_functions.php';
 ?>
 

@@ -10,7 +10,7 @@ function isPageActive($pageName) {
 
 <nav class="w-full flex justify-between items-center py-5 lg:py-9 px-4 lg:px-[3.5rem]">
     <div class="logo ml-2 lg:ml-4">
-        <a class="font-cormorant text-4xl font-bold" href="index.php">Subhamoy</a>
+        <a class="font-cormorant text-4xl font-bold" href="<?php echo $basePath?>">Subhamoy</a>
     </div>
     <div class="widemenu mr-4 hidden lg:block">
         <a class="mx-5 py-[0.30rem] relative group" href="projects.php">

@@ -1,3 +1,3 @@
 <?php
-require 'Router.php';
+require './core/router.php';
 ?>
