@@ -2,7 +2,7 @@
 <div id="searchwindow" class="searchwindow w-[90vw] md:w-[44vw] mx-auto h-[60vh] fixed inset-x-0 top-[30vh] z-40 flex-col items-center bg-bg_secondary rounded-xl overflow-y-scroll hidden">
     <div class="defresultpages w-full flex flex-col justify-start px-2 mt-1">
         <p class="text-xs text-accent_three mt-3 mb-2 mx-1">PAGE SHOTCUTS</p>
-        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='index.php'">
+        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='<?php echo $basePath ?>'">
             <span class="flex items-center">
                 <lord-icon class="mx-1" src="https://cdn.lordicon.com/cnpvyndp.json" target=".resultitem" trigger="hover" colors="primary:#38BDF8" style="width:25px"></lord-icon>
                 <p class="mx-1">Home</p>
@@ -13,7 +13,7 @@
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
-        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='projects.php'">
+        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='<?php echo $basePath . '/projects' ?>'">
             <span class="flex items-center">
                 <lord-icon class="mx-1" src="https://cdn.lordicon.com/utpmnzxz.json" target=".resultitem" trigger="hover" colors="primary:#38BDF8" style="width:25px"></lord-icon>
                 <p class="mx-1">Projects</p>
@@ -24,7 +24,7 @@
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
-        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='blog.php'">
+        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='<?php echo $basePath . '/blog' ?>'">
             <span class="flex items-center">
                 <lord-icon class="mx-1" src="https://cdn.lordicon.com/lyrrgrsl.json" target=".resultitem" trigger="hover" colors="primary:#38BDF8" style="width:25px"></lord-icon>
                 <p class="mx-1">Blog</p>
@@ -35,7 +35,7 @@
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
-        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='contact.php'">
+        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='<?php echo $basePath . '/contact' ?>'">
             <span class="flex items-center">
                 <lord-icon class="mx-1" src="https://cdn.lordicon.com/kthelypq.json" target=".resultitem" trigger="hover" colors="primary:#38BDF8" style="width:25px"></lord-icon>
                 <p class="mx-1">Contact</p>
