@@ -25,7 +25,7 @@ function isPageActive($pageName) {
             Contact
             <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('contact.php');?> group-hover:w-full"></span>
         </a>
-        <button class="ml-5 px-3 py-1 border-[2px] border-accent_primary rounded-full hover:rounded-lg hover:shadow-lg hover:shadow-accent_primary_transparent transition transform duration-500" onclick="location.href='contact.php'">Let's Talk</button>
+        <button class="ml-5 px-3 py-1 border-[2px] border-accent_primary rounded-full hover:rounded-lg hover:shadow-lg hover:shadow-accent_primary_transparent transition transform duration-500" onclick="location.href='<?php echo $basePath . '/contact' ?>'">Let's Talk</button>
     </div>
     <div class="hamburger mr-3 mt-1 lg:hidden cursor-pointer">
         <i class="fa-solid fa-bars text-2xl text-accent_primary" onclick="showNavslider()"></i>
@@ -37,26 +37,26 @@ function isPageActive($pageName) {
                 <i class="fa-solid fa-xmark text-3xl text-accent_primary mr-3 cursor-pointer" onclick="closeNavslider()"></i>
             </div>
             <div class="mobilemenu flex flex-col mt-5" id="mobilemenu">
-                <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="index.php">
+                <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="<?php echo $basePath ?>">
                     Home Page
                     <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('index.php');?> group-hover:w-full"></span>
                 </a>
-                <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="projects.php">
+                <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="<?php echo $basePath . '/projects' ?>">
                     My Projects
                     <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('projects.php');?> group-hover:w-full"></span>
                 </a>
-                <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="blog.php">
+                <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="<?php echo $basePath . '/blog' ?>">
                     My Blog
                     <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('blog.php');?> group-hover:w-full"></span>
                 </a>
-                <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="contact.php">
+                <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="<?php echo $basePath . '/contact' ?>">
                     Contact Me
                     <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('contact.php');?> group-hover:w-full"></span>
                 </a>
             </div>
         </div>
         <div class="mobilemenufooter w-full flex flex-col mb-20">
-            <button class="mx-6 px-7 py-2 border-[2px] border-accent_primary rounded-lg hover:rounded-lg hover:shadow-lg hover:shadow-accent_primary_transparent transition transform duration-500" onclick="location.href='contact.php'">Let's Talk</button>
+            <button class="mx-6 px-7 py-2 border-[2px] border-accent_primary rounded-lg hover:rounded-lg hover:shadow-lg hover:shadow-accent_primary_transparent transition transform duration-500" onclick="location.href='<?php echo $basePath . '/contact' ?>'">Let's Talk</button>
             <div class="flex justify-center items-center mt-7 text-xl">
                 <?php
 
