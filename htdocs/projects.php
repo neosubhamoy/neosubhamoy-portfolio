@@ -1,7 +1,7 @@
 <?php
-require './core/connection.php';
-require './core/host_config.php';
-require './core/query_functions.php';
+require 'core/connection.php';
+require 'core/host_config.php';
+require 'core/query_functions.php';
 
 $years = create_project_years_array($conn);
 ?>
@@ -175,7 +175,7 @@ $years = create_project_years_array($conn);
         </div>
     </div>
     <?php require 'assets/_footer.php';?>
-    <script type="text/javascript" src="./assets/js/preloader-config.js"></script>
-    <script type="text/javascript" src="./assets/js/floatingbar-config.js"></script>
+    <script type="text/javascript" src="assets/js/preloader-config.js"></script>
+    <script type="text/javascript" src="assets/js/floatingbar-config.js"></script>
 </body>
 </html>
