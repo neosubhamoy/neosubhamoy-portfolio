@@ -8,10 +8,10 @@
         </div>
         <div class="w-[50%] lg:w-[25%] flex flex-col justify-start items-start mb-10 lg:mb-0">
             <h6 class="font-bold mb-8">Site Pages</h6>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="index.php">Home Page</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="projects.php">My Projects</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="blog.php">My Blog</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="contact.php">Contact Me</a>
+            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="<?php echo $basePath ?>">Home Page</a>
+            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="<?php echo $basePath . '/projects' ?>">My Projects</a>
+            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="<?php echo $basePath . '/blog' ?>">My Blog</a>
+            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="<?php echo $basePath . '/contact' ?>">Contact Me</a>
         </div>
         <div class="w-[50%] lg:w-[25%] flex flex-col justify-start items-start mb-10 lg:mb-0">
             <h6 class="font-bold mb-8">Featured</h6>

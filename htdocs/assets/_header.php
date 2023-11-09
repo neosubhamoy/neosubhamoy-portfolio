@@ -10,18 +10,18 @@ function isPageActive($pageName) {
 
 <nav class="w-full flex justify-between items-center py-5 lg:py-9 px-4 lg:px-[3.5rem]">
     <div class="logo ml-2 lg:ml-4">
-        <a class="font-cormorant text-4xl font-bold" href="<?php echo $basePath?>">Subhamoy</a>
+        <a class="font-cormorant text-4xl font-bold" href="<?php echo $basePath ?>">Subhamoy</a>
     </div>
     <div class="widemenu mr-4 hidden lg:block">
-        <a class="mx-5 py-[0.30rem] relative group" href="projects.php">
+        <a class="mx-5 py-[0.30rem] relative group" href="<?php echo $basePath . '/projects' ?>">
             Projects
             <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('projects.php');?> group-hover:w-full"></span>
         </a>
-        <a class="mx-5 py-[0.30rem] relative group" href="blog.php">
+        <a class="mx-5 py-[0.30rem] relative group" href="<?php echo $basePath . '/blog' ?>">
             Blog
             <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('blog.php');?> group-hover:w-full"></span>
         </a>
-        <a class="mx-5 py-[0.30rem] relative group" href="contact.php">
+        <a class="mx-5 py-[0.30rem] relative group" href="<?php echo $basePath . '/contact' ?>">
             Contact
             <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('contact.php');?> group-hover:w-full"></span>
         </a>
