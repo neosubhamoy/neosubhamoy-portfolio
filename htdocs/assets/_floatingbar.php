@@ -1,6 +1,6 @@
 <div id="floatingwindowwrapper" class="floatingwindowwrapper fixed top-0 left-0 w-screen h-screen z-30 bg-[rgba(0,_0,_0,_0.4)] hidden"></div>
-<div id="searchwindow" class="searchwindow w-[90vw] md:w-[44vw] mx-auto h-[60vh] fixed inset-x-0 top-[30vh] z-40 flex-col items-center bg-bg_secondary rounded-xl overflow-y-scroll hidden">
-    <div class="defresultpages w-full flex flex-col justify-start px-2 mt-1">
+<div id="searchwindow" class="searchwindow w-[90vw] md:w-[44vw] mx-auto h-[60vh] fixed inset-x-0 top-[30vh] z-40 flex-col items-center bg-bg_secondary rounded-xl overflow-y-scroll no-scrollbar hidden">
+    <div class="defresults w-full flex flex-col justify-start px-2 mt-1">
         <p class="text-xs text-accent_three mt-3 mb-2 mx-1">PAGE SHOTCUTS</p>
         <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='<?php echo $basePath ?>'">
             <span class="flex items-center">
@@ -64,6 +64,22 @@
             </span>
             <span class="flex items-center mr-1">
                 <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">S</span>
+                <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
+            </span>
+        </div>
+    </div>
+    <div class="searchresults w-full flex flex-col justify-start px-2 mt-1">
+        <p class="text-xs text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS</p>
+        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='<?php echo $basePath ?>'">
+            <span class="flex items-center">
+                <span class="mx-1 px-[0.65rem] py-1 rounded border-[1px] border-accent_secondary_transparent">P</span>
+                <span class="flex flex-col">
+                    <h6 class="mx-1">ProURL</h6>
+                    <p class="mx-1 text-xs text-accent_three">All in one link shortener and management tool webapp</p>
+                </span>
+            </span>
+            <span class="flex items-center mr-1">
+                <span class="px-[1rem] py-[0.05rem] mx-1 text-xs bg-accent_four text-bg_secondary rounded-full group-hover:hidden">#project</span>
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
