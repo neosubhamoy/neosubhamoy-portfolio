@@ -5,6 +5,6 @@ if($currentHost == "localhost") {
     $basePath = "https://localhost/neosubhamoy/htdocs";
 }
 else {
-    $basePath = "https://" + $host;
+    $basePath = "https://" . $currentHost;
 }
 ?>
