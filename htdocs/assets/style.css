@@ -1160,10 +1160,6 @@ video {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
-.bg-\[rgba\(54\2c _255\2c _135\2c _0\.55\)\] {
-  background-color: rgba(54, 255, 135, 0.55);
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1235,9 +1231,19 @@ video {
   padding-right: 0.40rem;
 }
 
+.px-\[0\.65rem\] {
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+}
+
 .px-\[0\.80rem\] {
   padding-left: 0.80rem;
   padding-right: 0.80rem;
+}
+
+.px-\[1rem\] {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-1 {
@@ -1255,6 +1261,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-\[0\.05rem\] {
+  padding-top: 0.05rem;
+  padding-bottom: 0.05rem;
+}
+
 .py-\[0\.10rem\] {
   padding-top: 0.10rem;
   padding-bottom: 0.10rem;
@@ -1268,31 +1279,6 @@ video {
 .py-\[0\.30rem\] {
   padding-top: 0.30rem;
   padding-bottom: 0.30rem;
-}
-
-.px-\[1rem\] {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-\[0\.05rem\] {
-  padding-top: 0.05rem;
-  padding-bottom: 0.05rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.px-\[0\.70rem\] {
-  padding-left: 0.70rem;
-  padding-right: 0.70rem;
-}
-
-.px-\[0\.65rem\] {
-  padding-left: 0.65rem;
-  padding-right: 0.65rem;
 }
 
 .text-center {

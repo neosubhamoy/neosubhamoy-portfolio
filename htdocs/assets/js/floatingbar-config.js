@@ -7,6 +7,8 @@ const searchTxt = document.getElementById("searchtext");
 const searchInput = document.getElementById("searchinput");
 const windowWrapper = document.getElementById("floatingwindowwrapper");
 const searchWin = document.getElementById("searchwindow");
+const searchDef = document.getElementById("defresults");
+const searchRes = document.getElementById("searchresults");
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function () {
@@ -84,3 +86,44 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+//---controls search window results
+function perform_search(searchInput, searchDef, searchRes) {
+    searchDef.classList.remove("flex");
+    searchDef.classList.add("hidden");
+    searchRes.classList.remove("hidden");
+    searchRes.classList.add("flex");
+    let searchString = searchInput.value;
+
+    $.ajax({
+        url: 'core/handle_search.php',
+        type: 'POST',
+        dataType: 'json',
+        data: { keyword: searchString },
+        success: function(response) {
+            console.log("success");
+            console.log(response);
+        },
+        error: function(error) {
+            console.error('error:', error);
+        },
+        complete: function() {
+            console.log("completed");
+        }
+    });
+}
+
+function fallback_search(searchDef, searchRes) {
+    searchDef.classList.remove("hidden");
+    searchDef.classList.add("flex");
+    searchRes.classList.remove("flex");
+    searchRes.classList.add("hidden");
+}
+
+searchInput.addEventListener('input', function() {
+    if (searchInput.value != "") {
+        perform_search(searchInput, searchDef, searchRes);
+    }
+    else {
+        fallback_search(searchDef, searchRes);
+    }
+});
