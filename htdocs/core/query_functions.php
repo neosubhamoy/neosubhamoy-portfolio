@@ -50,4 +50,15 @@ function fetch_social_icon($conn, $platform_name) {
         return $row['icon'];
     }
 }
+
+function fetch_search_results($conn, $keyword) {
+    $sql = "SELECT * FROM projects WHERE name LIKE '%$keyword%'";
+    $result = $conn -> query($sql);
+    if($result -> num_rows > 0) {
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+    else {
+        return array('results' => 'none');
+    }
+}
 ?>
