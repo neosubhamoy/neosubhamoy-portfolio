@@ -100,7 +100,6 @@ function perform_search(searchInput, searchDef, searchRes) {
         dataType: 'json',
         data: { keyword: searchString },
         success: function(response) {
-            console.log("success");
             console.log(response);
         },
         error: function(error) {

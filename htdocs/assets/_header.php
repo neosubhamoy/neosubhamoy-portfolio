@@ -1,7 +1,11 @@
 <?php
-function isPageActive($pageName) {
+function isPageActive($pageName, $pageRoute) {
     $currentPage = $_SERVER['PHP_SELF'];
-    if (strpos($currentPage, $pageName) !== false) {
+    $currentRoute = parse_url($_SERVER['REQUEST_URI'])['path'];
+    if (strpos($currentPage, $pageName) !== false || strpos($currentRoute, $pageRoute) !== false) {
+        if ($pageRoute == '/' && ($pos = strrpos($currentRoute, $pageRoute)) !== false && $pos < strlen($currentRoute) - 1) {
+            return '';
+        }
         return 'w-full';
     }
     return '';
@@ -15,15 +19,15 @@ function isPageActive($pageName) {
     <div class="widemenu mr-4 hidden lg:block">
         <a class="mx-5 py-[0.30rem] relative group" href="<?php echo $basePath . '/projects' ?>">
             Projects
-            <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('projects.php');?> group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('projects.php', '/projects');?> group-hover:w-full"></span>
         </a>
         <a class="mx-5 py-[0.30rem] relative group" href="<?php echo $basePath . '/blog' ?>">
             Blog
-            <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('blog.php');?> group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('blog.php', '/blog');?> group-hover:w-full"></span>
         </a>
         <a class="mx-5 py-[0.30rem] relative group" href="<?php echo $basePath . '/contact' ?>">
             Contact
-            <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('contact.php');?> group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('contact.php', '/contact');?> group-hover:w-full"></span>
         </a>
         <button class="ml-5 px-3 py-1 border-[2px] border-accent_primary rounded-full hover:rounded-lg hover:shadow-lg hover:shadow-accent_primary_transparent transition transform duration-500" onclick="location.href='<?php echo $basePath . '/contact' ?>'">Let's Talk</button>
     </div>
@@ -39,19 +43,19 @@ function isPageActive($pageName) {
             <div class="mobilemenu flex flex-col mt-5" id="mobilemenu">
                 <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="<?php echo $basePath ?>">
                     Home Page
-                    <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('index.php');?> group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('home.php', '/');?> group-hover:w-full"></span>
                 </a>
                 <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="<?php echo $basePath . '/projects' ?>">
                     My Projects
-                    <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('projects.php');?> group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('projects.php', '/projects');?> group-hover:w-full"></span>
                 </a>
                 <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="<?php echo $basePath . '/blog' ?>">
                     My Blog
-                    <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('blog.php');?> group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('blog.php', '/blog');?> group-hover:w-full"></span>
                 </a>
                 <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="<?php echo $basePath . '/contact' ?>">
                     Contact Me
-                    <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('contact.php');?> group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 h-[2px] bg-accent_primary transition-all duration-300 w-0 <?php echo isPageActive('contact.php', '/contact');?> group-hover:w-full"></span>
                 </a>
             </div>
         </div>
