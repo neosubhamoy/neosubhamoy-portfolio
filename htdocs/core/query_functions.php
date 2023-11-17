@@ -62,7 +62,7 @@ function fetch_search_results($conn, $keyword) {
         return $result;
     }
     else {
-        return array('results' => 'none');
+        return array('results' => 'none', 'message' => ': ( &nbsp; No Results Found');
     }
 }
 ?>

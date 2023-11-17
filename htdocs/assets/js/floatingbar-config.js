@@ -100,7 +100,13 @@ function perform_search(searchInput, searchDef, searchRes) {
         dataType: 'json',
         data: { keyword: searchString },
         success: function(response) {
-            inject_search_results(response);
+            console.log(response);
+            if(response.results && response.results === "none") {
+                inject_no_results(response);
+            }
+            else {
+                inject_search_results(response);
+            }
         },
         error: function(error) {
             console.error('error:', error);
@@ -142,6 +148,10 @@ function inject_search_results (results) {
 
         searchRes.appendChild(resultDiv);
     });
+}
+
+function inject_no_results(results) {
+    searchRes.innerHTML = `<div class="resultitem w-full h-[59vh] flex flex-col justify-center items-center"><p class="text-xl text-accent_three">${results.message}</p</div>`;
 }
 
 searchInput.addEventListener('input', function() {

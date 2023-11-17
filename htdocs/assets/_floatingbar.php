@@ -70,16 +70,16 @@
     </div>
     <div id="searchresults" class="searchresults w-full flex-col justify-start px-2 mt-1 hidden">
         <p class="text-xs text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS</p>
-        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='<?php echo $basePath ?>'">
+        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='#'">
             <span class="flex items-center">
-                <span class="mx-1 px-[0.65rem] py-1 rounded border-[1px] border-accent_secondary_transparent">P</span>
+                <span class="mx-1 px-[0.65rem] py-1 rounded border-[1px] border-accent_secondary_transparent">TITLE LETTER</span>
                 <span class="flex flex-col">
-                    <h6 class="mx-1">ProURL</h6>
-                    <p class="mx-1 text-xs text-accent_three">All in one link shortener and management tool webapp</p>
+                    <h6 class="mx-1">TITLE</h6>
+                    <p class="mx-1 text-xs text-accent_three">DESCRIPTION</p>
                 </span>
             </span>
             <span class="flex items-center mr-1">
-                <span class="px-[1rem] py-[0.05rem] mx-1 text-xs bg-accent_four text-bg_secondary rounded-full group-hover:hidden">#project</span>
+                <span class="px-[1rem] py-[0.05rem] mx-1 text-xs bg-accent_four text-bg_secondary rounded-full group-hover:hidden">#TAG</span>
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
