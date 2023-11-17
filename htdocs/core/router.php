@@ -16,7 +16,7 @@ $devRoutes = [
     '/neosubhamoy/htdocs/contact' => 'contact.php',
 ];
 
-if ($host == "localhost") {
+if ($host == "localhost" || $host == "192.168.29.177") {
     $routes = $devRoutes;
 }
 else {

@@ -128,11 +128,11 @@ function inject_search_results (results) {
     searchRes.innerHTML = `<p class="text-xs text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS</p>`;
 
     results.forEach(function(result) {
-        let resultDiv = document.createElement("div");
-        resultDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
-        resultDiv.setAttribute("onclick", "location.href='" + result.link + "'");
+        let projectsDiv = document.createElement("div");
+        projectsDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
+        projectsDiv.setAttribute("onclick", "location.href='" + result.link + "'");
 
-        resultDiv.innerHTML = `
+        projectsDiv.innerHTML = `
             <span class="flex items-center">
                 <span class="mx-1 px-[0.65rem] py-1 rounded border-[1px] border-accent_secondary_transparent">${result.name.charAt(0).toUpperCase()}</span>
                 <span class="flex flex-col">
@@ -146,7 +146,7 @@ function inject_search_results (results) {
             </span>
         `;
 
-        searchRes.appendChild(resultDiv);
+        searchRes.appendChild(projectsDiv);
     });
 }
 

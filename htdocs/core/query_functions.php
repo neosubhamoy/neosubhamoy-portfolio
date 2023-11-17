@@ -51,13 +51,28 @@ function fetch_social_icon($conn, $platform_name) {
     }
 }
 
-function fetch_search_results($conn, $keyword) {
+function fetch_search_results_projects($conn, $keyword) {
     $sql = "SELECT * FROM projects WHERE name LIKE '%$keyword%'";
     $result = $conn -> query($sql);
     if($result -> num_rows > 0) {
         $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
         foreach ($result as &$element) {
             $element['tag'] = 'project';
+        }
+        return $result;
+    }
+    else {
+        return array('results' => 'none', 'message' => ': ( &nbsp; No Results Found');
+    }
+}
+
+function fetch_search_results_socials($conn, $keyword) {
+    $sql = "SELECT * FROM socials WHERE platform LIKE '%$keyword%'";
+    $result = $conn -> query($sql);
+    if($result -> num_rows > 0) {
+        $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        foreach ($result as &$element) {
+            $element['tag'] = 'social';
         }
         return $result;
     }
