@@ -37,7 +37,7 @@ function isPageActive($pageName, $pageRoute) {
     <div class="slidercontainer hidden flex-col justify-between items-center lg:hidden fixed top-0 left-0 w-screen h-screen overflow-hidden z-50 bg-bg_primary" id="slidercontainer">
         <div class="mobilemenuheader w-full flex flex-col">
             <div class="topnavbarumobile flex justify-between items-center py-5 px-4">
-                <a class="font-cormorant text-4xl font-bold ml-2" href="index.php">Subhamoy</a>
+                <a class="font-cormorant text-4xl font-bold ml-2" href="<?php echo $basePath ?>">Subhamoy</a>
                 <i class="fa-solid fa-xmark text-3xl text-accent_primary mr-3 cursor-pointer" onclick="closeNavslider()"></i>
             </div>
             <div class="mobilemenu flex flex-col mt-5" id="mobilemenu">
