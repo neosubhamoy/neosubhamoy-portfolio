@@ -100,7 +100,7 @@ function perform_search(searchInput, searchDef, searchRes) {
         dataType: 'json',
         data: { keyword: searchString },
         success: function(response) {
-            console.log(response);
+            inject_search_results(response);
         },
         error: function(error) {
             console.error('error:', error);
@@ -116,6 +116,32 @@ function fallback_search(searchDef, searchRes) {
     searchDef.classList.add("flex");
     searchRes.classList.remove("flex");
     searchRes.classList.add("hidden");
+}
+
+function inject_search_results (results) {
+    searchRes.innerHTML = `<p class="text-xs text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS</p>`;
+
+    results.forEach(function(result) {
+        let resultDiv = document.createElement("div");
+        resultDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
+        resultDiv.setAttribute("onclick", "location.href='" + result.link + "'");
+
+        resultDiv.innerHTML = `
+            <span class="flex items-center">
+                <span class="mx-1 px-[0.65rem] py-1 rounded border-[1px] border-accent_secondary_transparent">${result.name.charAt(0).toUpperCase()}</span>
+                <span class="flex flex-col">
+                    <h6 class="mx-1">${result.name}</h6>
+                    <p class="mx-1 text-xs text-accent_three">${result.description.slice(0, 35) + '...'}</p>
+                </span>
+            </span>
+            <span class="flex items-center mr-1">
+                <span class="px-[1rem] py-[0.05rem] mx-1 text-xs bg-accent_four text-bg_secondary rounded-full group-hover:hidden">${'#' + result.tag}</span>
+                <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
+            </span>
+        `;
+
+        searchRes.appendChild(resultDiv);
+    });
 }
 
 searchInput.addEventListener('input', function() {
