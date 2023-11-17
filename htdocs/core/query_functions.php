@@ -55,7 +55,11 @@ function fetch_search_results($conn, $keyword) {
     $sql = "SELECT * FROM projects WHERE name LIKE '%$keyword%'";
     $result = $conn -> query($sql);
     if($result -> num_rows > 0) {
-        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        foreach ($result as &$element) {
+            $element['tag'] = 'project';
+        }
+        return $result;
     }
     else {
         return array('results' => 'none');
