@@ -138,7 +138,7 @@ function inject_search_results (results) {
         results.project.forEach(function(result) {
             let projectDiv = document.createElement("div");
             projectDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
-            projectDiv.setAttribute("onclick", "location.href='" + result.link + "'");
+            projectDiv.setAttribute("onclick", "window.open('" + result.link + "', '_blank')");
     
             projectDiv.innerHTML = `
                 <span class="flex items-center">
@@ -176,6 +176,48 @@ function inject_search_results (results) {
             `;
     
             searchRes.appendChild(socialDiv);
+        });
+    }
+
+    if(typeof(results.page) !== 'undefined') {
+        results.page.forEach(function(result) {
+            let pageDiv = document.createElement("div");
+            pageDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
+            pageDiv.setAttribute("onclick", "location.href='" + result.link + "'");
+    
+            pageDiv.innerHTML = `
+            <span class="flex items-center">
+                <lord-icon class="mx-1" src="https://cdn.lordicon.com/${result.icon}" target=".resultitem" trigger="hover" colors="primary:#38BDF8" style="width:25px"></lord-icon>
+                <p class="mx-1">${result.name}</p>
+            </span>
+            <span class="flex items-center mr-1">
+                <span class="px-[1rem] py-[0.05rem] mx-1 text-xs bg-accent_four text-bg_secondary rounded-full group-hover:hidden">${'#' + result.tag}</span>
+                <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
+            </span>
+            `;
+    
+            searchRes.appendChild(pageDiv);
+        });
+    }
+
+    if(typeof(results.action) !== 'undefined') {
+        results.action.forEach(function(result) {
+            let actionDiv = document.createElement("div");
+            actionDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
+            actionDiv.setAttribute("onclick", "window.open('" + result.link + "', '_blank')");
+    
+            actionDiv.innerHTML = `
+            <span class="flex items-center">
+                <lord-icon class="mx-1" src="https://cdn.lordicon.com/${result.icon}" target=".resultitem" trigger="hover" colors="primary:#38BDF8" style="width:25px"></lord-icon>
+                <p class="mx-1">${result.name}</p>
+            </span>
+            <span class="flex items-center mr-1">
+                <span class="px-[1rem] py-[0.05rem] mx-1 text-xs bg-accent_four text-bg_secondary rounded-full group-hover:hidden">${'#' + result.tag}</span>
+                <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
+            </span>
+            `;
+    
+            searchRes.appendChild(actionDiv);
         });
     }
 }

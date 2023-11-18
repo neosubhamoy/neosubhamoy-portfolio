@@ -5,11 +5,15 @@ require 'query_functions.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['keyword'])) {
         $keyword = $_POST['keyword'];
-        $results_projects = fetch_search_results_projects($conn, $keyword);
-        $results_socials = fetch_search_results_socials($conn, $keyword);
+        $results_array = [
+            $results_projects = fetch_search_results_projects($conn, $keyword),
+            $results_socials = fetch_search_results_socials($conn, $keyword),
+            $results_pages = fetch_search_results_pages($conn, $keyword),
+            $results_quickactions = fetch_search_results_quickactions($conn, $keyword)
+        ];
 
         $results = [];
-        foreach ([$results_projects, $results_socials] as $array) {
+        foreach ($results_array as $array) {
             if (!empty($array)) {
                 $results = array_merge($results, $array);
             }

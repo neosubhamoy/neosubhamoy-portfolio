@@ -83,4 +83,36 @@ function fetch_search_results_socials($conn, $keyword) {
         return array();
     }
 }
+
+//for pages table
+function fetch_search_results_pages($conn, $keyword) {
+    $sql = "SELECT * FROM pages WHERE name LIKE '%$keyword%'";
+    $result = $conn -> query($sql);
+    if($result -> num_rows > 0) {
+        $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        foreach ($result as &$element) {
+            $element['tag'] = 'page';
+        }
+        return $result;
+    }
+    else {
+        return array();
+    }
+}
+
+//for quick_actions table
+function fetch_search_results_quickactions($conn, $keyword) {
+    $sql = "SELECT * FROM quick_actions WHERE name LIKE '%$keyword%'";
+    $result = $conn -> query($sql);
+    if($result -> num_rows > 0) {
+        $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        foreach ($result as &$element) {
+            $element['tag'] = 'action';
+        }
+        return $result;
+    }
+    else {
+        return array();
+    }
+}
 ?>

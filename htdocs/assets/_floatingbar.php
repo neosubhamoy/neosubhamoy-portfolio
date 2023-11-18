@@ -46,7 +46,7 @@
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
-        <p class="text-xs text-accent_three mt-3 mb-2 mx-1">QUICK SHOTCUTS</p>
+        <p class="text-xs text-accent_three mt-3 mb-2 mx-1">QUICK ACTIONS</p>
         <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='mailto:hey@neosubhamoy.dev'">
             <span class="flex items-center">
                 <lord-icon class="mx-1" src="https://cdn.lordicon.com/xtnsvhie.json" target=".resultitem" trigger="hover" colors="primary:#38BDF8" style="width:25px"></lord-icon>
