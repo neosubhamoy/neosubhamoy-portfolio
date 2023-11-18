@@ -2,9 +2,17 @@
 require 'connection.php';
 require 'query_functions.php';
 
+function input_filter($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['keyword'])) {
         $keyword = $_POST['keyword'];
+        $keyword = input_filter($keyword);
         $results_array = [
             $results_projects = fetch_search_results_projects($conn, $keyword),
             $results_socials = fetch_search_results_socials($conn, $keyword),
