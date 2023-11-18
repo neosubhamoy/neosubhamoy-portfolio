@@ -914,6 +914,10 @@ video {
   height: 100vh;
 }
 
+.h-\[50vh\] {
+  height: 50vh;
+}
+
 .w-0 {
   width: 0px;
 }

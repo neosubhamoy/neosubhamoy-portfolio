@@ -103,7 +103,7 @@ function perform_search(searchInput, searchDef, searchRes) {
         success: function(response) {
             console.log(response);
             if(response.results && response.results === "none") {
-                inject_no_results(response);
+                inject_no_results(response, searchString);
             }
             else {
                 const resultTags = [...new Set(response.map(item => item.tag))];
@@ -113,7 +113,7 @@ function perform_search(searchInput, searchDef, searchRes) {
                 result[tag] = response.filter(item => item.tag === tag);
                 });
 
-                inject_search_results(result);
+                inject_search_results(result, searchString);
             }
         },
         error: function(error) {
@@ -132,10 +132,15 @@ function fallback_search(searchDef, searchRes) {
     searchRes.classList.add("hidden");
 }
 
-function inject_search_results (results) {
-    searchRes.innerHTML = `<p class="text-xs text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS</p>`;
+function inject_search_results (results, keyword) {
+    searchRes.innerHTML = `<p class="text-sm text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS for '${keyword.toUpperCase()}'</p>`;
 
     if(typeof(results.project) !== 'undefined') {
+        let projectDivTitle = document.createElement("p");
+        projectDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
+        projectDivTitle.innerHTML = "PROJECTS";
+        searchRes.appendChild(projectDivTitle);
+
         results.project.forEach(function(result) {
             let projectDiv = document.createElement("div");
             projectDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
@@ -160,6 +165,11 @@ function inject_search_results (results) {
     }
 
     if(typeof(results.social) !== 'undefined') {
+        let socialDivTitle = document.createElement("p");
+        socialDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
+        socialDivTitle.innerHTML = "SOCIAL LINKS";
+        searchRes.appendChild(socialDivTitle);
+
         results.social.forEach(function(result) {
             let socialDiv = document.createElement("div");
             socialDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
@@ -181,6 +191,11 @@ function inject_search_results (results) {
     }
 
     if(typeof(results.page) !== 'undefined') {
+        let pageDivTitle = document.createElement("p");
+        pageDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
+        pageDivTitle.innerHTML = "SITE PAGES";
+        searchRes.appendChild(pageDivTitle);
+
         results.page.forEach(function(result) {
             let pageDiv = document.createElement("div");
             pageDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
@@ -202,6 +217,11 @@ function inject_search_results (results) {
     }
 
     if(typeof(results.action) !== 'undefined') {
+        let actionDivTitle = document.createElement("p");
+        actionDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
+        actionDivTitle.innerHTML = "QUICK ACTIONS";
+        searchRes.appendChild(actionDivTitle);
+
         results.action.forEach(function(result) {
             let actionDiv = document.createElement("div");
             actionDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
@@ -223,8 +243,13 @@ function inject_search_results (results) {
     }
 }
 
-function inject_no_results(results) {
-    searchRes.innerHTML = `<div class="resultitem w-full h-[59vh] flex flex-col justify-center items-center"><p class="text-xl text-accent_three">${results.message}</p</div>`;
+function inject_no_results(results, keyword) {
+    searchRes.innerHTML = `
+    <p class="text-sm text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS for '${keyword.toUpperCase()}'</p>
+    <div class="resultitem w-full h-[50vh] flex flex-col justify-center items-center">
+        <p class="text-xl text-accent_three">${results.message}</p>
+    </div>
+    `;
 }
 
 searchInput.addEventListener('input', function() {
