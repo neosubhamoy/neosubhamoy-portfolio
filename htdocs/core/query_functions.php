@@ -54,7 +54,7 @@ function fetch_social_icon($conn, $platform_name) {
 //---functions to fetch search results starts here---
 //from projects table
 function fetch_search_results_projects($conn, $keyword) {
-    $sql = "SELECT * FROM projects WHERE name LIKE '%$keyword%'";
+    $sql = "SELECT * FROM projects WHERE name LIKE '%$keyword%' OR stag LIKE '%$keyword%'";
     $result = $conn -> query($sql);
     if($result -> num_rows > 0) {
         $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -70,7 +70,7 @@ function fetch_search_results_projects($conn, $keyword) {
 
 //from socials table
 function fetch_search_results_socials($conn, $keyword) {
-    $sql = "SELECT * FROM socials WHERE platform LIKE '%$keyword%'";
+    $sql = "SELECT * FROM socials WHERE platform LIKE '%$keyword%' OR stag LIKE '%$keyword%'";
     $result = $conn -> query($sql);
     if($result -> num_rows > 0) {
         $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -86,7 +86,7 @@ function fetch_search_results_socials($conn, $keyword) {
 
 //for pages table
 function fetch_search_results_pages($conn, $keyword) {
-    $sql = "SELECT * FROM pages WHERE name LIKE '%$keyword%'";
+    $sql = "SELECT * FROM pages WHERE name LIKE '%$keyword%' OR stag LIKE '%$keyword%'";
     $result = $conn -> query($sql);
     if($result -> num_rows > 0) {
         $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -102,7 +102,7 @@ function fetch_search_results_pages($conn, $keyword) {
 
 //for quick_actions table
 function fetch_search_results_quickactions($conn, $keyword) {
-    $sql = "SELECT * FROM quick_actions WHERE name LIKE '%$keyword%'";
+    $sql = "SELECT * FROM quick_actions WHERE name LIKE '%$keyword%' OR stag LIKE '%$keyword%'";
     $result = $conn -> query($sql);
     if($result -> num_rows > 0) {
         $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
