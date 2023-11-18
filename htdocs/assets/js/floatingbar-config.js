@@ -9,6 +9,7 @@ const windowWrapper = document.getElementById("floatingwindowwrapper");
 const searchWin = document.getElementById("searchwindow");
 const searchDef = document.getElementById("defresults");
 const searchRes = document.getElementById("searchresults");
+const basePath = document.getElementById('phpHostBasePath').dataset.basePath;
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function () {
@@ -183,7 +184,7 @@ function inject_search_results (results) {
         results.page.forEach(function(result) {
             let pageDiv = document.createElement("div");
             pageDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
-            pageDiv.setAttribute("onclick", "location.href='" + result.link + "'");
+            pageDiv.setAttribute("onclick", "location.href='" + basePath + result.link + "'");
     
             pageDiv.innerHTML = `
             <span class="flex items-center">
