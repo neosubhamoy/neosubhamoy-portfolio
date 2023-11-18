@@ -51,6 +51,8 @@ function fetch_social_icon($conn, $platform_name) {
     }
 }
 
+//---functions to fetch search results starts here---
+//from projects table
 function fetch_search_results_projects($conn, $keyword) {
     $sql = "SELECT * FROM projects WHERE name LIKE '%$keyword%'";
     $result = $conn -> query($sql);
@@ -62,10 +64,11 @@ function fetch_search_results_projects($conn, $keyword) {
         return $result;
     }
     else {
-        return array('results' => 'none', 'message' => ': ( &nbsp; No Results Found');
+        return array();
     }
 }
 
+//from socials table
 function fetch_search_results_socials($conn, $keyword) {
     $sql = "SELECT * FROM socials WHERE platform LIKE '%$keyword%'";
     $result = $conn -> query($sql);
@@ -77,7 +80,7 @@ function fetch_search_results_socials($conn, $keyword) {
         return $result;
     }
     else {
-        return array('results' => 'none', 'message' => ': ( &nbsp; No Results Found');
+        return array();
     }
 }
 ?>

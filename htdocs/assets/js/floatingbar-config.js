@@ -105,7 +105,14 @@ function perform_search(searchInput, searchDef, searchRes) {
                 inject_no_results(response);
             }
             else {
-                inject_search_results(response);
+                const resultTags = [...new Set(response.map(item => item.tag))];
+                const result = {};
+
+                resultTags.forEach(tag => {
+                result[tag] = response.filter(item => item.tag === tag);
+                });
+                console.log(result);
+                inject_search_results(result.project);
             }
         },
         error: function(error) {
