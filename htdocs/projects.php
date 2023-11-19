@@ -144,7 +144,7 @@ $years = create_project_years_array($conn);
                                     <div class='overlay absolute w-full h-full bg-gradient-to-r from-bg_third z-20 flex-col p-3 hidden group-hover:flex'>
                                         <h6 class='text-xl mb-1'>".$featured_item['name']."</h6>
                                         <p class='text-xs font-[300] mb-4 text-accent_three'>".$featured_item['description']."</p>
-                                        <a class='text-sm font-[300] bg-gradient-to-r from-accent_secondary_transparent border-[1px] border-accent_secondary px-3 py-[0.15rem] w-fit rounded-full hover:rounded' href='".$featured_item['link']."' target='_blank'>View Now</a>
+                                        <a class='text-sm font-[300] bg-[rgba(255,_255,_255,_0.25)] border-[1px] border-accent_secondary text-accent_secondary px-3 py-[0.15rem] w-fit rounded-full hover:rounded hover:bg-accent_secondary hover:text-bg_primary hover:shadow-lg hover:shadow-accent_secondary_transparent transition transform duration-500' href='".$featured_item['link']."' target='_blank'>View Now</a>
                                     </div>
                                     <img class='opacity-[0.75]' src='".$featured_item['thumbnail']."' alt='".strtolower($featured_item['name'])."'>
                                 </div>

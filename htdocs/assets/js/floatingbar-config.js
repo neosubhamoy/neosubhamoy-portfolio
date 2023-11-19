@@ -255,7 +255,7 @@ function inject_search_results (results, keyword) {
     
             profileDiv.innerHTML = `
             <span class="flex items-center">
-                <span class="wrapper mx-1 w-[35px] rounded-lg overflow-hidden">
+                <span class="wrapper mx-1 w-[35px] rounded-md overflow-hidden">
                     <img src="${result.photo}" alt="${result.name.toLowerCase().replace(/\s/g, '')}">
                 </span>
                 <span class="flex flex-col">
