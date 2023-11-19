@@ -635,10 +635,6 @@ video {
   z-index: 50;
 }
 
-.m-1 {
-  margin: 0.25rem;
-}
-
 .m-2 {
   margin: 0.5rem;
 }
@@ -894,8 +890,8 @@ video {
   height: 50px;
 }
 
-.h-\[59vh\] {
-  height: 59vh;
+.h-\[50vh\] {
+  height: 50vh;
 }
 
 .h-\[60vh\] {
@@ -912,10 +908,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[50vh\] {
-  height: 50vh;
 }
 
 .w-0 {
