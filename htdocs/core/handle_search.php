@@ -17,7 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $results_projects = fetch_search_results_projects($conn, $keyword),
             $results_socials = fetch_search_results_socials($conn, $keyword),
             $results_pages = fetch_search_results_pages($conn, $keyword),
-            $results_quickactions = fetch_search_results_quickactions($conn, $keyword)
+            $results_quickactions = fetch_search_results_quickactions($conn, $keyword),
+            $results_profiles = fetch_search_results_profiles($conn, $keyword)
         ];
 
         $results = [];

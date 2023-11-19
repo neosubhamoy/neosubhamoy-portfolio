@@ -115,4 +115,20 @@ function fetch_search_results_quickactions($conn, $keyword) {
         return array();
     }
 }
+
+//for quick_actions table
+function fetch_search_results_profiles($conn, $keyword) {
+    $sql = "SELECT * FROM profile WHERE name LIKE '%$keyword%' OR stag LIKE '%$keyword%'";
+    $result = $conn -> query($sql);
+    if($result -> num_rows > 0) {
+        $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        foreach ($result as &$element) {
+            $element['tag'] = 'profile';
+        }
+        return $result;
+    }
+    else {
+        return array();
+    }
+}
 ?>

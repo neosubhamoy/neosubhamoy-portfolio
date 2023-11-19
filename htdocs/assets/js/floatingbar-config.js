@@ -241,6 +241,37 @@ function inject_search_results (results, keyword) {
             searchRes.appendChild(actionDiv);
         });
     }
+
+    if(typeof(results.profile) !== 'undefined') {
+        let profileDivTitle = document.createElement("p");
+        profileDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
+        profileDivTitle.innerHTML = "PROFILES";
+        searchRes.appendChild(profileDivTitle);
+
+        results.profile.forEach(function(result) {
+            let profileDiv = document.createElement("div");
+            profileDiv.className = "group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg";
+            profileDiv.setAttribute("onclick", "window.open('" + result.link + "', '_blank')");
+    
+            profileDiv.innerHTML = `
+            <span class="flex items-center">
+                <span class="wrapper mx-1 w-[35px] rounded-lg overflow-hidden">
+                    <img src="${result.photo}" alt="${result.name.toLowerCase().replace(/\s/g, '')}">
+                </span>
+                <span class="flex flex-col">
+                    <h6 class="mx-1">${result.name}</h6>
+                    <p class="mx-1 text-xs text-accent_three">${result.description}</p>
+                </span>
+            </span>
+            <span class="flex items-center mr-1">
+                <span class="px-[1rem] py-[0.05rem] mx-1 text-xs bg-accent_four text-bg_secondary rounded-full group-hover:hidden">${'#' + result.tag}</span>
+                <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
+            </span>
+            `;
+    
+            searchRes.appendChild(profileDiv);
+        });
+    }
 }
 
 function inject_no_results(results, keyword) {
