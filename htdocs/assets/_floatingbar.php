@@ -9,8 +9,8 @@
                 <p class="mx-1">Home</p>
             </span>
             <span class="flex items-center mr-1">
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">N</span>
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">H</span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">N</p></span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">H</p></span>
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
@@ -20,8 +20,8 @@
                 <p class="mx-1">Projects</p>
             </span>
             <span class="flex items-center mr-1">
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">N</span>
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">P</span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">N</p></span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">P</p></span>
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
@@ -31,8 +31,8 @@
                 <p class="mx-1">Blog</p>
             </span>
             <span class="flex items-center mr-1">
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">N</span>
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">B</span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">N</p></span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">B</p></span>
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
@@ -42,8 +42,8 @@
                 <p class="mx-1">Contact</p>
             </span>
             <span class="flex items-center mr-1">
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">N</span>
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">C</span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">N</p></span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">C</p></span>
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
@@ -54,8 +54,8 @@
                 <p class="mx-1">Send Email</p>
             </span>
             <span class="flex items-center mr-1">
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">Q</span>
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">E</span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">Q</p></span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">E</p></span>
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
@@ -65,8 +65,8 @@
                 <p class="mx-1">Chat Online</p>
             </span>
             <span class="flex items-center mr-1">
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">Q</span>
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">M</span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">Q</p></span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">M</p></span>
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
@@ -76,8 +76,8 @@
                 <p class="mx-1">Source Code</p>
             </span>
             <span class="flex items-center mr-1">
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">Q</span>
-                <span class="px-[0.40rem] py-[0.10rem] mx-1 bg-accent_four text-bg_secondary rounded group-hover:hidden">S</span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">Q</p></span>
+                <span class="w-[30px] h-[30px] flex justify-center items-center mx-1 bg-accent_four rounded group-hover:hidden"><p class="text-bg_secondary">S</p></span>
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
