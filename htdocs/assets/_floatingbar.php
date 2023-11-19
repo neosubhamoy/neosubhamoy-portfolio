@@ -81,6 +81,7 @@
                 <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
             </span>
         </div>
+        <div class="bottomspacer w-full h-[10px]"></div>
     </div>
     <div id="searchresults" class="searchresults w-full flex-col justify-start px-2 mt-1 hidden">
         <p class="text-xs text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS</p>

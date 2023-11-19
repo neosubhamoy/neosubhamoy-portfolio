@@ -272,6 +272,10 @@ function inject_search_results (results, keyword) {
             searchRes.appendChild(profileDiv);
         });
     }
+
+    const bottomSpacer = document.createElement("div");
+    bottomSpacer.className = "bottomspacer w-full h-[10px]";
+    searchRes.appendChild(bottomSpacer);
 }
 
 function inject_no_results(results, keyword) {
