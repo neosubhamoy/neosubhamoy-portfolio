@@ -107,20 +107,26 @@ $years = create_project_years_array($conn);
             <div class="rightfeatured hidden lg:block">
                 <h5 class="text-xl font-bold mb-5">My Profiles</h5>
                 <div class="w-full flex flex-col justify-center items-center mb-12">
-                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500" onclick="window.open('https://github.com/neosubhamoy')">
-                        <div class="wrapper w-[50px] rounded-lg overflow-hidden"><img src="./assets/images/neosubhamoy.jpg" alt="neosubhamoy"></div>
-                        <div class="w-ful ml-7">
-                            <h6 class="text-base font-bold my-1">Subhamoy Biswas</h6>
-                            <p class="text-xs text-accent_three my-1">Personal Profile</p>
-                        </div>
-                    </div>
-                    <div class="w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500" onclick="window.open('https://github.com/techishfellow')">
-                        <div class="wrapper w-[50px] rounded-lg overflow-hidden"><img src="./assets/images/techishfellow.jpg" alt="techishfellow"></div>
-                        <div class="w-ful ml-7">
-                            <h6 class="text-base font-bold my-1">The TechishFellow</h6>
-                            <p class="text-xs text-accent_three my-1">Digital Product Publisher</p>
-                        </div>
-                    </div>
+                    <?php
+
+                    $profiles = fetch_all_records($conn, "profile");
+
+                    if($profiles -> num_rows > 0) {
+                        //show all profiles
+                        while($profile = $profiles -> fetch_assoc()) {
+                            echo "
+                            <div class='w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500' onclick=\"window.open('".$profile['link']."')\">
+                                <div class='wrapper w-[50px] rounded-lg overflow-hidden'><img src='".$profile['photo']."' alt='".str_replace(' ', '', strtolower($profile['name']))."'></div>
+                                <div class='w-ful ml-7'>
+                                    <h6 class='text-base font-bold my-1'>".$profile['name']."</h6>
+                                    <p class='text-xs text-accent_three my-1'>".$profile['description']."</p>
+                                </div>
+                            </div>
+                            ";
+                        }
+                    }
+
+                    ?>
                 </div>
                 <h5 class="text-xl font-bold mb-5">Featured Projects</h5>
                 <div class="w-full flex flex-col justify-center items-center mb-12">
