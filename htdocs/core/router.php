@@ -1,4 +1,6 @@
 <?php
+//---controls page routing (url & links)
+
 $host = $_SERVER['HTTP_HOST'];
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 

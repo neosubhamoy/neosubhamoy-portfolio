@@ -1,4 +1,5 @@
 //---controls the bottom floating bar behaviour
+
 const floatingBar = document.getElementById("floating-bar");
 const searchBar = document.getElementById("searchbar");
 const shareBtn = document.getElementById("sharebutton");
@@ -101,7 +102,6 @@ function perform_search(searchInput, searchDef, searchRes) {
         dataType: 'json',
         data: { keyword: searchString },
         success: function(response) {
-            console.log(response);
             if(response.results && response.results === "none") {
                 inject_no_results(response, searchString);
             }

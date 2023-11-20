@@ -1,3 +1,6 @@
+//---controls basic keyboard shotcuts
+//basePath const is defined in floatingbar-config
+
 let pressedKeys = {};
 
 document.addEventListener('keydown', function(event) {
