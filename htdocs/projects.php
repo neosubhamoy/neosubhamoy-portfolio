@@ -183,5 +183,6 @@ $years = create_project_years_array($conn);
     <?php require 'assets/_footer.php';?>
     <script type="text/javascript" src="assets/js/preloader-config.js"></script>
     <script type="text/javascript" src="assets/js/floatingbar-config.js"></script>
+    <script type="text/javascript" src="assets/js/keybinding-config.js"></script>
 </body>
 </html>

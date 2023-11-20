@@ -216,6 +216,7 @@ require 'core/query_functions.php';
     <?php require 'assets/_footer.php';?>
     <script type="text/javascript" src="assets/js/preloader-config.js"></script>
     <script type="text/javascript" src="assets/js/floatingbar-config.js"></script>
+    <script type="text/javascript" src="assets/js/keybinding-config.js"></script>
     <script type="text/javascript">
         //---hello textbox (hero-section) config
         const texts = ["Namaste! 🙏", "Hello! 👋", "Konnichiwa! 😄", "Anyeonghaseyo! 😊", "Hola! 😃", "Bonjour! 😄", "Zdravstvuyte! 🙂", "Marhabaan! 😊", "Olá! 😃", "Salve! 🤠"];
