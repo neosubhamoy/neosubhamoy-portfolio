@@ -4,6 +4,7 @@ const floatingBar = document.getElementById("floating-bar");
 const searchBar = document.getElementById("searchbar");
 const shareBtn = document.getElementById("sharebutton");
 const closeBtn = document.getElementById("closebutton");
+const shareCloseBtn = document.getElementById("shareclosebutton");
 const searchTxt = document.getElementById("searchtext");
 const searchInput = document.getElementById("searchinput");
 const windowWrapper = document.getElementById("floatingwindowwrapper");
@@ -294,4 +295,30 @@ searchInput.addEventListener('input', function() {
     else {
         fallback_search(searchDef, searchRes);
     }
+});
+
+
+//---share window config starts here
+
+function activate_share() {
+    windowWrapper.classList.remove("hidden");
+    windowWrapper.classList.add("flotingbar-window-wrapper-show");
+    shareBtn.classList.add("hidden");
+    shareCloseBtn.classList.remove("hidden");
+
+}
+
+function close_share() {
+    windowWrapper.classList.remove("flotingbar-window-wrapper-show");
+    windowWrapper.classList.add("hidden");
+    shareCloseBtn.classList.add("hidden");
+    shareBtn.classList.remove("hidden");
+}
+
+shareBtn.addEventListener("click", function () {
+    activate_share();
+});
+
+shareCloseBtn.addEventListener("click", function () {
+    close_share();
 });
