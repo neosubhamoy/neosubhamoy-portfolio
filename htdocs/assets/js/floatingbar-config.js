@@ -33,7 +33,7 @@ window.addEventListener("scroll", function () {
 });
 
 // function to open floating search window
-function activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin) {
+function activate_search() {
     floatingBar.classList.remove("floatingbar-click-slide-down");
     floatingBar.classList.add("floatingbar-click-slide-up");
     searchBar.classList.remove("searchbar-click-decrease-width");
@@ -50,7 +50,7 @@ function activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, 
 }
 
 // function to close floating search window
-function close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin) {
+function close_search() {
     floatingBar.classList.remove("floatingbar-click-slide-up");
     floatingBar.classList.add("floatingbar-click-slide-down");
     searchBar.classList.remove("searchbar-click-increase-width");
@@ -67,25 +67,25 @@ function close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, sea
 
 // when the search icon is clicked
 searchBar.addEventListener("click", function () {
-    activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin);
+    activate_search();
 });
 
 // when ALT + K shortcut key is pressed
 document.addEventListener("keydown", function(event) {
     if (event.altKey && event.key === "k") {
-        activate_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin);
+        activate_search();
     }
 });
 
 // when close button is clicked
 closeBtn.addEventListener("click", function () {
-    close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin);
+    close_search();
 });
 
 // when ESC key is pressed
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
-        close_search(searchBar, floatingBar, closeBtn, shareBtn, searchTxt, searchInput, windowWrapper, searchWin);
+        close_search();
     }
 });
 
