@@ -918,6 +918,10 @@ video {
   height: 100vh;
 }
 
+.h-\[45dvh\] {
+  height: 45dvh;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -1600,6 +1604,10 @@ video {
 @media (min-width: 768px) {
   .md\:h-\[60vh\] {
     height: 60vh;
+  }
+
+  .md\:h-\[60dvh\] {
+    height: 60dvh;
   }
 
   .md\:w-\[44vw\] {
