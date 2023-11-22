@@ -9,6 +9,7 @@ const searchTxt = document.getElementById("searchtext");
 const searchInput = document.getElementById("searchinput");
 const windowWrapper = document.getElementById("floatingwindowwrapper");
 const searchWin = document.getElementById("searchwindow");
+const shareWin = document.getElementById("sharewindow");
 const searchDef = document.getElementById("defresults");
 const searchRes = document.getElementById("searchresults");
 const basePath = document.getElementById('phpHostBasePath').dataset.basePath;
@@ -305,6 +306,7 @@ function activate_share() {
     windowWrapper.classList.add("flotingbar-window-wrapper-show");
     shareBtn.classList.add("hidden");
     shareCloseBtn.classList.remove("hidden");
+    shareWin.classList.remove("hidden");
 
 }
 
@@ -313,6 +315,7 @@ function close_share() {
     windowWrapper.classList.add("hidden");
     shareCloseBtn.classList.add("hidden");
     shareBtn.classList.remove("hidden");
+    shareWin.classList.add("hidden");
 }
 
 shareBtn.addEventListener("click", function () {

@@ -595,6 +595,10 @@ video {
   top: 10rem;
 }
 
+.top-\[10vh\] {
+  top: 10vh;
+}
+
 .top-\[20\.5rem\] {
   top: 20.5rem;
 }
@@ -605,6 +609,10 @@ video {
 
 .top-\[4\.7rem\] {
   top: 4.7rem;
+}
+
+.top-\[20vh\] {
+  top: 20vh;
 }
 
 .z-10 {
