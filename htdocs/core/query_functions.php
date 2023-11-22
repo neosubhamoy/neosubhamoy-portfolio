@@ -51,6 +51,16 @@ function fetch_social_icon($conn, $platform_name) {
     }
 }
 
+//function to fetch page title
+function fetch_page_title($conn, $page_name) {
+    $sql = "SELECT title FROM pages WHERE name = '$page_name'";
+    $result = $conn -> query($sql);
+    if($result -> num_rows > 0){
+        $row = $result -> fetch_assoc();
+        return $row['title'];
+    }
+}
+
 //---functions to fetch search results starts here---
 //from projects table
 function fetch_search_results_projects($conn, $keyword) {

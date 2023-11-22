@@ -10,7 +10,7 @@ require 'core/query_functions.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <title>My Blog - @neo_subhamoy</title>
+    <title><?php echo fetch_page_title($conn, "Blog");?></title>
     <?php include 'assets/_preloader.php';?>
     <?php include 'assets/_floatingbar.php';?>
     <?php require 'assets/_integrate.php';?>

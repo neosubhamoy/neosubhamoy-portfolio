@@ -10,7 +10,7 @@ require 'core/query_functions.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <title>Contact Me - @neo_subhamoy</title>
+    <title><?php echo fetch_page_title($conn, "Contact");?></title>
     <?php require 'assets/_integrate.php';?>
 </head>
 <body class="font-lexend bg-bg_primary text-accent_secondary">
