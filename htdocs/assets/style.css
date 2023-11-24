@@ -1161,6 +1161,10 @@ video {
   border-color: rgb(217 217 217 / var(--tw-border-opacity));
 }
 
+.border-\[rgba\(255\2c _255\2c _255\2c _0\.15\)\] {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 .border-l-accent_primary {
   --tw-border-opacity: 1;
   border-left-color: rgb(56 189 248 / var(--tw-border-opacity));
@@ -1320,6 +1324,28 @@ video {
 .px-\[0\.85rem\] {
   padding-left: 0.85rem;
   padding-right: 0.85rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pr-7 {
+  padding-right: 1.75rem;
+}
+
+.pl-7 {
+  padding-left: 1.75rem;
 }
 
 .text-left {

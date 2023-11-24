@@ -100,8 +100,8 @@
         </div>
     </div>
 </div>
-<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto h-[45vh] md:h-[60vh] p-4 fixed inset-x-0 top-[20vh] z-40 justify-between items-center bg-bg_secondary rounded-xl hidden">
-    <div class="shareviaqr w-fit h-full flex flex-col items-center p-3">
+<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto h-[45vh] md:h-[60vh] py-6 fixed inset-x-0 top-[20vh] z-40 justify-between items-center bg-bg_secondary rounded-xl hidden">
+    <div class="shareviaqr w-fit h-full flex flex-col items-center py-3 px-7">
         <p class="self-start">Scan to Share</p>
         <div class="bg-bg_primary p-5 rounded-lg my-3">
             <div class="qrwrapper w-[150px] h-[150px]">
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <div class="extrashareopt w-full h-full flex flex-col items-center p-3 border-l-[1px] border-accent_secondary_transparent">
+    <div class="extrashareopt w-full h-full flex flex-col items-center py-3 px-7 border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
         <p class="self-start">Other Sharing Options</p>
     </div>
 </div>
