@@ -306,7 +306,7 @@ function activate_share() {
     windowWrapper.classList.add("flotingbar-window-wrapper-show");
     shareBtn.classList.add("hidden");
     shareCloseBtn.classList.remove("hidden");
-    shareWin.classList.remove("hidden");
+    shareWin.classList.add("floatingshare-window-show");
 
 }
 
@@ -315,7 +315,7 @@ function close_share() {
     windowWrapper.classList.add("hidden");
     shareCloseBtn.classList.add("hidden");
     shareBtn.classList.remove("hidden");
-    shareWin.classList.add("hidden");
+    shareWin.classList.remove("floatingshare-window-show");
 }
 
 shareBtn.addEventListener("click", function () {

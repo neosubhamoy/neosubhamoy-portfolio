@@ -595,12 +595,12 @@ video {
   top: 10rem;
 }
 
-.top-\[10vh\] {
-  top: 10vh;
-}
-
 .top-\[20\.5rem\] {
   top: 20.5rem;
+}
+
+.top-\[20vh\] {
+  top: 20vh;
 }
 
 .top-\[30vh\] {
@@ -609,10 +609,6 @@ video {
 
 .top-\[4\.7rem\] {
   top: 4.7rem;
-}
-
-.top-\[20vh\] {
-  top: 20vh;
 }
 
 .z-10 {
@@ -1293,6 +1289,11 @@ video {
   padding-bottom: 0.30rem;
 }
 
+.px-\[0\.85rem\] {
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1612,6 +1613,10 @@ video {
 
   .md\:w-\[44vw\] {
     width: 44vw;
+  }
+
+  .md\:w-\[50vw\] {
+    width: 50vw;
   }
 }
 

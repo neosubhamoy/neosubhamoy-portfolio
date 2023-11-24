@@ -196,9 +196,40 @@ background: #38BDF8;
     }
 }
 
+.floatingshare-window-show {
+    display: flex;
+    animation: shareWindowShow 0.5s ease-in-out;
+}
+
+@keyframes shareWindowShow {
+    from {
+        width: 25vw;
+        height: 30vh;
+        opacity: 0;
+    }
+    to {
+        width: 50vw;
+        height: 60vh;
+        opacity: 1;
+    }
+}
+
 @media only screen and (max-width: 768px) {
 
     @keyframes searchWindowShow {
+        from {
+            width: 25vw;
+            height: 30vh;
+            opacity: 0;
+        }
+        to {
+            width: 90vw;
+            height: 45vh;
+            opacity: 1;
+        }
+    }
+
+    @keyframes shareWindowShow {
         from {
             width: 25vw;
             height: 30vh;
