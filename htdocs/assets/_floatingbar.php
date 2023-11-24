@@ -100,8 +100,13 @@
         </div>
     </div>
 </div>
-<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto h-[45vh] md:h-[60vh] fixed inset-x-0 top-[20vh] z-40 flex-col items-center bg-bg_secondary rounded-xl hidden">
-
+<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto h-[45vh] md:h-[60vh] fixed inset-x-0 top-[20vh] z-40 justify-center items-center bg-bg_secondary rounded-xl hidden">
+    <div class="shareviaqr flex flex-col items-center">
+        <div class="qrwrapper">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&size=200x200&&color=38BDF8&format=svg" alt="shareqrcode">
+        </div>
+    </div>
+    <div class="extrashareopt"></div>
 </div>
 <div id="floating-bar" class="fixed inset-x-0 bottom-[7vh] z-[50] flex justify-center items-center">
     <div id="searchbar" class="searchbar bg-bg_secondary rounded-full p-[0.30rem] flex items-center cursor-pointer mx-2 hover:shadow-[0px_0px_30px] hover:shadow-accent_primary_extratransparent transition transform duration-300">
