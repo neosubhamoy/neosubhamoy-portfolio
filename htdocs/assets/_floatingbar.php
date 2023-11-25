@@ -112,7 +112,10 @@
     </div>
     <div class="extrashareopt w-full h-full flex flex-col items-center py-3 px-7 border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
         <p class="self-start text-lg"><i class="fa-solid fa-user-group text-accent_primary"></i>&nbsp; Sharing Options</p>
-        <div class="urlinputbar w-full flex justify-between items-center py-2 px-3 my-3 bg-bg_primary rounded-full overflow-hidden"><input id="urlinput" class="w-[85%] bg-bg_primary caret-accent_primary text-accent_four font-[300] outline-none" type="text" value="https://localhost/neosubhamoy/htdocs/" readonly><button class="urlcopybtn px-3 border-l-[1px] border-accent_secondary_transparent" title="Copy link"><i class="fa-regular fa-copy"></i></button></div>
+        <div class="urlinputbar w-full flex justify-between items-center py-2 px-3 my-3 bg-bg_primary rounded-full overflow-hidden">
+            <input id="pageurlinput" class="w-[85%] bg-bg_primary caret-accent_primary text-accent_four font-[300] outline-none" type="text" value="https://neosubhamoy.dev" readonly>
+            <button class="urlcopybtn px-3 border-l-[1px] border-accent_secondary_transparent" title="Copy link"><i class="fa-regular fa-copy"></i></button>
+        </div>
     </div>
 </div>
 <div id="floating-bar" class="fixed inset-x-0 bottom-[7vh] z-[50] flex justify-center items-center">

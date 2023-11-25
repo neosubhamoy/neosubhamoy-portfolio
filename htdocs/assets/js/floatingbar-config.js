@@ -12,6 +12,8 @@ const searchWin = document.getElementById("searchwindow");
 const shareWin = document.getElementById("sharewindow");
 const searchDef = document.getElementById("defresults");
 const searchRes = document.getElementById("searchresults");
+const qrCode = document.getElementById("pageqrcode");
+const linkInput = document.getElementById("pageurlinput");
 const basePath = document.getElementById('phpHostBasePath').dataset.basePath;
 let lastScrollTop = 0;
 
@@ -302,6 +304,10 @@ searchInput.addEventListener('input', function() {
 //---share window config starts here
 
 function activate_share() {
+    //create qrcode of the current page link
+    qrCode.src = "https://api.qrserver.com/v1/create-qr-code/?data=" + window.location.href + "&color=38BDF8&bgcolor=0F172A";
+    //change pageUrlInput value to current page
+    linkInput.value = window.location.href;
     windowWrapper.classList.remove("hidden");
     windowWrapper.classList.add("flotingbar-window-wrapper-show");
     shareBtn.classList.add("hidden");
