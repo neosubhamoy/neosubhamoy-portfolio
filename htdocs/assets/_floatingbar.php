@@ -102,15 +102,17 @@
 </div>
 <div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto h-[45vh] md:h-[60vh] py-6 fixed inset-x-0 top-[20vh] z-40 justify-between items-center bg-bg_secondary rounded-xl hidden">
     <div class="shareviaqr w-fit h-full flex flex-col items-center py-3 px-7">
-        <p class="self-start">Scan to Share</p>
+        <p class="self-start text-xl">Scan to Share</p>
         <div class="bg-bg_primary p-5 rounded-lg my-3">
             <div class="qrwrapper w-[150px] h-[150px]">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&color=38BDF8&bgcolor=0F172A" alt="shareqrcode">
+                <img id="pageqrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&color=38BDF8&bgcolor=0F172A" alt="qrcode">
             </div>
         </div>
+        <button class="w-[97%] px-4 py-2 rounded-lg border-[2px] border-accent_primary text-accent_primary my-2"><i class="fa-solid fa-download"></i>&nbsp; Download QR</button>
     </div>
     <div class="extrashareopt w-full h-full flex flex-col items-center py-3 px-7 border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
-        <p class="self-start">Other Sharing Options</p>
+        <p class="self-start text-lg"><i class="fa-solid fa-user-group text-accent_primary"></i>&nbsp; Sharing Options</p>
+        <div class="urlinputbar w-full flex justify-between items-center py-2 px-3 my-3 bg-bg_primary rounded-full overflow-hidden"><input id="urlinput" class="w-[85%] bg-bg_primary caret-accent_primary text-accent_four font-[300] outline-none" type="text" value="https://localhost/neosubhamoy/htdocs/" readonly><button class="urlcopybtn px-3 border-l-[1px] border-accent_secondary_transparent" title="Copy link"><i class="fa-regular fa-copy"></i></button></div>
     </div>
 </div>
 <div id="floating-bar" class="fixed inset-x-0 bottom-[7vh] z-[50] flex justify-center items-center">
