@@ -110,11 +110,19 @@
         </div>
         <button class="w-[97%] px-4 py-2 rounded-lg border-[2px] border-accent_primary text-accent_primary my-2"><i class="fa-solid fa-download"></i>&nbsp; Download QR</button>
     </div>
-    <div class="extrashareopt w-full h-full flex flex-col items-center py-3 px-7 border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
-        <p class="self-start text-lg"><i class="fa-solid fa-user-group text-accent_primary"></i>&nbsp; Sharing Options</p>
+    <div class="extrashareopt w-full h-full flex flex-col py-3 px-7 border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
+        <p class="text-lg"><i class="fa-solid fa-user-group text-accent_primary"></i>&nbsp; Sharing Options</p>
         <div class="urlinputbar w-full flex justify-between items-center py-2 px-3 my-3 bg-bg_primary rounded-full overflow-hidden">
             <input id="pageurlinput" class="w-[85%] bg-bg_primary caret-accent_primary text-accent_four font-[300] outline-none" type="text" value="https://neosubhamoy.dev" readonly>
             <button class="urlcopybtn px-3 border-l-[1px] border-accent_secondary_transparent" title="Copy link"><i class="fa-regular fa-copy"></i></button>
+        </div>
+        <div class="socialshare w-full grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-3 gap-y-3 justify-items-center p-4 my-3 bg-bg_primary rounded-lg">
+            <botton class="shareitems w-12 h-12 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer"><i class="fa-brands fa-facebook text-accent_primary"></i></botton>
+            <botton class="shareitems w-12 h-12 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer"><i class="fa-brands fa-instagram text-accent_primary"></i></botton>
+            <botton class="shareitems w-12 h-12 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer"><i class="fa-brands fa-x-twitter text-accent_primary"></i></botton>
+            <botton class="shareitems w-12 h-12 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer"><i class="fa-brands fa-whatsapp text-accent_primary"></i></botton>
+            <botton class="shareitems w-12 h-12 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer"><i class="fa-brands fa-facebook-messenger text-accent_primary"></i></botton>
+            <botton class="shareitems w-12 h-12 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer"><i class="fa-brands fa-telegram text-accent_primary"></i></botton>
         </div>
     </div>
 </div>
