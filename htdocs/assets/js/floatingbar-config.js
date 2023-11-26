@@ -331,3 +331,23 @@ shareBtn.addEventListener("click", function () {
 shareCloseBtn.addEventListener("click", function () {
     close_share();
 });
+
+function call_webshare_api() {
+    if(navigator.share) {
+        navigator.share({
+            title: document.getElementsByTagName("title")[0].innerHTML,
+            text: 'Check-out this awesome website:',
+            url: document.location.href
+        }).then(() => {
+            window.alert("Thanks for sharing!");
+        }).catch(console.error);
+    }
+    else {
+        if (window.location.protocol !== "https:") {
+            window.alert("Sorry, webShareAPI is not accessable as your connection with the server is not encrypted with https protocol");
+        }
+        else{
+            window.alert("Sorry, webShareAPI is not supported by your browser");
+        }
+    }
+}
