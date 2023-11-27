@@ -100,7 +100,7 @@
         </div>
     </div>
 </div>
-<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto h-[45vh] md:h-[60vh] py-6 fixed inset-x-0 top-[20vh] z-40 justify-between items-center bg-bg_secondary rounded-xl hidden">
+<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 top-[20vh] z-40 justify-between items-center bg-bg_secondary rounded-xl hidden">
     <div class="shareviaqr w-fit h-full flex flex-col items-center py-3 px-7">
         <p class="self-start text-xl">Scan to Share</p>
         <div class="bg-bg_primary p-5 rounded-lg my-3">
@@ -122,6 +122,10 @@
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Post on facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href))"><i class="fa-brands fa-facebook text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Tweet on twitter" onclick="window.open('https://twitter.com/intent/tweet?text=' + 'Check-out%20this%20awesome%20website:%0A' + '&url=' + encodeURIComponent(window.location.href))"><i class="fa-brands fa-x-twitter text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="More sharing options" onclick="call_webshare_api()"><i class="fa-solid fa-ellipsis text-accent_primary"></i></botton>
+        </div>
+        <!-- <p class="text-xs my-3">EMBED THIS PAGE</p> -->
+        <div class="embedpagecode w-full bg-bg_primary p-4 rounded-lg">
+            <pre class="text-accent_four text-xs whitespace-pre-wrap"><code>&lt;iframe&#13;&#10;src="https://localhost/neosubhamoy/htdocs/projects"&#13;&#10;height="200"&#13;&#10;width="300"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
         </div>
     </div>
 </div>
