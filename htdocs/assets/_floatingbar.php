@@ -100,7 +100,7 @@
         </div>
     </div>
 </div>
-<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 top-[20vh] z-40 justify-between items-center bg-bg_secondary rounded-xl hidden">
+<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-40 justify-between items-center bg-bg_secondary rounded-xl hidden">
     <div class="shareviaqr w-fit h-full flex flex-col items-center py-3 px-7">
         <p class="self-start text-xl">Scan to Share</p>
         <div class="bg-bg_primary p-5 rounded-lg my-3">
@@ -116,14 +116,15 @@
             <input id="pageurlinput" class="w-[85%] bg-bg_primary caret-accent_primary text-accent_four font-[300] outline-none" type="text" value="https://neosubhamoy.dev" readonly>
             <button class="urlcopybtn px-3 border-l-[1px] border-accent_secondary_transparent" title="Copy link"><i class="fa-regular fa-copy"></i></button>
         </div>
-        <div class="socialshare w-full grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-3 gap-y-3 justify-items-center p-4 my-3 bg-bg_primary rounded-lg">
+        <p class="text-xs my-3 text-accent_three">SHARE ON</p>
+        <div class="socialshare w-full grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-3 gap-y-3 justify-items-center p-4 mb-2 bg-bg_primary rounded-lg">
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Share on whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=&text=' + 'Check-out%20this%20awesome%20website:%0A' + encodeURIComponent(window.location.href))"><i class="fa-brands fa-whatsapp text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Share on telegram" onclick="window.open('https://t.me/share/url?url=' + encodeURIComponent(window.location.href) + '&text=Check-out%20this%20awesome%20website')"><i class="fa-brands fa-telegram text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Post on facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href))"><i class="fa-brands fa-facebook text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Tweet on twitter" onclick="window.open('https://twitter.com/intent/tweet?text=' + 'Check-out%20this%20awesome%20website:%0A' + '&url=' + encodeURIComponent(window.location.href))"><i class="fa-brands fa-x-twitter text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="More sharing options" onclick="call_webshare_api()"><i class="fa-solid fa-ellipsis text-accent_primary"></i></botton>
         </div>
-        <!-- <p class="text-xs my-3">EMBED THIS PAGE</p> -->
+        <p class="text-xs my-3 text-accent_three">EMBED THIS PAGE</p>
         <div class="embedpagecode w-full bg-bg_primary p-4 rounded-lg">
             <pre class="text-accent_four text-xs whitespace-pre-wrap"><code>&lt;iframe&#13;&#10;src="https://localhost/neosubhamoy/htdocs/projects"&#13;&#10;height="200"&#13;&#10;width="300"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
         </div>

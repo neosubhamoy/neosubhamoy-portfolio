@@ -611,6 +611,14 @@ video {
   top: 4.7rem;
 }
 
+.bottom-\[10vh\] {
+  bottom: 10vh;
+}
+
+.bottom-\[20vh\] {
+  bottom: 20vh;
+}
+
 .z-10 {
   z-index: 10;
 }
