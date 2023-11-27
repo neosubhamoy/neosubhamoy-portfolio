@@ -354,3 +354,16 @@ function call_webshare_api() {
         }
     }
 }
+
+function copy_to_clipboard(textContent, copyContext) {
+    if(navigator.clipboard) {
+        navigator.clipboard.writeText(textContent).then(function() {
+            window.alert(copyContext + "Copied to Clipboard");
+        }, function() {
+            window.alert("Failed to Copy the" + copyContext + "!");
+        })
+    }
+    else {
+        window.alert("Sorry, webClipboardAPI is not supported by your browser");
+    }
+}

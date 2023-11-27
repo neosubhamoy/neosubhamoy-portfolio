@@ -114,7 +114,7 @@
         <p class="text-lg"><i class="fa-solid fa-user-group text-accent_primary"></i>&nbsp; Sharing Options</p>
         <div class="urlinputbar w-full flex justify-between items-center py-2 px-3 my-3 bg-bg_primary rounded-full overflow-hidden">
             <input id="pageurlinput" class="w-[85%] bg-bg_primary caret-accent_primary text-accent_four font-[300] outline-none" type="text" value="https://neosubhamoy.dev" readonly>
-            <button class="urlcopybtn px-3 border-l-[1px] border-accent_secondary_transparent" title="Copy link"><i class="fa-regular fa-copy"></i></button>
+            <button class="urlcopybtn px-3 border-l-[1px] border-accent_secondary_transparent" title="Copy link" onclick="copy_to_clipboard(document.location.href, 'Link')"><i class="fa-regular fa-copy"></i></button>
         </div>
         <p class="text-xs my-3 text-accent_three">SHARE ON</p>
         <div class="socialshare w-full grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-3 gap-y-3 justify-items-center p-4 mb-2 bg-bg_primary rounded-lg">
