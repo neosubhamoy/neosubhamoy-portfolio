@@ -203,13 +203,11 @@ background: #38BDF8;
 
 @keyframes shareWindowShow {
     from {
-        width: 25vw;
-        height: 30vh;
+        bottom: -100vh;
         opacity: 0;
     }
     to {
-        width: 50vw;
-        height: 60vh;
+        bottom: 20vh;
         opacity: 1;
     }
 }
@@ -231,14 +229,12 @@ background: #38BDF8;
 
     @keyframes shareWindowShow {
         from {
-            width: 25vw;
-            height: 30vh;
-            opacity: 0;
-        }
-        to {
-            width: 90vw;
-            height: 45vh;
-            opacity: 1;
-        }
+        bottom: -100vh;
+        opacity: 0;
+    }
+    to {
+        bottom: 20vh;
+        opacity: 1;
+    }
     }
 }

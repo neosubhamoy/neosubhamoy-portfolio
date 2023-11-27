@@ -100,7 +100,7 @@
         </div>
     </div>
 </div>
-<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-40 justify-between items-center bg-bg_secondary rounded-xl hidden">
+<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-40 justify-between bg-bg_secondary rounded-xl hidden">
     <div class="shareviaqr w-fit h-full flex flex-col items-center py-3 px-7">
         <p class="self-start text-xl">Scan to Share</p>
         <div class="bg-bg_primary p-5 rounded-lg my-3">
