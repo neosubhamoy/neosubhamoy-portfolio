@@ -130,6 +130,7 @@ function perform_search(searchInput, searchDef, searchRes) {
     });
 }
 
+// function to display default search results
 function fallback_search(searchDef, searchRes) {
     searchDef.classList.remove("hidden");
     searchDef.classList.add("flex");
@@ -137,6 +138,7 @@ function fallback_search(searchDef, searchRes) {
     searchRes.classList.add("hidden");
 }
 
+// function to inject proper search results with category based styling
 function inject_search_results (results, keyword) {
     searchRes.innerHTML = `<p class="text-sm text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS for '${keyword.toUpperCase()}'</p>`;
 
@@ -278,11 +280,13 @@ function inject_search_results (results, keyword) {
         });
     }
 
+    //add an extra bottom spacer item for better appearance
     const bottomSpacer = document.createElement("div");
     bottomSpacer.className = "bottomspacer w-full h-[10px]";
     searchRes.appendChild(bottomSpacer);
 }
 
+// function to display NO RESULTS FOUND as result
 function inject_no_results(results, keyword) {
     searchRes.innerHTML = `
     <p class="text-sm text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS for '${keyword.toUpperCase()}'</p>
@@ -304,6 +308,7 @@ searchInput.addEventListener('input', function() {
 
 //---share window config starts here
 
+// function to open the share window
 function activate_share() {
     //create qrcode of the current page link
     qrCode.src = "https://api.qrserver.com/v1/create-qr-code/?data=" + window.location.href + "&color=38BDF8&bgcolor=0F172A";
@@ -319,6 +324,7 @@ function activate_share() {
 
 }
 
+// function to close the share window
 function close_share() {
     windowWrapper.classList.remove("flotingbar-window-wrapper-show");
     windowWrapper.classList.add("hidden");
@@ -335,6 +341,7 @@ shareCloseBtn.addEventListener("click", function () {
     close_share();
 });
 
+// function to share with webShareAPI (Native OS Share)
 function call_webshare_api() {
     if(navigator.share) {
         navigator.share({
@@ -355,6 +362,7 @@ function call_webshare_api() {
     }
 }
 
+// function to copy text based content to device clipboard
 function copy_to_clipboard(textContent, copyContext) {
     if(navigator.clipboard) {
         navigator.clipboard.writeText(textContent).then(function() {
