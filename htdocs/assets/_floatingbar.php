@@ -126,7 +126,7 @@
         </div>
         <p class="text-xs my-3 text-accent_three">EMBED THIS PAGE</p>
         <div class="embedpagecode w-full bg-bg_primary p-4 rounded-lg">
-            <pre class="text-accent_four text-xs whitespace-pre-wrap"><code>&lt;iframe&#13;&#10;src="https://localhost/neosubhamoy/htdocs/projects"&#13;&#10;height="200"&#13;&#10;width="300"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
+            <pre class="text-accent_four text-xs whitespace-pre-wrap"><code id="embedcodetag">&lt;iframe&#13;&#10;src="https://neosubhamoy.dev"&#13;&#10;height="200"&#13;&#10;width="300"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
         </div>
     </div>
 </div>

@@ -14,6 +14,7 @@ const searchDef = document.getElementById("defresults");
 const searchRes = document.getElementById("searchresults");
 const qrCode = document.getElementById("pageqrcode");
 const linkInput = document.getElementById("pageurlinput");
+const embedCode = document.getElementById("embedcodetag");
 const basePath = document.getElementById('phpHostBasePath').dataset.basePath;
 let lastScrollTop = 0;
 
@@ -308,6 +309,8 @@ function activate_share() {
     qrCode.src = "https://api.qrserver.com/v1/create-qr-code/?data=" + window.location.href + "&color=38BDF8&bgcolor=0F172A";
     //change pageUrlInput value to current page
     linkInput.value = window.location.href;
+    //genrate embed code for current page link
+    embedCode.innerHTML = '&lt;iframe&#13;&#10;src="' + window.location.href + '"&#13;&#10;height="200"&#13;&#10;width="300"&#13;&#10;title="embed-neosubhamoy-portfolio"&gt;&lt;/iframe&gt;';
     windowWrapper.classList.remove("hidden");
     windowWrapper.classList.add("flotingbar-window-wrapper-show");
     shareBtn.classList.add("hidden");
