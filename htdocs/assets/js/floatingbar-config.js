@@ -90,6 +90,7 @@ closeBtn.addEventListener("click", function () {
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
         close_search();
+        close_share();
     }
 });
 
@@ -340,6 +341,13 @@ shareBtn.addEventListener("click", function () {
 
 shareCloseBtn.addEventListener("click", function () {
     close_share();
+});
+
+// when ALT + L shortcut key is pressed
+document.addEventListener("keydown", function(event) {
+    if (event.altKey && event.key === "l") {
+        activate_share();
+    }
 });
 
 // function to share with webShareAPI (Native OS Share)
