@@ -16,7 +16,7 @@ const qrCode = document.getElementById("pageqrcode");
 const linkInput = document.getElementById("pageurlinput");
 const embedCode = document.getElementById("embedcodetag");
 const basePath = document.getElementById('phpHostBasePath').dataset.basePath;
-let lastScrollTop = 0;
+let lastScrollTop = 0, isSearchActive = false, isShareActive = false;
 
 window.addEventListener("scroll", function () {
     const st = window.pageYOffset || document.documentElement.scrollTop;
@@ -38,6 +38,7 @@ window.addEventListener("scroll", function () {
 
 // function to open floating search window
 function activate_search() {
+    isSearchActive = true;
     floatingBar.classList.remove("floatingbar-click-slide-down");
     floatingBar.classList.add("floatingbar-click-slide-up");
     searchBar.classList.remove("searchbar-click-decrease-width");
@@ -67,17 +68,30 @@ function close_search() {
     windowWrapper.classList.remove("flotingbar-window-wrapper-show");
     windowWrapper.classList.add("hidden");
     searchWin.classList.remove("floatingsearch-window-show");
+    isSearchActive = false;
 }
 
 // when the search icon is clicked
 searchBar.addEventListener("click", function () {
-    activate_search();
+    if(!isShareActive) {
+        activate_search();
+    }
+    else {
+        close_share();
+        activate_search();
+    }
 });
 
 // when ALT + K shortcut key is pressed
 document.addEventListener("keydown", function(event) {
     if (event.altKey && event.key === "k") {
-        activate_search();
+        if(!isShareActive) {
+            activate_search();
+        }
+        else {
+            close_share();
+            activate_search();
+        }
     }
 });
 
@@ -89,8 +103,12 @@ closeBtn.addEventListener("click", function () {
 // when ESC key is pressed
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
-        close_search();
-        close_share();
+        if(isSearchActive) {
+            close_search();
+        }
+        else if(isShareActive) {
+            close_share();
+        }
     }
 });
 
@@ -311,6 +329,7 @@ searchInput.addEventListener('input', function() {
 
 // function to open the share window
 function activate_share() {
+    isShareActive = true;
     //create qrcode of the current page link
     qrCode.src = "https://api.qrserver.com/v1/create-qr-code/?data=" + window.location.href + "&color=38BDF8&bgcolor=0F172A";
     //change pageUrlInput value to current page
@@ -333,10 +352,17 @@ function close_share() {
     shareBtn.classList.remove("hidden");
     shareWin.classList.remove("floatingshare-window-show");
     document.body.classList.remove("overflow-hidden");
+    isShareActive = false;
 }
 
 shareBtn.addEventListener("click", function () {
-    activate_share();
+    if(!isSearchActive) {
+        activate_share();
+    }
+    else {
+        close_search();
+        activate_share();
+    }
 });
 
 shareCloseBtn.addEventListener("click", function () {
@@ -346,7 +372,13 @@ shareCloseBtn.addEventListener("click", function () {
 // when ALT + L shortcut key is pressed
 document.addEventListener("keydown", function(event) {
     if (event.altKey && event.key === "l") {
+        if(!isSearchActive) {
         activate_share();
+        }
+        else {
+            close_search();
+            activate_share();
+        }
     }
 });
 
