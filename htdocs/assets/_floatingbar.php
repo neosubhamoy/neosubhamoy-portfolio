@@ -126,7 +126,7 @@
         </div>
         <p class="text-xs my-3 text-accent_three">EMBED THIS PAGE</p>
         <div class="embedpagecode w-full bg-bg_primary p-4 rounded-lg relative">
-            <button class="copyembedcode absolute top-3 right-3 px-3 py-2 bg-bg_secondary rounded-lg" title="Copy code snippet"><i class="fa-regular fa-copy"></i></button>
+            <button class="copyembedcode absolute top-3 right-3 px-3 py-2 bg-bg_secondary rounded-lg hover:bg-bg_third transition transform duration-500" title="Copy code snippet" onclick="copy_to_clipboard(document.getElementById('embedcodetag').innerHTML, 'Code Snippet')"><i class="fa-regular fa-copy"></i></button>
             <pre class="text-accent_four text-xs whitespace-pre-wrap"><code id="embedcodetag">&lt;iframe&#13;&#10;src="https://neosubhamoy.dev"&#13;&#10;height="200"&#13;&#10;width="300"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
         </div>
     </div>

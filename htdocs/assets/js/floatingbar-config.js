@@ -321,7 +321,7 @@ function activate_share() {
     shareBtn.classList.add("hidden");
     shareCloseBtn.classList.remove("hidden");
     shareWin.classList.add("floatingshare-window-show");
-
+    document.body.classList.add("overflow-hidden");
 }
 
 // function to close the share window
@@ -331,6 +331,7 @@ function close_share() {
     shareCloseBtn.classList.add("hidden");
     shareBtn.classList.remove("hidden");
     shareWin.classList.remove("floatingshare-window-show");
+    document.body.classList.remove("overflow-hidden");
 }
 
 shareBtn.addEventListener("click", function () {
@@ -364,6 +365,9 @@ function call_webshare_api() {
 
 // function to copy text based content to device clipboard
 function copy_to_clipboard(textContent, copyContext) {
+    if(copyContext === 'Code Snippet') {
+        textContent = textContent.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    }
     if(navigator.clipboard) {
         navigator.clipboard.writeText(textContent).then(function() {
             window.alert(copyContext + " Copied to Clipboard");
