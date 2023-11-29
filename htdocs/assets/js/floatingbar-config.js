@@ -419,3 +419,28 @@ function copy_to_clipboard(textContent, copyContext) {
         window.alert("Sorry, webClipboardAPI is not supported by your browser");
     }
 }
+
+// function to download image from any url
+function download_image(imageURL, imageName, downloadType = "image") {
+    if(downloadType === "qr") {
+        imageName = imageName.split('/');
+        imageName = imageName[imageName.length - 1];
+        imageName = "qrcode_" + imageName + "_page.png";
+    }
+
+    fetch(imageURL)
+    .then(response => response.blob())
+    .then(blob => {
+      var anchor = document.createElement('a');
+      var blobUrl = window.URL.createObjectURL(blob);
+
+      anchor.href = blobUrl;
+      anchor.download = imageName;
+
+      document.body.appendChild(anchor);
+      anchor.click();
+      document.body.removeChild(anchor);
+      window.URL.revokeObjectURL(blobUrl);
+    })
+    .catch(error => console.error('Error downloading image:', error));
+}

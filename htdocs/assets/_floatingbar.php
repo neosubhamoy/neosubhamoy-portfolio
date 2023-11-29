@@ -108,7 +108,7 @@
                 <img id="pageqrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&color=38BDF8&bgcolor=0F172A" alt="qrcode">
             </div>
         </div>
-        <button class="w-full px-4 py-2 rounded-full border-[2px] border-accent_primary text-accent_primary my-2 hover:shadow-lg hover:rounded-lg hover:shadow-accent_primary_transparent transition transform duration-500"><i class="fa-solid fa-download"></i>&nbsp; Download QR</button>
+        <button class="w-full px-4 py-2 rounded-full border-[2px] border-accent_primary text-accent_primary my-2 hover:shadow-lg hover:rounded-lg hover:shadow-accent_primary_transparent transition transform duration-500" title="Download the page qr code" onclick="download_image(document.getElementById('pageqrcode').src, document.location.href, 'qr')"><i class="fa-solid fa-download"></i>&nbsp; Download QR</button>
         <p class="text-xs text-accent_three my-2">* For better experiance please turn on auto weblink opening feature on your scanner app</p>
     </div>
     <div class="extrashareopt w-full h-full flex flex-col py-3 px-7 border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
