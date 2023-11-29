@@ -161,6 +161,7 @@ function fallback_search(searchDef, searchRes) {
 function inject_search_results (results, keyword) {
     searchRes.innerHTML = `<p class="text-sm text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS for '${keyword.toUpperCase()}'</p>`;
 
+    // search result category: projects
     if(typeof(results.project) !== 'undefined') {
         let projectDivTitle = document.createElement("p");
         projectDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
@@ -190,6 +191,7 @@ function inject_search_results (results, keyword) {
         });
     }
 
+    // search result category: socials
     if(typeof(results.social) !== 'undefined') {
         let socialDivTitle = document.createElement("p");
         socialDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
@@ -216,6 +218,7 @@ function inject_search_results (results, keyword) {
         });
     }
 
+    // search result category: site pages
     if(typeof(results.page) !== 'undefined') {
         let pageDivTitle = document.createElement("p");
         pageDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
@@ -242,6 +245,7 @@ function inject_search_results (results, keyword) {
         });
     }
 
+    // search result category: quick actions
     if(typeof(results.action) !== 'undefined') {
         let actionDivTitle = document.createElement("p");
         actionDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
@@ -268,6 +272,7 @@ function inject_search_results (results, keyword) {
         });
     }
 
+    // search result category: my profiles
     if(typeof(results.profile) !== 'undefined') {
         let profileDivTitle = document.createElement("p");
         profileDivTitle.className = "text-xs text-accent_three mt-3 mb-2 mx-1";
@@ -315,6 +320,7 @@ function inject_no_results(results, keyword) {
     `;
 }
 
+// when any charecter is inputed into the search bar
 searchInput.addEventListener('input', function() {
     if (searchInput.value != "") {
         perform_search(searchInput, searchDef, searchRes);
@@ -355,6 +361,7 @@ function close_share() {
     isShareActive = false;
 }
 
+// when Share Button is clicked
 shareBtn.addEventListener("click", function () {
     if(!isSearchActive) {
         activate_share();
@@ -365,6 +372,7 @@ shareBtn.addEventListener("click", function () {
     }
 });
 
+// when Close Share button is pressed
 shareCloseBtn.addEventListener("click", function () {
     close_share();
 });
