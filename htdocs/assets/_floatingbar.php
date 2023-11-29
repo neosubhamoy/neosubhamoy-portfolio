@@ -101,14 +101,15 @@
     </div>
 </div>
 <div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-40 justify-between bg-bg_secondary rounded-xl hidden">
-    <div class="shareviaqr w-fit h-full flex flex-col items-center py-3 px-7">
+    <div class="shareviaqr w-[40%] h-full flex flex-col py-3 px-7">
         <p class="self-start text-xl">Scan to Share</p>
         <div class="bg-bg_primary p-5 rounded-lg my-3">
             <div class="qrwrapper w-[150px] h-[150px]">
                 <img id="pageqrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&color=38BDF8&bgcolor=0F172A" alt="qrcode">
             </div>
         </div>
-        <button class="w-[97%] px-4 py-2 rounded-lg border-[2px] border-accent_primary text-accent_primary my-2"><i class="fa-solid fa-download"></i>&nbsp; Download QR</button>
+        <button class="w-full px-4 py-2 rounded-full border-[2px] border-accent_primary text-accent_primary my-2 hover:shadow-lg hover:rounded-lg hover:shadow-accent_primary_transparent transition transform duration-500"><i class="fa-solid fa-download"></i>&nbsp; Download QR</button>
+        <p class="text-xs text-accent_three my-2">* For better experiance please turn on auto weblink opening feature on your scanner app</p>
     </div>
     <div class="extrashareopt w-full h-full flex flex-col py-3 px-7 border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
         <p class="text-lg"><i class="fa-solid fa-user-group text-accent_primary"></i>&nbsp; Sharing Options</p>
