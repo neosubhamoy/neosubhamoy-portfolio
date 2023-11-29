@@ -341,7 +341,7 @@ function activate_share() {
     //change pageUrlInput value to current page
     linkInput.value = window.location.href;
     //genrate embed code for current page link
-    embedCode.innerHTML = '&lt;iframe&#13;&#10;src="' + window.location.href + '"&#13;&#10;height="200"&#13;&#10;width="300"&#13;&#10;title="embed-neosubhamoy-portfolio"&gt;&lt;/iframe&gt;';
+    embedCode.innerHTML = '&lt;iframe&#13;&#10;src="' + window.location.href + '"&#13;&#10;height="720"&#13;&#10;width="1280"&#13;&#10;title="embed-neosubhamoy-portfolio"&gt;&lt;/iframe&gt;';
     windowWrapper.classList.remove("hidden");
     windowWrapper.classList.add("flotingbar-window-wrapper-show");
     shareBtn.classList.add("hidden");
