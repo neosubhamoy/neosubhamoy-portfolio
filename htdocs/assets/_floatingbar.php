@@ -100,33 +100,33 @@
         </div>
     </div>
 </div>
-<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-40 justify-between bg-bg_secondary rounded-xl hidden">
-    <div class="shareviaqr w-[40%] h-full flex flex-col py-3 px-7">
-        <p class="self-start text-xl">Scan to Share</p>
-        <div class="bg-bg_primary p-5 rounded-lg my-3">
-            <div class="qrwrapper w-[150px] h-[150px]">
-                <img id="pageqrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&color=38BDF8&bgcolor=0F172A" alt="qrcode">
+<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-40 justify-between flex-col md:flex-row bg-bg_secondary rounded-xl hidden">
+    <div class="shareviaqr w-full md:w-[40%] h-full flex flex-col py-3 px-7">
+        <p class="self-start text-xl hidden md:block">Scan to Share</p>
+        <div class="bg-bg_primary p-10 md:p-5 rounded-lg my-3">
+            <div class="qrwrapper aspect-square w-full md:w-[150px]">
+                <img class="w-full" id="pageqrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&color=38BDF8&bgcolor=0F172A" alt="qrcode">
             </div>
         </div>
         <button class="w-full px-4 py-2 rounded-full border-[2px] border-accent_primary text-accent_primary my-2 hover:shadow-lg hover:rounded-lg hover:shadow-accent_primary_transparent transition transform duration-500" title="Download the page qr code" onclick="download_image(document.getElementById('pageqrcode').src, document.location.href, 'qr')"><i class="fa-solid fa-download"></i>&nbsp; Download QR</button>
-        <p class="text-xs text-accent_three my-2">* For better experiance please turn on auto weblink opening feature on your scanner app</p>
+        <p class="text-xs text-accent_three my-2 hidden md:block">* For better experiance please turn on auto weblink opening feature on your scanner app</p>
     </div>
-    <div class="extrashareopt w-full h-full flex flex-col py-3 px-7 border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
-        <p class="text-lg"><i class="fa-solid fa-user-group text-accent_primary"></i>&nbsp; Sharing Options</p>
+    <div class="extrashareopt w-full h-full flex flex-col py-3 px-7 border-t-[1px] md:border-t-[0px] md:border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
+        <p class="text-lg hidden md:block"><i class="fa-solid fa-user-group text-accent_primary"></i>&nbsp; Sharing Options</p>
         <div class="urlinputbar w-full flex justify-between items-center py-2 px-3 my-3 bg-bg_primary rounded-full overflow-hidden">
             <input id="pageurlinput" class="w-[85%] bg-bg_primary caret-accent_primary text-accent_four font-[300] outline-none" type="text" value="https://neosubhamoy.dev" readonly>
             <button class="urlcopybtn px-3 border-l-[1px] border-accent_secondary_transparent" title="Copy link" onclick="copy_to_clipboard(document.location.href, 'Link')"><i class="fa-regular fa-copy"></i></button>
         </div>
-        <p class="text-xs my-3 text-accent_three">SHARE ON</p>
-        <div class="socialshare w-full grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-3 gap-y-3 justify-items-center p-4 mb-2 bg-bg_primary rounded-lg">
+        <p class="text-xs my-3 text-accent_three hidden md:block">SHARE ON</p>
+        <div class="socialshare w-full grid grid-cols-5 lg:grid-cols-4 xl:grid-cols-6 gap-x-3 gap-y-3 justify-items-center p-4 mb-2 bg-bg_primary rounded-lg">
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Share on whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=&text=' + 'Check-out%20this%20awesome%20website:%0A' + encodeURIComponent(window.location.href))"><i class="fa-brands fa-whatsapp text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Share on telegram" onclick="window.open('https://t.me/share/url?url=' + encodeURIComponent(window.location.href) + '&text=Check-out%20this%20awesome%20website')"><i class="fa-brands fa-telegram text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Post on facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href))"><i class="fa-brands fa-facebook text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="Tweet on twitter" onclick="window.open('https://twitter.com/intent/tweet?text=' + 'Check-out%20this%20awesome%20website:%0A' + '&url=' + encodeURIComponent(window.location.href))"><i class="fa-brands fa-x-twitter text-accent_primary"></i></botton>
             <botton class="shareitems w-10 h-10 flex justify-center items-center bg-bg_secondary rounded-full cursor-pointer hover:bg-bg_third transition transform duration-500" title="More sharing options" onclick="call_webshare_api()"><i class="fa-solid fa-ellipsis text-accent_primary"></i></botton>
         </div>
-        <p class="text-xs my-3 text-accent_three">EMBED THIS PAGE</p>
-        <div class="group embedpagecode w-full bg-bg_primary p-4 rounded-lg relative">
+        <p class="text-xs my-3 text-accent_three hidden md:block">EMBED THIS PAGE</p>
+        <div class="group embedpagecode w-full bg-bg_primary p-4 rounded-lg relative hidden md:block">
             <button class="copyembedcode absolute top-3 right-3 px-3 py-2 bg-bg_secondary rounded-lg hover:bg-bg_third transition transform duration-500 hidden group-hover:block" title="Copy code snippet" onclick="copy_to_clipboard(document.getElementById('embedcodetag').innerHTML, 'Code Snippet')"><i class="fa-regular fa-copy"></i></button>
             <pre class="text-accent_four text-xs whitespace-pre-wrap"><code id="embedcodetag">&lt;iframe&#13;&#10;src="https://neosubhamoy.dev"&#13;&#10;height="720"&#13;&#10;width="1280"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
         </div>
