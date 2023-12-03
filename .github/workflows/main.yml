@@ -2,8 +2,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'neosubhamoy.sql'
     
 name: 🚀 Deploy website on server
 jobs:
@@ -19,7 +17,7 @@ jobs:
       run: |
         mysql -h ${{ secrets.DB_HOST }} --port 3306 -u${{ secrets.DB_USERNAME }} -p${{ secrets.DB_PASSWORD }} -D${{ secrets.DB_NAME }} -e "source drop_script.sql"
         mysql -h ${{ secrets.DB_HOST }} --port 3306 -u${{ secrets.DB_USERNAME }} -p${{ secrets.DB_PASSWORD }} -D${{ secrets.DB_NAME }} -e "source neosubhamoy.sql"
-    
+      
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
