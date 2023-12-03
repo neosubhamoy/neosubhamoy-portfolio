@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-        - main
+      - main
 name: 🚀 Deploy website on server
 jobs:
   web-deploy:
@@ -10,6 +10,9 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
+    
+    - name: 📦 Update Database
+      run: mysql -h ${{ secrets.DB_HOST }} --port 3306 -u${{ secrets.DB_USERNAME }} -p${{ secrets.DB_PASSWORD }} -e "SHOW DATABASES"
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
