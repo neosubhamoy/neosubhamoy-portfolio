@@ -1,5 +1,5 @@
 <?php
-require 'connection.php';
+require '../../connection.php';
 require 'query_functions.php';
 
 function input_filter($data){
