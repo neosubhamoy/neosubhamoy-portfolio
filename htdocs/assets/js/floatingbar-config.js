@@ -12,6 +12,7 @@ const searchWin = document.getElementById("searchwindow");
 const shareWin = document.getElementById("sharewindow");
 const searchDef = document.getElementById("defresults");
 const searchRes = document.getElementById("searchresults");
+const spinner = document.getElementById("spinnercont");
 const qrCode = document.getElementById("pageqrcode");
 const linkInput = document.getElementById("pageurlinput");
 const embedCode = document.getElementById("embedcodetag");
@@ -118,6 +119,8 @@ function perform_search(searchInput, searchDef, searchRes) {
     searchDef.classList.add("hidden");
     searchRes.classList.remove("hidden");
     searchRes.classList.add("flex");
+    spinner.classList.remove("hidden");
+    spinner.classList.add("flex");
     let searchString = searchInput.value;
 
     $.ajax({
@@ -144,7 +147,8 @@ function perform_search(searchInput, searchDef, searchRes) {
             console.error('error:', error);
         },
         complete: function() {
-            console.log("completed");
+            spinner.classList.remove("flex");
+            spinner.classList.add("hidden");
         }
     });
 }
