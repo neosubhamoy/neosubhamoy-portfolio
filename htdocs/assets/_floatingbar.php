@@ -95,7 +95,8 @@
         <p class="self-start text-xl hidden md:block">Scan to Share</p>
         <div class="bg-bg_primary p-10 md:p-5 rounded-lg my-3">
             <div class="qrwrapper aspect-square w-full md:w-[150px]">
-                <img class="w-full" id="pageqrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&color=38BDF8&bgcolor=0F172A" alt="qrcode">
+                <img class="w-full hidden" id="pageqrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&color=38BDF8&bgcolor=0F172A" alt="qrcode">
+                <div id="qrspinnercont" class="qrspinnercont w-full h-full flex justify-center items-center"><div class="spinner border-[3px] border-accent_secondary_transparent border-t-[3px] border-t-accent_primary rounded-[50%] h-[30px] w-[30px] animate-spin"></div></div>
             </div>
         </div>
         <button class="w-full px-4 py-2 rounded-full border-[2px] border-accent_primary text-accent_primary my-2 hover:shadow-lg hover:rounded-lg hover:shadow-accent_primary_transparent transition transform duration-500" title="Download the page qr code" onclick="download_image(document.getElementById('pageqrcode').src, document.location.href, 'qr')"><i class="fa-solid fa-download"></i>&nbsp; Download QR</button>

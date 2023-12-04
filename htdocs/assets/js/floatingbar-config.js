@@ -13,6 +13,7 @@ const shareWin = document.getElementById("sharewindow");
 const searchDef = document.getElementById("defresults");
 const searchRes = document.getElementById("searchresults");
 const spinner = document.getElementById("spinnercont");
+const spinnerQr = document.getElementById("qrspinnercont");
 const qrCode = document.getElementById("pageqrcode");
 const linkInput = document.getElementById("pageurlinput");
 const embedCode = document.getElementById("embedcodetag");
@@ -352,6 +353,7 @@ function activate_share() {
     shareCloseBtn.classList.remove("hidden");
     shareWin.classList.add("floatingshare-window-show");
     document.body.classList.add("overflow-hidden");
+    show_qr_loading_delay();  //show qrcode loading delay spinner
 }
 
 // function to close the share window
@@ -393,6 +395,15 @@ document.addEventListener("keydown", function(event) {
         }
     }
 });
+
+// custom qr loading delay spinner
+function show_qr_loading_delay() {
+    setTimeout(() => {
+        spinnerQr.classList.remove("flex");
+        spinnerQr.classList.add("hidden");
+        qrCode.classList.remove("hidden");
+    }, 2000);
+}
 
 // function to share with webShareAPI (Native OS Share)
 function call_webshare_api() {
