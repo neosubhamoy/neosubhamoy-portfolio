@@ -84,20 +84,7 @@
         <div class="bottomspacer w-full h-[10px]"></div>
     </div>
     <div id="searchresults" class="searchresults w-full flex-col justify-start px-2 mt-1 hidden">
-        <p class="text-xs text-accent_three mt-3 mb-2 mx-1">SEARCH RESULTS</p>
-        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='#'">
-            <span class="flex items-center">
-                <span class="mx-1 px-[0.65rem] py-1 rounded border-[1px] border-accent_secondary_transparent">TITLE LETTER</span>
-                <span class="flex flex-col">
-                    <h6 class="mx-1">TITLE</h6>
-                    <p class="mx-1 text-xs text-accent_three">DESCRIPTION</p>
-                </span>
-            </span>
-            <span class="flex items-center mr-1">
-                <span class="px-[1rem] py-[0.05rem] mx-1 text-xs bg-accent_four text-bg_secondary rounded-full group-hover:hidden">#TAG</span>
-                <i class="fa-solid fa-chevron-right text-accent_three mx-2 hidden group-hover:block"></i>
-            </span>
-        </div>
+        <!-- Search Results will be displayed here by JS -->
     </div>
 </div>
 <div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-40 justify-between flex-col md:flex-row bg-bg_secondary rounded-xl hidden">
