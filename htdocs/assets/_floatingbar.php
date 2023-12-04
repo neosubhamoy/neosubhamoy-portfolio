@@ -48,7 +48,7 @@
             </span>
         </div>
         <p class="text-xs text-accent_three mt-3 mb-2 mx-1">QUICK ACTIONS</p>
-        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='mailto:hey@neosubhamoy.dev'">
+        <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='mailto:hey@neosubhamoy.com'">
             <span class="flex items-center">
                 <lord-icon class="mx-1" src="https://cdn.lordicon.com/xtnsvhie.json" target=".resultitem" trigger="hover" colors="primary:#38BDF8" style="width:25px"></lord-icon>
                 <p class="mx-1">Send Email</p>
@@ -119,7 +119,7 @@
         <p class="text-xs my-3 text-accent_three hidden md:block">EMBED THIS PAGE</p>
         <div class="group embedpagecode w-full bg-bg_primary p-4 rounded-lg relative hidden md:block">
             <button class="copyembedcode absolute top-3 right-3 px-3 py-2 bg-bg_secondary rounded-lg hover:bg-bg_third transition transform duration-500 hidden group-hover:block" title="Copy code snippet" onclick="copy_to_clipboard(document.getElementById('embedcodetag').innerHTML, 'Code Snippet')"><i class="fa-regular fa-copy"></i></button>
-            <pre class="text-accent_four text-xs whitespace-pre-wrap"><code id="embedcodetag">&lt;iframe&#13;&#10;src="https://neosubhamoy.dev"&#13;&#10;height="720"&#13;&#10;width="1280"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
+            <pre class="text-accent_four text-xs whitespace-pre-wrap"><code id="embedcodetag">&lt;iframe&#13;&#10;src="https://neosubhamoy.com"&#13;&#10;height="720"&#13;&#10;width="1280"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
         </div>
     </div>
 </div>

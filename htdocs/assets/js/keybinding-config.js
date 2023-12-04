@@ -19,7 +19,7 @@ document.addEventListener('keydown', function(event) {
         window.location.href = basePath + "/contact";
     }
     else if (pressedKeys['q'] && pressedKeys['e']) {
-        window.location.href = "mailto:hey@neosubhamoy.dev";
+        window.location.href = "mailto:hey@neosubhamoy.com";
     }
     else if (pressedKeys['q'] && pressedKeys['m']) {
         window.location.href = "#";

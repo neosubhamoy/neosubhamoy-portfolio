@@ -205,7 +205,7 @@ require 'core/query_functions.php';
             <div class="relative tagline mt-[10rem] mb-[12rem]">
                 <h3 class="text-2xl lg:text-4xl">On a mission to!</h3>
                 <h4 class="text-4xl lg:text-6xl mb-6 mt-1">make the <span class="text-accent_primary font-bold">web</span> more <span class="text-accent_primary font-bold">interesting</span>.</h4>
-                <h5 class="text-base lg:text-xl text-accent_three my-3">Wanna join the journey with me? &nbsp; <span class="lg:hidden"><br></span>email to: <a class="border-b-[2px] border-accent_primary_transparent hover:border-accent_primary transition transform duration-300 cursor-pointer" href="mailto:hey@neosubhamoy.dev">hey@neosubhamoy.dev</a></h5>
+                <h5 class="text-base lg:text-xl text-accent_three my-3">Wanna join the journey with me? &nbsp; <span class="lg:hidden"><br></span>email to: <a class="border-b-[2px] border-accent_primary_transparent hover:border-accent_primary transition transform duration-300 cursor-pointer" href="mailto:hey@neosubhamoy.com">hey@neosubhamoy.com</a></h5>
                 <div class="absolute w-[300px] top-[-2.5rem] left-2 lg:w-[330px] lg:top-[-3.7rem] lg:left-8">
                     <img src="./assets/images/endsec-bgpattern.svg" alt="patterns">
                 </div>
