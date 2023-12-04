@@ -114,7 +114,7 @@ document.addEventListener("keydown", function(event) {
 });
 
 //---controls search window results
-function perform_search(searchInput, searchDef, searchRes) {
+function perform_search() {
     searchDef.classList.remove("flex");
     searchDef.classList.add("hidden");
     searchRes.classList.remove("hidden");
@@ -154,7 +154,7 @@ function perform_search(searchInput, searchDef, searchRes) {
 }
 
 // function to display default search results
-function fallback_search(searchDef, searchRes) {
+function fallback_search() {
     searchDef.classList.remove("hidden");
     searchDef.classList.add("flex");
     searchRes.classList.remove("flex");
@@ -327,10 +327,10 @@ function inject_no_results(results, keyword) {
 // when any charecter is inputed into the search bar
 searchInput.addEventListener('input', function() {
     if (searchInput.value != "") {
-        perform_search(searchInput, searchDef, searchRes);
+        perform_search();
     }
     else {
-        fallback_search(searchDef, searchRes);
+        fallback_search();
     }
 });
 
