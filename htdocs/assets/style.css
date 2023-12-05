@@ -706,11 +706,6 @@ video {
   margin-bottom: 0.30rem;
 }
 
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1032,6 +1027,14 @@ video {
   width: 100vw;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
+.w-\[230px\] {
+  width: 230px;
+}
+
 .rotate-\[15deg\] {
   --tw-rotate: 15deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1164,12 +1167,12 @@ video {
   border-width: 2px;
 }
 
-.border-\[5px\] {
-  border-width: 5px;
-}
-
 .border-\[3px\] {
   border-width: 3px;
+}
+
+.border-\[5px\] {
+  border-width: 5px;
 }
 
 .border-b-\[2px\] {
@@ -1184,12 +1187,12 @@ video {
   border-top-width: 1px;
 }
 
-.border-t-\[5px\] {
-  border-top-width: 5px;
-}
-
 .border-t-\[3px\] {
   border-top-width: 3px;
+}
+
+.border-t-\[5px\] {
+  border-top-width: 5px;
 }
 
 .border-\[rgba\(255\2c _255\2c _255\2c _0\.15\)\] {
@@ -1232,6 +1235,15 @@ video {
 .border-t-accent_primary {
   --tw-border-opacity: 1;
   border-top-color: rgb(56 189 248 / var(--tw-border-opacity));
+}
+
+.border-b-accent_primary {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(56 189 248 / var(--tw-border-opacity));
+}
+
+.border-b-accent_secondary_transparent {
+  border-bottom-color: rgba(255, 255, 255, 0.30);
 }
 
 .bg-\[rgba\(0\2c _0\2c _0\2c _0\.4\)\] {
@@ -1329,11 +1341,6 @@ video {
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
-}
-
-.px-\[0\.65rem\] {
-  padding-left: 0.65rem;
-  padding-right: 0.65rem;
 }
 
 .px-\[0\.80rem\] {
@@ -1561,6 +1568,10 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.outline-accent_primary {
+  outline-color: #38BDF8;
 }
 
 .blur-2xl {
@@ -1889,6 +1900,10 @@ video {
     margin-top: 7rem;
   }
 
+  .lg\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -1927,6 +1942,14 @@ video {
 
   .lg\:w-\[350px\] {
     width: 350px;
+  }
+
+  .lg\:w-auto {
+    width: auto;
+  }
+
+  .lg\:w-\[40\%\] {
+    width: 40%;
   }
 
   .lg\:rotate-0 {
