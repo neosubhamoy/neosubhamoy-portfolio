@@ -87,7 +87,7 @@
         <!-- Search Results will be displayed here by JS -->
     </div>
     <div id="spinnercont" class="spinnercont w-full h-full absolute top-0 left-0 justify-center items-center bg-bg_secondary hidden">
-        <div class="spinner border-[3px] border-accent_secondary_transparent border-t-[3px] border-t-accent_primary rounded-[50%] h-[30px] w-[30px] animate-spin"></div>
+        <div class="spinner border-[4px] border-accent_secondary_transparent border-t-[4px] border-t-accent_primary rounded-[50%] h-[40px] w-[40px] animate-spin"></div>
     </div>
 </div>
 <div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-40 justify-between flex-col md:flex-row bg-bg_secondary rounded-xl hidden">

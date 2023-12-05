@@ -1175,6 +1175,10 @@ video {
   border-width: 5px;
 }
 
+.border-\[4px\] {
+  border-width: 4px;
+}
+
 .border-b-\[2px\] {
   border-bottom-width: 2px;
 }
@@ -1193,6 +1197,10 @@ video {
 
 .border-t-\[5px\] {
   border-top-width: 5px;
+}
+
+.border-t-\[4px\] {
+  border-top-width: 4px;
 }
 
 .border-\[rgba\(255\2c _255\2c _255\2c _0\.15\)\] {
