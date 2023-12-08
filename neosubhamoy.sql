@@ -67,7 +67,7 @@ INSERT INTO `pages` (`id`, `name`, `title`, `icon`, `link`, `stag`) VALUES
 (1, 'Home', '@neo_subhamoy - official website', 'cnpvyndp.json', '', NULL),
 (2, 'Projects', 'My Projects - @neo_subhamoy', 'utpmnzxz.json', '/projects', NULL),
 (3, 'Blog', 'My Blog - @neo_subhamoy', 'lyrrgrsl.json', '/blog', NULL),
-(4, 'Contact', 'My Projects - @neo_subhamoy', 'kthelypq.json', '/contact', 'contact');
+(4, 'Contact', 'Contact Me - @neo_subhamoy', 'kthelypq.json', '/contact', 'contact');
 
 -- --------------------------------------------------------
 
