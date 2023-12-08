@@ -36,6 +36,31 @@ require 'core/query_functions.php';
                 <div class="absolute bg-accent_primary w-[70px] h-[70px] rounded-full shadow-[0px_0px_120px_20px] shadow-accent_primary_transparent blur-2xl mr-0 mb-[2rem] lg:mb-0 lg:mr-[12.5rem] lg:mt-[3.5rem]"></div>
             </div>
         </div>
+        <div class="contactsection w-full flex justify-between items-start mt-32 mb-72 lg:mb-32 px-2 lg:px-0">
+            <div class="leftsec">
+
+            </div>
+            <div class="rightsec w-full lg:w-[40%]">
+                <form class="contactform w-full flex flex-col justify-center bg-bg_secondary rounded-lg p-5" action="">
+                    <p class="self-start text-lg mb-4"><i class="fa-solid fa-bell text-accent_primary"></i>&nbsp; Contact Form</p>
+                    <div class="nameinputcont w-full relative my-4">
+                        <input type="text" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary">
+                        <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary">Your Full Name</span>
+                    </div>
+                    <div class="emailinputcont w-full relative my-4">
+                        <input type="email" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary invalid:border-[#ff1c49]">
+                        <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary peer-invalid:text-[#ff1c49]">Your Email</span>
+                    </div>
+                    <div class="messagetextcont w-full relative my-4">
+                        <textarea type="text" rows="5" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary"></textarea>
+                        <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary">Message</span>
+                    </div>
+                    <div class="contactsubmit w-full">
+                        <button type="submit" class="bg-accent_primary rounded-full py-2 px-6 text-bg_primary font-bold hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500">SEND <i class="fa-regular fa-paper-plane ml-2"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     <?php require 'assets/_footer.php';?>
     <script type="text/javascript" src="assets/js/preloader-config.js"></script>

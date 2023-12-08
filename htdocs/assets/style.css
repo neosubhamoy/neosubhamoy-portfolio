@@ -619,6 +619,34 @@ video {
   top: 4.7rem;
 }
 
+.left-4 {
+  left: 1rem;
+}
+
+.top-\[-10\] {
+  top: -10;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.-top-2 {
+  top: -0.5rem;
+}
+
+.-top-1 {
+  top: -0.25rem;
+}
+
+.-top-3 {
+  top: -0.75rem;
+}
+
+.-top-\[0\.60rem\] {
+  top: -0.60rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -704,6 +732,11 @@ video {
 .my-\[0\.30rem\] {
   margin-top: 0.30rem;
   margin-bottom: 0.30rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-1 {
@@ -864,6 +897,14 @@ video {
 
 .mt-\[30vh\] {
   margin-top: 30vh;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .flex {
@@ -1027,12 +1068,8 @@ video {
   width: 100vw;
 }
 
-.w-\[40\%\] {
-  width: 40%;
-}
-
-.w-\[230px\] {
-  width: 230px;
+.w-\[30\%\] {
+  width: 30%;
 }
 
 .rotate-\[15deg\] {
@@ -1171,12 +1208,12 @@ video {
   border-width: 3px;
 }
 
-.border-\[5px\] {
-  border-width: 5px;
-}
-
 .border-\[4px\] {
   border-width: 4px;
+}
+
+.border-\[5px\] {
+  border-width: 5px;
 }
 
 .border-b-\[2px\] {
@@ -1195,12 +1232,12 @@ video {
   border-top-width: 3px;
 }
 
-.border-t-\[5px\] {
-  border-top-width: 5px;
-}
-
 .border-t-\[4px\] {
   border-top-width: 4px;
+}
+
+.border-t-\[5px\] {
+  border-top-width: 5px;
 }
 
 .border-\[rgba\(255\2c _255\2c _255\2c _0\.15\)\] {
@@ -1243,11 +1280,6 @@ video {
 .border-t-accent_primary {
   --tw-border-opacity: 1;
   border-top-color: rgb(56 189 248 / var(--tw-border-opacity));
-}
-
-.border-b-accent_primary {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(56 189 248 / var(--tw-border-opacity));
 }
 
 .border-b-accent_secondary_transparent {
@@ -1314,6 +1346,10 @@ video {
 
 .p-\[0\.30rem\] {
   padding: 0.30rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-1 {
@@ -1505,6 +1541,10 @@ video {
   color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
+.text-accent_secondary_transparent {
+  color: rgba(255, 255, 255, 0.30);
+}
+
 .caret-accent_primary {
   caret-color: #38BDF8;
 }
@@ -1578,10 +1618,6 @@ video {
   outline-offset: 2px;
 }
 
-.outline-accent_primary {
-  outline-color: #38BDF8;
-}
-
 .blur-2xl {
   --tw-blur: blur(40px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1643,6 +1679,16 @@ video {
 
 .last\:mb-3:last-child {
   margin-bottom: 0.75rem;
+}
+
+.invalid\:border-\[\#ff1c49\]:invalid {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 28 73 / var(--tw-border-opacity));
+}
+
+.invalid\:border-\[\#ff8099\]:invalid {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 128 153 / var(--tw-border-opacity));
 }
 
 .hover\:scale-125:hover {
@@ -1715,6 +1761,15 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.focus\:border-accent_primary:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(56 189 248 / var(--tw-border-opacity));
+}
+
+.focus\:border-accent_primary_transparent:focus {
+  border-color: rgba(56, 189, 248, 0.30);
+}
+
 .group:hover .group-hover\:block {
   display: block;
 }
@@ -1729,6 +1784,21 @@ video {
 
 .group:hover .group-hover\:w-full {
   width: 100%;
+}
+
+.group:focus .group-focus\:text-accent_primary {
+  --tw-text-opacity: 1;
+  color: rgb(56 189 248 / var(--tw-text-opacity));
+}
+
+.peer:invalid ~ .peer-invalid\:text-\[\#ff1c49\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 28 73 / var(--tw-text-opacity));
+}
+
+.peer:focus ~ .peer-focus\:text-accent_primary {
+  --tw-text-opacity: 1;
+  color: rgb(56 189 248 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
@@ -1896,6 +1966,10 @@ video {
     margin-top: 0.5rem;
   }
 
+  .lg\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .lg\:mt-\[2\.5rem\] {
     margin-top: 2.5rem;
   }
@@ -1906,10 +1980,6 @@ video {
 
   .lg\:mt-\[7rem\] {
     margin-top: 7rem;
-  }
-
-  .lg\:mt-5 {
-    margin-top: 1.25rem;
   }
 
   .lg\:block {
@@ -2032,11 +2102,6 @@ video {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:blur-2xl {
-    --tw-blur: blur(40px);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
   .lg\:blur-lg {
