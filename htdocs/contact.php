@@ -25,8 +25,7 @@ require 'core/query_functions.php';
                 <h2 class="text-lg mt-3 mb-1 lg:mt-2 lg:mb-1 lg:whitespace-nowrap">You're just one <span class="text-accent_primary font-bold">step</span> away from reaching out!</h2>
                 <h3 class="text-lg mt-1 mb-3 lg:mt-1 lg:mb-2 lg:whitespace-nowrap">I'd love to <span class="text-accent_primary font-bold">hear from you</span> just drop a <span class="text-accent_primary font-bold">message</span></h3>
                 <div class="w-full flex justify-start items-center my-7 lg:my-6">
-                    <button class="w-fit px-5 py-1 my-2 mr-2 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('', '_blank')"><i class="text-bg_primary fa-brands fa-whatsapp"></i> WhatsApp</button>
-                    <button class="w-fit px-5 py-1 my-2 ml-2 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('', '_blank')"><i class="text-bg_primary fa-brands fa-telegram"></i> Telegram</button>
+                    <button class="w-fit px-5 py-1 my-2 mr-2 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="location.href='#contactsection'"><i class="fa-solid fa-chevron-down"></i> Get Details</button>
                 </div>
             </div>
             <div class="heroimage w-full h-full flex justify-center lg:justify-end items-center mt-10 lg:mt-0">
@@ -36,9 +35,23 @@ require 'core/query_functions.php';
                 <div class="absolute bg-accent_primary w-[70px] h-[70px] rounded-full shadow-[0px_0px_120px_20px] shadow-accent_primary_transparent blur-2xl mr-0 mb-[2rem] lg:mb-0 lg:mr-[12.5rem] lg:mt-[3.5rem]"></div>
             </div>
         </div>
-        <div class="contactsection w-full flex justify-between items-start mt-32 mb-72 lg:mb-32 px-2 lg:px-0">
-            <div class="leftsec">
-
+        <div id="contactsection" class="contactsection w-full flex flex-col justify-start lg:flex-row lg:justify-between items-start mt-32 mb-72 lg:mb-32 px-2 lg:px-0">
+            <div class="leftsec mb-14 lg:mb-0">
+                <h4 class="text-2xl font-bold mb-10">My <span class="text-accent_primary">Contact</span> Details</h4>
+                <div class="contactinfocont mt-14">
+                    <div class="flex items-center my-4">
+                        <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Contact via Phone Call"><i class="fa-solid fa-phone"></i></span>
+                        <p class="text-lg font-light cursor-pointer" onclick="copy_to_clipboard('+91 8695174974', 'Number')">+91 8695174974</p>
+                    </div>
+                    <div class="flex items-center my-4">
+                        <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Contact via Email"><i class="fa-solid fa-envelope"></i></span>
+                        <p class="text-lg font-light cursor-pointer" onclick="location.href='mailto:hey@neosubhamoy.com'">hey@neosubhamoy.com</p>
+                    </div>
+                    <div class="flex items-center my-4">
+                        <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Chat with me on Telegram"><i class="fa-brands fa-telegram"></i></span>
+                        <p class="text-lg font-light cursor-pointer" onclick="window.open('https://t.me/neo_subhamoy', '_blank')">t.me/neo_subhamoy</p>
+                    </div>
+                </div>
             </div>
             <div class="rightsec w-full lg:w-[40%]">
                 <form class="contactform w-full flex flex-col justify-center bg-bg_secondary rounded-lg p-5" action="">
