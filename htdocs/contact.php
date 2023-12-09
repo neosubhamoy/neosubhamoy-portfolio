@@ -54,25 +54,26 @@ require 'core/query_functions.php';
                 </div>
             </div>
             <div class="rightsec w-full lg:w-[40%]">
-                <form class="contactform w-full flex flex-col justify-center bg-bg_secondary rounded-lg p-5" action="">
+                <form id="contactForm" class="contactform w-full flex flex-col justify-center bg-bg_secondary rounded-lg p-5" method="POST" enctype="application/x-www-form-urlencoded">
                     <p class="self-start text-lg mb-4"><i class="fa-solid fa-bell text-accent_primary"></i>&nbsp; Contact Form</p>
                     <div class="nameinputcont w-full relative my-4">
-                        <input type="text" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary">
+                        <input id="contactNameInput" type="text" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary">
                         <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary">Your Full Name</span>
                     </div>
                     <div class="emailinputcont w-full relative my-4">
-                        <input type="email" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary invalid:border-[#ff1c49]">
+                        <input id="contactEmailInput" type="email" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary invalid:border-[#ff1c49]">
                         <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary peer-invalid:text-[#ff1c49]">Your Email</span>
                     </div>
                     <div class="messagetextcont w-full relative my-4">
-                        <textarea type="text" rows="5" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary"></textarea>
+                        <textarea id="contactMessageInput" type="text" rows="5" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary"></textarea>
                         <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary">Message</span>
                     </div>
-                    <div class="captchacont w-full mb-4">
+                    <div class="captchacont w-full">
                         <div id="recaptcha" class="g-recaptcha w-full h-fit transform scale-[0.70] origin-left" data-sitekey="6Lfq2SspAAAAADDI2jvOiZ2snM_H0JENRK8vajoX" data-theme="dark"></div>
                     </div>
+                    <div id="contactAlert" class="w-full mb-4"></div>
                     <div class="contactsubmit w-full">
-                        <button type="submit" class="bg-accent_primary rounded-full py-2 px-6 text-bg_primary font-bold hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500">SEND <i class="fa-regular fa-paper-plane ml-2"></i></button>
+                        <button id="contactSendButton" type="submit" class="bg-accent_primary rounded-full py-2 px-6 text-bg_primary font-bold hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500">SEND <i class="fa-regular fa-paper-plane ml-2"></i></button>
                     </div>
                 </form>
             </div>
@@ -82,5 +83,6 @@ require 'core/query_functions.php';
     <script type="text/javascript" src="assets/js/preloader-config.js"></script>
     <script type="text/javascript" src="assets/js/floatingbar-config.js"></script>
     <script type="text/javascript" src="assets/js/keybinding-config.js"></script>
+    <script type="text/javascript" src="assets/js/contactform-config.js"></script>
 </body>
 </html>

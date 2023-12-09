@@ -1275,6 +1275,10 @@ video {
   border-top-width: 5px;
 }
 
+.border-l-\[7px\] {
+  border-left-width: 7px;
+}
+
 .border-\[rgba\(255\2c _255\2c _255\2c _0\.15\)\] {
   border-color: rgba(255, 255, 255, 0.15);
 }
@@ -1300,6 +1304,21 @@ video {
 .border-accent_three {
   --tw-border-opacity: 1;
   border-color: rgb(217 217 217 / var(--tw-border-opacity));
+}
+
+.border-\[rgb\(249\2c _115\2c _22\)\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(249 115 22 / var(--tw-border-opacity));
+}
+
+.border-\[rgb\(255\2c _29\2c _72\)\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 29 72 / var(--tw-border-opacity));
+}
+
+.border-\[rgb\(22\2c _163\2c _74\)\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(22 163 74 / var(--tw-border-opacity));
 }
 
 .border-l-accent_primary {
@@ -1343,6 +1362,56 @@ video {
 .bg-bg_secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgb\(249\2c _115\2c _22\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgb\(254\2c _215\2c _170\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgb\(249\2c _115\2c _22\2c _0\.3\)\] {
+  background-color: rgb(249, 115, 22, 0.3);
+}
+
+.bg-\[rgb\(255\2c _29\2c _72\2c _0\.3\)\] {
+  background-color: rgb(255, 29, 72, 0.3);
+}
+
+.bg-accent_primary_transparent {
+  background-color: rgba(56, 189, 248, 0.30);
+}
+
+.bg-\[rgb\(22\2c _163\2c _74\2c _0\.3\)\] {
+  background-color: rgb(22, 163, 74, 0.3);
+}
+
+.bg-\[rgb\(255\2c _29\2c _72\2c _0\.2\)\] {
+  background-color: rgb(255, 29, 72, 0.2);
+}
+
+.bg-\[rgb\(22\2c _163\2c _74\2c _0\.2\)\] {
+  background-color: rgb(22, 163, 74, 0.2);
+}
+
+.bg-\[rgb\(249\2c _115\2c _22\2c _0\.2\)\] {
+  background-color: rgb(249, 115, 22, 0.2);
+}
+
+.bg-\[rgba\(22\2c _163\2c _74\2c _0\.2\)\] {
+  background-color: rgba(22, 163, 74, 0.2);
+}
+
+.bg-\[rgba\(249\2c _115\2c _22\2c _0\.2\)\] {
+  background-color: rgba(249, 115, 22, 0.2);
+}
+
+.bg-\[rgba\(255\2c _29\2c _72\2c _0\.2\)\] {
+  background-color: rgba(255, 29, 72, 0.2);
 }
 
 .bg-gradient-to-r {
@@ -1574,6 +1643,26 @@ video {
 .text-bg_secondary {
   --tw-text-opacity: 1;
   color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
+.text-\[rgb\(234\2c _88\2c _12\)\] {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
+}
+
+.text-\[rgb\(249\2c _115\2c _22\)\] {
+  --tw-text-opacity: 1;
+  color: rgb(249 115 22 / var(--tw-text-opacity));
+}
+
+.text-\[rgb\(255\2c _29\2c _72\)\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 29 72 / var(--tw-text-opacity));
+}
+
+.text-\[rgb\(22\2c _163\2c _74\)\] {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
 .caret-accent_primary {
