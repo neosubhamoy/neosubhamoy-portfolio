@@ -25,7 +25,7 @@ $(document).ready(function() {
             }
         }
         else {
-            show_alert("Please fill-up all the fields", "info");
+            show_alert("Please fill-up all fields", "info");
         }
     });
 });

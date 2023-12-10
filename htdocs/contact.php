@@ -56,13 +56,13 @@ require 'core/query_functions.php';
             <div class="rightsec w-full lg:w-[40%]">
                 <form id="contactForm" class="contactform w-full flex flex-col justify-center bg-bg_secondary rounded-lg p-5" method="POST" enctype="application/x-www-form-urlencoded" autocomplete="off">
                     <input class="hidden" autocomplete="false" name="hidden" type="text">
-                    <p class="self-start text-lg mb-4"><i class="fa-solid fa-bell text-accent_primary"></i>&nbsp; Contact Form</p>
+                    <p class="self-start w-[40%] pb-1 text-lg mb-4"><i class="fa-solid fa-bell text-accent_primary"></i>&nbsp; Contact Form</p>
                     <div class="nameinputcont w-full relative my-4">
                         <input id="contactNameInput" type="text" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary">
                         <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary">Your Full Name</span>
                     </div>
                     <div class="emailinputcont w-full relative my-4">
-                        <input id="contactEmailInput" type="email" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary invalid:border-[#ff1c49]">
+                        <input id="contactEmailInput" type="email" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary invalid:border-[#ff1c49]" autocomplete="new-password">
                         <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary peer-invalid:text-[#ff1c49]">Your Email</span>
                     </div>
                     <div class="messagetextcont w-full relative my-4">
