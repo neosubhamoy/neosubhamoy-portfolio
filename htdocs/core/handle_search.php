@@ -1,5 +1,9 @@
 <?php
-require '../../connection.php';
+require 'vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable('../../');
+$dotenv->load();
+
+require 'connection.php';
 require 'query_functions.php';
 
 function input_filter($conn, $data){

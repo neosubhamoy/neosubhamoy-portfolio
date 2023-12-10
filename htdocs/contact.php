@@ -1,5 +1,9 @@
 <?php
-require '../connection.php';
+require 'core/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable('../');
+$dotenv->load();
+
+require 'core/connection.php';
 require 'core/host_config.php';
 require 'core/query_functions.php';
 ?>

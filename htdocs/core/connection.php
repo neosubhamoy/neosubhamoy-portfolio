@@ -1,9 +1,9 @@
 <?php
-//Database info - (for loclhost)
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$database = "neosubhamoy";
+//Collect Database info
+$hostname = $_ENV['DB_HOST'];
+$username = $_ENV['DB_USER'];
+$password = $_ENV['DB_PASS'];
+$database = $_ENV['DB_NAME'];
 
 //Connect with Database
 $conn = new mysqli($hostname, $username, $password, $database);

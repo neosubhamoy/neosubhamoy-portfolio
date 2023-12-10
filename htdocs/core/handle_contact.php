@@ -1,14 +1,14 @@
 <?php
 require 'vendor/autoload.php';
-require '../../connection.php';
+$dotenv = Dotenv\Dotenv::createImmutable('../../');
+$dotenv->load();
+
+require 'connection.php';
 require 'query_functions.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
-$dotenv = Dotenv\Dotenv::createImmutable('../../');
-$dotenv->load();
 
 function form_input_filter($conn, $data){
     $data = trim($data);
