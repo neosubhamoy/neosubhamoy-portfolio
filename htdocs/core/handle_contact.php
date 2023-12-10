@@ -20,8 +20,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $message = form_input_filter($conn, $formData['message']);
         $recaptcha = form_input_filter($conn, $formData['recaptcha']);
 
-        $alertMessage = "Form Data Recived from ".$name;
-        $alertType = "success";
+        if($name !== "" && $email !== "" && $message !== "") {
+            if($recaptcha !== "") {
+                $secret = '';
+                $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $recaptcha);
+                $responseData = json_decode($verifyResponse);
+
+                if($responseData->success) {
+
+                }
+                else {
+
+                }
+            }
+            else {
+
+            }
+        }
+        else {
+
+        }
+        
         echo json_encode(array("alert" => $alertMessage, "alertType" => $alertType));
     }
 }
