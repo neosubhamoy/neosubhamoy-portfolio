@@ -13,15 +13,43 @@ $(document).ready(function() {
 
         let name = nameInput.value;
         let email = emailInput.value;
-        let message = emailInput.value;
+        let message = messageInput.value;
         let recaptchaValue = grecaptcha.getResponse();
 
         if(name !== "" && email !== "" && message !== "") {
             if(recaptchaValue !== "") {
-                
+
+                let formData = {
+                    name: name,
+                    email: email,
+                    message: message,
+                    recaptcha: recaptchaValue
+                };
+
+                $(sendBtn).html("Sending....");
+                $.ajax({
+                    url: 'core/handle_contact.php',
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+        
+                    success: function(response) {
+                        if (response.alert && response.alertType) {
+                            console.log(response.alert);
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log(textStatus, errorThrown);
+                    },
+                    complete: function() {
+                        $(sendBtn).html("SEND <i class='fa-regular fa-paper-plane ml-2'></i>");
+                        console.log("completed");
+                    }
+                });
             }
             else {
-                show_alert("Please check-in reCaptcha", "info")
+                show_alert("Please check-in reCaptcha", "info");
             }
         }
         else {
