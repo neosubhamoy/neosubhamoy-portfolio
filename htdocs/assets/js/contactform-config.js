@@ -36,7 +36,7 @@ $(document).ready(function() {
         
                     success: function(response) {
                         if (response.alert && response.alertType) {
-                            console.log(response.alert);
+                            show_alert(response.alert, response.alertType);
                         }
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
@@ -44,7 +44,6 @@ $(document).ready(function() {
                     },
                     complete: function() {
                         $(sendBtn).html("SEND <i class='fa-regular fa-paper-plane ml-2'></i>");
-                        console.log("completed");
                     }
                 });
             }

@@ -3,6 +3,10 @@ require 'vendor/autoload.php';
 require '../../connection.php';
 require 'query_functions.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 $dotenv = Dotenv\Dotenv::createImmutable('../../');
 $dotenv->load();
 
@@ -12,6 +16,40 @@ function form_input_filter($conn, $data){
     $data = htmlspecialchars($data);
     $data = mysqli_real_escape_string($conn, $data);
     return $data;
+}
+
+function send_alert($alertMessage, $alertType) {
+    echo json_encode(array("alert" => $alertMessage, "alertType" => $alertType));
+}
+
+function send_contact_email($name, $email, $message) {
+    require_once ("vendor/phpmailer/phpmailer/src/Exception.php");
+    require_once ("vendor/phpmailer/phpmailer/src/PHPMailer.php");
+    require_once ("vendor/phpmailer/phpmailer/src/SMTP.php");
+
+    $mail = new PHPMailer(true);
+
+    try {
+        $mail->isSMTP();
+        $mail->Host       = $_ENV['SMTP_HOST'];
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $_ENV['SMTP_USER'];
+        $mail->Password   = $_ENV['SMTP_PASS'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = $_ENV['SMTP_PORT'];
+    
+        $mail->setFrom($_ENV['SMTP_USER'], 'contact@neosubhamoy.com');
+        $mail->addAddress($_ENV['SMTP_SENDTO']);
+    
+        $mail->isHTML(true);
+        $mail->Subject = "New Contact Form Submission by $name";
+        $mail->Body    = "name: $name <br>email: $email <br>message: $message <br><a href='mailto:$email'>Quick Reply</a>";
+    
+        $mail->send();
+        return true;
+    } catch (Exception $e) {
+        return false;
+    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -31,21 +69,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $responseData = json_decode($verifyResponse);
 
                 if($responseData->success) {
-                    
+                    if(send_contact_email($name, $email, $message)) {
+                        send_alert("Message Sent Successfully", "success");
+                    }
+                    else {
+                        send_alert("Something went wrong! Try again later", "danger");
+                    }
                 }
                 else {
-
+                    send_alert("Invalid reCaptcha! Please try again", "danger");
                 }
             }
             else {
-
+                send_alert("Please check-in reCaptcha", "info");
             }
         }
         else {
-
+            send_alert("Please fill-up all fields", "info");
         }
-        
-        echo json_encode(array("alert" => $alertMessage, "alertType" => $alertType));
     }
 }
 
