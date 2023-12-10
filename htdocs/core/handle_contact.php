@@ -1,6 +1,10 @@
 <?php
+require 'vendor/autoload.php';
 require '../../connection.php';
 require 'query_functions.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable('../../');
+$dotenv->load();
 
 function form_input_filter($conn, $data){
     $data = trim($data);
@@ -22,12 +26,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if($name !== "" && $email !== "" && $message !== "") {
             if($recaptcha !== "") {
-                $secret = '';
+                $secret = $_ENV['RECAPTCHA_SECRET'];
                 $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $recaptcha);
                 $responseData = json_decode($verifyResponse);
 
                 if($responseData->success) {
-
+                    
                 }
                 else {
 
