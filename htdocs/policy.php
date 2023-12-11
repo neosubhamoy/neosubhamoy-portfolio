@@ -76,7 +76,7 @@ require 'core/query_functions.php';
     
                     <p>We use the information we collect in various ways, including to:</p>
     
-                    <ul>
+                    <ul class="list-disc ml-10">
                         <li>Provide, operate, and maintain our website</li>
                         <li>Improve, personalize, and expand our website</li>
                         <li>Understand and analyze how you use our website</li>
@@ -139,7 +139,7 @@ require 'core/query_functions.php';
                         access, we hyperlinked to their Privacy Policies below.
                     </p>
     
-                    <ul>
+                    <ul class="list-disc ml-10">
                         <li>
                         <p>Google</p>
                         <p>

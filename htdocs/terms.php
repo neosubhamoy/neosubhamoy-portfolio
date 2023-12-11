@@ -38,11 +38,9 @@ require 'core/query_functions.php';
                     <p>The Subhamoy Biswas Portfolio website located at https://neosubhamoy.com is a copyrighted work belonging to Subhamoy Biswas. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.</p>
     
                     <p>All such additional terms, guidelines, and rules are incorporated by reference into these Terms.</p>
+                    <p>These Terms of Use described the legally binding terms and conditions that oversee your use of the Site.&nbsp;BY LOGGING INTO THE SITE, YOU ARE BEING COMPLIANT THAT THESE TERMS and you represent that you have the authority and capacity to enter into these Terms.&nbsp;YOU SHOULD BE AT LEAST 18 YEARS OF AGE TO ACCESS THE SITE. IF YOU DISAGREE WITH ALL OF THE PROVISION OF THESE TERMS, DO NOT LOG INTO AND/OR USE THE SITE.</p>
                 </div>
                 <div class="termscont2 text-accent_three">
-                    <p>These Terms of Use described the legally binding terms and conditions that oversee your use of the Site.&nbsp;BY LOGGING INTO THE SITE, YOU ARE BEING COMPLIANT THAT THESE TERMS and you represent that you have the authority and capacity to enter into these Terms.&nbsp;YOU SHOULD BE AT LEAST 18 YEARS OF AGE TO ACCESS THE SITE. IF YOU DISAGREE WITH ALL OF THE PROVISION OF THESE TERMS, DO NOT LOG INTO AND/OR USE THE SITE.</p>
-    
-                    <p>&nbsp;</p>
     
                     <p>These terms require the use of arbitration Section 10.2 on an individual basis to resolve disputes and also limit the remedies available to you in the event of a dispute.</p>
     
