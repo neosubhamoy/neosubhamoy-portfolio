@@ -2,9 +2,9 @@
     <div class="fottermenu w-full flex justify-around flex-wrap lg:flex-nowrap mb-10">
         <div class="w-[50%] lg:w-[25%] flex flex-col justify-start items-start mb-10 lg:mb-0">
             <h6 class="font-bold mb-8">Informations</h6>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Privacy Policy</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Terms of Services</a>
-            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="">Dmca Notice</a>
+            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="<?php echo $basePath . '/privacy-policy' ?>">Privacy Policy</a>
+            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="<?php echo $basePath . '/terms-of-use' ?>">Terms of Use</a>
+            <a class="text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100" href="<?php echo $basePath . '/dmca' ?>">Dmca Notice</a>
         </div>
         <div class="w-[50%] lg:w-[25%] flex flex-col justify-start items-start mb-10 lg:mb-0">
             <h6 class="font-bold mb-8">Site Pages</h6>

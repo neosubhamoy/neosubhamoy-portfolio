@@ -28,11 +28,11 @@ require 'core/query_functions.php';
                     <button class="w-[40px] h-[40px] bg-bg_secondary hover:bg-bg_third rounded-full flex justify-center items-center mr-3" onclick="location.href='<?php echo $basePath ?>'"><i class="fa-solid fa-chevron-left"></i></button>
                     <h1 class="text-4xl">Privacy Policy</h1>
                 </span>
-                <span class="px-4 py-1 bg-accent_primary_extratransparent rounded-full text-accent_primary">#legal</span>
+                <span class="px-4 py-1 bg-accent_primary_extratransparent rounded-full text-accent_primary hidden lg:block">#legal</span>
             </div>
             <p class="text-lg text-accent_three mt-12">Last Updated On: 11th of December 2023</p>
             <div class="policycontent w-full bg-bg_secondary rounded-xl px-5 py-7 mt-7">
-                <div class="policycont1 pb-5 mb-10 border-b-[1px] border-b-accent_secondary_transparent">
+                <div class="policycont1 text-accent_three pb-5 mb-10 border-b-[1px] border-b-accent_secondary_transparent">
                     <p>
                         At Subhamoy Biswas Portfolio, accessible from https://neosubhamoy.com,
                         one of our main priorities is the privacy of our visitors. This Privacy
@@ -45,15 +45,15 @@ require 'core/query_functions.php';
                         Privacy Policy, do not hesitate to contact us.
                     </p>
                 </div>
-                <div class="policycont2">
-                    <h2 class="text-2xl mb-2">Consent</h2>
+                <div class="policycont2 text-accent_three">
+                    <h2 class="text-2xl text-accent_secondary mb-2">Consent</h2>
     
                     <p>
                         By using our website, you hereby consent to our Privacy Policy and agree
                         to its terms.
                     </p>
                     <br>
-                    <h2 class="text-2xl mb-2">Information we collect</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">Information we collect</h2>
     
                     <p>
                         The personal information that you are asked to provide, and the reasons
@@ -72,7 +72,7 @@ require 'core/query_functions.php';
                         address, and telephone number.
                     </p>
                     <br>
-                    <h2 class="text-2xl mb-2">How we use your information</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">How we use your information</h2>
     
                     <p>We use the information we collect in various ways, including to:</p>
     
@@ -91,7 +91,7 @@ require 'core/query_functions.php';
                         <li>Find and prevent fraud</li>
                     </ul>
                     <br>
-                    <h2 class="text-2xl mb-2">Log Files</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">Log Files</h2>
     
                     <p>
                         Subhamoy Biswas Portfolio follows a standard procedure of using log
@@ -106,7 +106,7 @@ require 'core/query_functions.php';
                         information.
                     </p>
                     <br>
-                    <h2 class="text-2xl mb-2">Cookies and Web Beacons</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">Cookies and Web Beacons</h2>
     
                     <p>
                         Like any other website, Subhamoy Biswas Portfolio uses 'cookies'. These
@@ -117,7 +117,7 @@ require 'core/query_functions.php';
                         information.
                     </p>
                     <br>
-                    <h2 class="text-2xl mb-2">Google DoubleClick DART Cookie</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">Google DoubleClick DART Cookie</h2>
     
                     <p>
                         Google is one of a third-party vendor on our site. It also uses cookies,
@@ -130,7 +130,7 @@ require 'core/query_functions.php';
                         >
                     </p>
                     <br> 
-                    <h2 class="text-2xl mb-2">Our Advertising Partners</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">Our Advertising Partners</h2>
     
                     <p>
                         Some of advertisers on our site may use cookies and web beacons. Our
@@ -150,7 +150,7 @@ require 'core/query_functions.php';
                         </li>
                     </ul>
                     <br>
-                    <h2 class="text-2xl mb-2">Advertising Partners Privacy Policies</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">Advertising Partners Privacy Policies</h2>
     
                     <p>
                         You may consult this list to find the Privacy Policy for each of the
@@ -172,7 +172,7 @@ require 'core/query_functions.php';
                         these cookies that are used by third-party advertisers.
                     </p>
                     <br>
-                    <h2 class="text-2xl mb-2">Third Party Privacy Policies</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">Third Party Privacy Policies</h2>
     
                     <p>
                         Subhamoy Biswas Portfolio's Privacy Policy does not apply to other
@@ -189,7 +189,7 @@ require 'core/query_functions.php';
                         websites.
                     </p>
                     <br>
-                    <h2 class="text-2xl mb-2">CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
     
                     <p>
                         Under the CCPA, among other rights, California consumers have the right
@@ -213,7 +213,7 @@ require 'core/query_functions.php';
                         like to exercise any of these rights, please contact us.
                     </p>
                     <br>
-                    <h2 class="text-2xl mb-2">GDPR Data Protection Rights</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">GDPR Data Protection Rights</h2>
     
                     <p>
                         We would like to make sure you are fully aware of all of your data
@@ -251,7 +251,7 @@ require 'core/query_functions.php';
                         like to exercise any of these rights, please contact us.
                     </p>
                     <br>
-                    <h2 class="text-2xl mb-2">Children's Information</h2>
+                    <h2 class="text-2xl text-accent_secondary mb-2">Children's Information</h2>
     
                     <p>
                         Another part of our priority is adding protection for children while

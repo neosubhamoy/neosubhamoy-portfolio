@@ -10,6 +10,8 @@ $serverRoutes = [
     '/blog' => 'blog.php',
     '/contact' => 'contact.php',
     '/privacy-policy' => 'policy.php',
+    '/terms-of-use' => 'terms.php',
+    '/dmca' => 'dmca.php',
 ];
 
 $devRoutes = [
@@ -18,6 +20,8 @@ $devRoutes = [
     '/neosubhamoy/htdocs/blog' => 'blog.php',
     '/neosubhamoy/htdocs/contact' => 'contact.php',
     '/neosubhamoy/htdocs/privacy-policy' => 'policy.php',
+    '/neosubhamoy/htdocs/terms-of-use' => 'terms.php',
+    '/neosubhamoy/htdocs/dmca' => 'dmca.php',
 ];
 
 if ($host == "localhost" || $host == "192.168.29.177") {
