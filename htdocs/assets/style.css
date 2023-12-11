@@ -959,6 +959,10 @@ video {
   margin-top: 7rem;
 }
 
+.mb-28 {
+  margin-bottom: 7rem;
+}
+
 .block {
   display: block;
 }
@@ -1335,6 +1339,10 @@ video {
   border-top-width: 5px;
 }
 
+.border-b-\[1px\] {
+  border-bottom-width: 1px;
+}
+
 .border-\[rgb\(22\2c _163\2c _74\)\] {
   --tw-border-opacity: 1;
   border-color: rgb(22 163 74 / var(--tw-border-opacity));
@@ -1392,6 +1400,10 @@ video {
   border-top-color: rgb(56 189 248 / var(--tw-border-opacity));
 }
 
+.border-b-accent_secondary_transparent {
+  border-bottom-color: rgba(255, 255, 255, 0.30);
+}
+
 .bg-\[rgba\(0\2c _0\2c _0\2c _0\.4\)\] {
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -1430,6 +1442,23 @@ video {
 .bg-bg_secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.bg-bg_third {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 51 74 / var(--tw-bg-opacity));
+}
+
+.bg-accent_primary_transparent {
+  background-color: rgba(56, 189, 248, 0.30);
+}
+
+.bg-accent_secondary_transparent {
+  background-color: rgba(255, 255, 255, 0.30);
+}
+
+.bg-accent_primary_extratransparent {
+  background-color: rgba(56, 189, 248, 0.15);
 }
 
 .bg-gradient-to-r {
@@ -1565,8 +1594,21 @@ video {
   padding-bottom: 0.30rem;
 }
 
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.pt-7 {
+  padding-top: 1.75rem;
 }
 
 .text-center {
@@ -1627,6 +1669,11 @@ video {
 
 .text-9xl {
   font-size: 8rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 

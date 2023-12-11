@@ -9,6 +9,7 @@ $serverRoutes = [
     '/projects' => 'projects.php',
     '/blog' => 'blog.php',
     '/contact' => 'contact.php',
+    '/privacy-policy' => 'policy.php',
 ];
 
 $devRoutes = [
@@ -16,6 +17,7 @@ $devRoutes = [
     '/neosubhamoy/htdocs/projects' => 'projects.php',
     '/neosubhamoy/htdocs/blog' => 'blog.php',
     '/neosubhamoy/htdocs/contact' => 'contact.php',
+    '/neosubhamoy/htdocs/privacy-policy' => 'policy.php',
 ];
 
 if ($host == "localhost" || $host == "192.168.29.177") {
