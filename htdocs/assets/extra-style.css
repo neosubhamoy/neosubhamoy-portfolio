@@ -44,11 +44,11 @@ background: #38BDF8;
     animation: slide-up 0.5s ease-in-out;
 }
 
-.aboutcontainer:hover::before {
+.hoverAnimatedContainer:hover::before {
     opacity: 1;
 }
 
-.aboutcontainer::before {
+.hoverAnimatedContainer::before {
     background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
     border-radius: inherit;
     content: "";
@@ -57,7 +57,6 @@ background: #38BDF8;
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: 2;
     opacity: 0;
     transition: opacity 500ms;
 }

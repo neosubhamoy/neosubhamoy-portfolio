@@ -40,27 +40,49 @@ require 'core/query_functions.php';
             </div>
         </div>
         <div id="contactsection" class="contactsection w-full flex flex-col justify-start lg:flex-row lg:justify-between items-start mt-32 mb-72 lg:mb-32 px-2 lg:px-0">
-            <div class="leftsec mb-14 w-full lg:w-[50%] lg:mb-0">
-                <h4 class="text-2xl font-bold mb-10">My <span class="text-accent_primary">Contact</span> Details</h4>
-                <div class="contactinfocont mt-14">
-                    <div class="flex items-center my-4">
-                        <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Contact via Phone Call"><i class="fa-solid fa-phone"></i></span>
-                        <p class="text-lg font-light cursor-pointer" onclick="copy_to_clipboard('+91 8695174974', 'Number')">+91 8695174974</p>
+            <div class="leftsec mb-14 w-full h-full flex flex-col justify-between lg:w-[50%] lg:mb-0">
+                <div class="leftsectop">
+                    <h4 class="text-2xl font-bold mb-10">My <span class="text-accent_primary">Contact</span> Details</h4>
+                    <div class="contactinfocont mt-14">
+                        <div class="flex items-center my-4">
+                            <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Contact via Phone Call"><i class="fa-solid fa-phone"></i></span>
+                            <p class="text-lg font-light cursor-pointer" onclick="copy_to_clipboard('+91 8695174974', 'Number')">+91 8695174974</p>
+                        </div>
+                        <div class="flex items-center my-4">
+                            <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Contact via Email"><i class="fa-solid fa-envelope"></i></span>
+                            <p class="text-lg font-light cursor-pointer" onclick="location.href='mailto:hey@neosubhamoy.com'">hey@neosubhamoy.com</p>
+                        </div>
+                        <div class="flex items-center my-4">
+                            <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Chat with me on Telegram"><i class="fa-brands fa-telegram"></i></span>
+                            <p class="text-lg font-light cursor-pointer" onclick="window.open('https://t.me/neo_subhamoy', '_blank')">t.me/neo_subhamoy</p>
+                        </div>
                     </div>
-                    <div class="flex items-center my-4">
-                        <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Contact via Email"><i class="fa-solid fa-envelope"></i></span>
-                        <p class="text-lg font-light cursor-pointer" onclick="location.href='mailto:hey@neosubhamoy.com'">hey@neosubhamoy.com</p>
-                    </div>
-                    <div class="flex items-center my-4">
-                        <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Chat with me on Telegram"><i class="fa-brands fa-telegram"></i></span>
-                        <p class="text-lg font-light cursor-pointer" onclick="window.open('https://t.me/neo_subhamoy', '_blank')">t.me/neo_subhamoy</p>
+                </div>
+                <div class="leftsecbottom">
+                    <div class="hoverAnimatedContainer bg-bg_secondary rounded-lg p-5 relative">
+                        <span class="flex items-center text-lg justify-between">
+                            <span class="">
+                                <i class="fa-solid fa-house text-accent_primary"></i>
+                                <span class="ml-2">Address</span>
+                            </span>
+                            <button class="w-fit px-5 py-1 text-base font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('https://www.google.com/maps/place/Basirhat,+West+Bengal/')"><i class="fa-solid fa-location-dot"></i> Map</button>
+                        </span>
+                        <div class="flex items-center mt-3">
+                            <div class="wrapper w-[100px] rounded-xl overflow-hidden">
+                                <img src="assets/images/basirhat.webp" alt="basirhat">
+                            </div>
+                            <div class="ml-5">
+                                <h5 class="">Basirhat, North 24 Parganas, West Bengal, India, 743411</h5>
+                                <p class="text-xs font-light text-accent_three mt-2">Basirhat is a city of West Bengal, India. It is located on the banks of the Ichamati River</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="rightsec w-full lg:w-[40%]">
                 <form id="contactForm" class="contactform w-full flex flex-col justify-center bg-bg_secondary rounded-lg p-5" method="POST" enctype="application/x-www-form-urlencoded" autocomplete="off">
                     <input class="hidden" autocomplete="false" name="hidden" type="text">
-                    <p class="self-start w-[40%] pb-1 text-lg mb-4"><i class="fa-solid fa-bell text-accent_primary"></i>&nbsp; Contact Form</p>
+                    <p class="self-start w-[40%] pb-1 text-lg mb-4 whitespace-nowrap"><i class="fa-solid fa-bell text-accent_primary"></i>&nbsp; Contact Form</p>
                     <div class="nameinputcont w-full relative my-4">
                         <input id="contactNameInput" type="text" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary">
                         <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary">Your Full Name</span>
@@ -89,5 +111,20 @@ require 'core/query_functions.php';
     <script type="text/javascript" src="assets/js/floatingbar-config.js"></script>
     <script type="text/javascript" src="assets/js/keybinding-config.js"></script>
     <script type="text/javascript" src="assets/js/contactform-config.js"></script>
+    <script type="text/javascript">
+        const handleOnMouseMove = e => {
+            const { currentTarget: target } = e;
+            const rect = target.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+
+            target.style.setProperty("--mouse-x",`${x}px`);
+            target.style.setProperty("--mouse-y",`${y}px`);
+        }
+
+        for(const card of document.querySelectorAll(".hoverAnimatedContainer")){
+            card.onmousemove = e => handleOnMouseMove(e);
+        }
+    </script>
 </body>
 </html>
