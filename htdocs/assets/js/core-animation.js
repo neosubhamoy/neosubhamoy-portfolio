@@ -2,20 +2,22 @@
 function animate_hello() {
     const texts = ["Namaste! 🙏", "Hello! 👋", "Konnichiwa! 😄", "Anyeonghaseyo! 😊", "Hola! 😃", "Bonjour! 😄", "Zdravstvuyte! 🙂", "Marhabaan! 😊", "Olá! 😃", "Salve! 🤠"];
     const textContainer = document.getElementById("helloContainer");
-    
+
     let currentIndex = 0;
+
     function animateText() {
-        textContainer.textContent = texts[currentIndex];
+        textContainer.innerHTML = texts[currentIndex].split(' ').map(word => `<span class="slideUpFade">${word}</span>`).join(' ');
         currentIndex = (currentIndex + 1) % texts.length;
-    
+
         setTimeout(() => {
             animateText();
-        }, 3000);
+        }, 4000);
     }
+
     animateText();
 }
 
-if(document.getElementById("helloContainer")) {
+if (document.getElementById("helloContainer")) {
     animate_hello();
 }
 
