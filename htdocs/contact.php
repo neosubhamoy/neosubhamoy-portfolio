@@ -110,21 +110,7 @@ require 'core/query_functions.php';
     <script type="text/javascript" src="assets/js/preloader-config.js"></script>
     <script type="text/javascript" src="assets/js/floatingbar-config.js"></script>
     <script type="text/javascript" src="assets/js/keybinding-config.js"></script>
+    <script type="text/javascript" src="assets/js/core-animation.js"></script>
     <script type="text/javascript" src="assets/js/contactform-config.js"></script>
-    <script type="text/javascript">
-        const handleOnMouseMove = e => {
-            const { currentTarget: target } = e;
-            const rect = target.getBoundingClientRect(),
-                x = e.clientX - rect.left,
-                y = e.clientY - rect.top;
-
-            target.style.setProperty("--mouse-x",`${x}px`);
-            target.style.setProperty("--mouse-y",`${y}px`);
-        }
-
-        for(const card of document.querySelectorAll(".hoverAnimatedContainer")){
-            card.onmousemove = e => handleOnMouseMove(e);
-        }
-    </script>
 </body>
 </html>
