@@ -40,7 +40,7 @@ require 'core/query_functions.php';
             </div>
         </div>
         <div id="contactsection" class="contactsection w-full flex flex-col justify-start lg:flex-row lg:justify-between items-start mt-32 mb-72 lg:mb-32 px-2 lg:px-0">
-            <div class="leftsec mb-14 w-full h-full flex flex-col justify-between lg:w-[50%] lg:mb-0">
+            <div class="leftsec mb-14 w-full flex flex-col justify-between lg:w-[50%] lg:mb-0">
                 <div class="leftsectop">
                     <h4 class="text-2xl font-bold mb-10">My <span class="text-accent_primary">Contact</span> Details</h4>
                     <div class="contactinfocont mt-14">
@@ -58,7 +58,7 @@ require 'core/query_functions.php';
                         </div>
                     </div>
                 </div>
-                <div class="leftsecbottom">
+                <div class="leftsecbottom mt-10 lg:mt-[6.5rem]">
                     <div class="hoverAnimatedContainer bg-bg_secondary rounded-lg p-5 relative">
                         <span class="flex items-center text-lg justify-between">
                             <span class="">
@@ -68,11 +68,11 @@ require 'core/query_functions.php';
                             <button class="w-fit px-5 py-1 text-base font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('https://www.google.com/maps/place/Basirhat,+West+Bengal/')"><i class="fa-solid fa-location-dot"></i> Map</button>
                         </span>
                         <div class="flex items-center mt-3">
-                            <div class="wrapper w-[100px] rounded-xl overflow-hidden">
+                            <div class="wrapper w-[200px] lg:w-[100px] rounded-xl overflow-hidden">
                                 <img src="assets/images/basirhat.webp" alt="basirhat">
                             </div>
                             <div class="ml-5">
-                                <h5 class="">Basirhat, North 24 Parganas, West Bengal, India, 743411</h5>
+                                <h5 class="">Basirhat, West Bengal, India, 743411</h5>
                                 <p class="text-xs font-light text-accent_three mt-2">Basirhat is a city of West Bengal, India. It is located on the banks of the Ichamati River</p>
                             </div>
                         </div>
