@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /core/
+Disallow: /error/
+
+Sitemap: https://neosubhamoy.com/sitemap.xml
