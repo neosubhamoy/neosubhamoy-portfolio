@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2023 at 04:16 PM
+-- Generation Time: Dec 13, 2023 at 08:21 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,7 +42,7 @@ CREATE TABLE `featured_projects` (
 INSERT INTO `featured_projects` (`id`, `name`, `description`, `link`, `thumbnail`) VALUES
 (1, 'FantasyWalls', 'An open-souced community crafted wallpaper collection app', 'https://techishfellow.weebly.com/fantasywalls-official.html', './assets/images/fantasywalls.jpg'),
 (2, 'ProURL', 'All in one link shortener and management tool webapp', 'https://prourl.eu.org', './assets/images/prourl.jpg'),
-(3, 'TestProject', 'This is a test project description for this item', 'https://google.com', NULL);
+(3, 'AdlinkflyBot', 'A simple-to-use Python based Telegram Bot Script designed to work with Adlinkfly PHP Link Shortener website', 'https://github.com/techishfellow/adlinkfly-telegram-bot', NULL);
 
 -- --------------------------------------------------------
 
@@ -113,11 +113,19 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `name`, `shortdes`, `description`, `link`, `year`, `stag`) VALUES
-(1, 'ProURL', 'Link management tool', 'All-in-one link shortener and management tool web app. Give your links superpower try it now!', 'https://prourl.eu.org', 2023, NULL),
-(2, 'My Test Project 2', '', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribu', 'https://abcd.com', 2020, NULL),
-(3, 'By Test Project 3', '', 'packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy', 'https://abcdefg.com', 2020, NULL),
-(4, 'My Test Project 4 Hehe', '', 'typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing', 'https://abcdfgrdjerfhewsgf.com', 2017, NULL),
-(5, 'Ay Test Project Something', '', 'many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)', 'https://abcdeefjhdwjkfhjksd.com', 2019, NULL);
+(1, 'Techishfellow Website', 'Landingpage', 'A static landing page for The Techishfellow Foundation', 'https://techishfellow.weebly.com', 2018, NULL),
+(2, 'HTML Video Player', 'Script', 'A simple to use browser based local video player', 'https://techishfellow.github.io/html_videoplayer/', 2018, NULL),
+(3, 'NeoMods', 'Android App Store', 'An online App Store for modified android apps', 'https://neomods.ml', 2019, NULL),
+(4, 'QuikLink', 'Link Shortener', 'A database less link shortener webapp', 'https://quik.ml', 2019, NULL),
+(5, 'NxtCountry', 'Android VPN App', 'A multi-layered OpenVPN protocol based VPN app for android', 'https://nxtcountryvpn.ml', 2020, NULL),
+(6, 'TechishNews', 'Trending News Website', 'A trending tech news provider web platform', 'https://techishnews.ml', 2020, NULL),
+(7, 'EzyBlog', 'Blogging Script', 'A simple and easy to deploy blogging website script', 'https://ezyblog.tk', 2021, NULL),
+(8, 'QteeStream', 'P2P Video Streaming', 'A peer-to-peer video sharing platform webapp', 'https://qtee.ml', 2021, NULL),
+(9, 'FantasyWalls', 'Wallpaper App', 'A cloud-based handcrafted wallpaper collection app for android', 'https://techishfellow.weebly.com/fantasywalls-official.html', 2021, NULL),
+(10, 'ProURL', 'URL Management Tool', 'A powerful all-in-one link shortener and management tool webapp', 'https://prourl.eu.org', 2022, NULL),
+(11, 'Adlinkfly Telegram Bot', 'Script', 'A Python based Telegram Bot Script for Adlinlfly PHP Link Shortener Websites', 'https://github.com/techishfellow/adlinkfly-telegram-bot', 2022, NULL),
+(12, 'POCO X3 Pro Splash Maker', 'CLI Tool', 'A CLI tool to create Custom Splash Screen Logo for POCO X3 Pro (vayu) device', 'https://github.com/neosubhamoy/poco-x3-pro-custom-logo-image-maker', 2023, NULL),
+(13, 'NeoSubhamoy Portfolio', 'Website', 'Official portfolio website of Subhamoy Biswas (@neo_subhamoy)', 'https://neosubhamoy.com', 2023, NULL);
 
 -- --------------------------------------------------------
 
@@ -265,7 +273,7 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `quick_actions`
