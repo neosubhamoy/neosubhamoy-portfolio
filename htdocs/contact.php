@@ -104,8 +104,8 @@ require 'core/query_functions.php';
                     <div class="captchacont w-full">
                         <div id="recaptcha" class="g-recaptcha w-full h-fit transform scale-[0.70] origin-left" data-sitekey="6Lfq2SspAAAAADDI2jvOiZ2snM_H0JENRK8vajoX" data-theme="dark"></div>
                     </div>
-                    <div id="contactAlert" class="w-full mb-4"></div>
-                    <div class="contactsubmit w-full">
+                    <div id="contactAlert" class="w-full"></div>
+                    <div class="contactsubmit w-full mt-4">
                         <button id="contactSendButton" type="submit" class="bg-accent_primary rounded-full py-2 px-6 text-bg_primary font-bold hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500">SEND <i class="fa-regular fa-paper-plane ml-2"></i></button>
                     </div>
                 </form>
