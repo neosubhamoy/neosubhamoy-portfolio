@@ -85,7 +85,10 @@ require 'core/query_functions.php';
             <div class="rightsec w-full lg:w-[40%]">
                 <form id="contactForm" class="contactform w-full flex flex-col justify-center bg-bg_secondary rounded-lg p-5" method="POST" enctype="application/x-www-form-urlencoded" autocomplete="off">
                     <input class="hidden" autocomplete="false" name="hidden" type="text">
-                    <p class="self-start w-[40%] pb-1 text-lg mb-4 whitespace-nowrap"><i class="fa-solid fa-bell text-accent_primary"></i>&nbsp; Contact Form</p>
+                    <p class="self-start w-[40%] pb-1 text-lg whitespace-nowrap"><i class="fa-solid fa-bell text-accent_primary"></i>&nbsp; Contact Form</p>
+                    <svg class="mb-4" width="170" height="10" viewBox="0 0 703 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 9.5C13.65 0.833334 25.3 0.833334 36.95 9.5C48.6 18.1667 60.25 18.1667 71.9 9.5C83.55 0.833334 95.2 0.833334 106.85 9.5C118.5 18.1667 130.15 18.1667 141.8 9.5C153.45 0.833334 165.1 0.833334 176.75 9.5C188.4 18.1667 200.05 18.1667 211.7 9.5C223.35 0.833334 235 0.833334 246.65 9.5C258.3 18.1667 269.95 18.1667 281.6 9.5C293.25 0.833334 304.9 0.833334 316.55 9.5C328.2 18.1667 339.85 18.1667 351.5 9.5C363.15 0.833334 374.8 0.833334 386.45 9.5C398.1 18.1667 409.75 18.1667 421.4 9.5C433.05 0.833334 444.7 0.833334 456.35 9.5C468 18.1667 479.65 18.1667 491.3 9.5C502.95 0.833334 514.6 0.833334 526.25 9.5C537.9 18.1667 549.55 18.1667 561.2 9.5C572.85 0.833334 584.5 0.833334 596.15 9.5C607.8 18.1667 619.45 18.1667 631.1 9.5C642.75 0.833334 654.4 0.833334 666.05 9.5C677.7 18.1667 689.35 18.1667 701 9.5" stroke="#38BDF8" stroke-width="8"/>
+                    </svg>
                     <div class="nameinputcont w-full relative my-4">
                         <input id="contactNameInput" type="text" class="peer w-full p-2 border-[2px] bg-bg_secondary border-accent_secondary_transparent rounded outline-none focus:border-accent_primary">
                         <span class="absolute text-sm -top-[0.60rem] left-4 px-3 bg-bg_secondary peer-focus:text-accent_primary">Your Full Name</span>
