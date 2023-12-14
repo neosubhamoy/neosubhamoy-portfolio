@@ -13,7 +13,10 @@ require 'core/query_functions.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Get in touch with me instantly, contact now">
+    <meta property="og:title" content="<?php echo fetch_page_title($conn, "Contact");?>">
+    <meta property="og:description" content="Contact with Subhamoy Biswas (@neo_subhamoy) - Full-Stack Web, Android Developer and UI/UX Designer">
+    <meta property="og:image" content="https://neosubhamoy.com/assets/images/neosubhamoy.jpg">
     <title><?php echo fetch_page_title($conn, "Contact");?></title>
     <?php require 'assets/_integrate.php';?>
 </head>

@@ -13,7 +13,10 @@ require 'core/query_functions.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Privacy Policy for Subhamoy Biswas Portfolio">
+    <meta property="og:title" content="Privacy Policy - @neo_subhamoy">
+    <meta property="og:description" content="Privacy Policy for Subhamoy Biswas Portfolio">
+    <meta property="og:image" content="https://neosubhamoy.com/assets/images/neosubhamoy.jpg">
     <title>Privacy Policy - @neo_subhamoy</title>
     <?php require 'assets/_integrate.php';?>
 </head>
