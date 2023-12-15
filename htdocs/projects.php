@@ -97,7 +97,7 @@ $years = create_project_years_array($conn);
                         //fetch all projects by year and show it
                         while ($project = $projects -> fetch_assoc()) {
                             echo "
-                            <a class='projectitem my-2 ml-7 last:mb-3' href='".$project['link']."' target='_blank'>".$project['name'].($project['shortdes'] != "" ? ' - '. $project['shortdes'] : '')."</a>
+                            <a class='projectitem text-accent_three my-2 ml-7 last:mb-3' href='".$project['link']."' target='_blank'>".$project['name'].($project['shortdes'] != "" ? ' - '. $project['shortdes'] : '')."</a>
                             ";
                         }
 
