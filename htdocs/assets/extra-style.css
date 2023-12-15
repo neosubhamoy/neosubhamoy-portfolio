@@ -272,3 +272,23 @@ background: #38BDF8;
     }
     }
 }
+
+/* --- Tooltip Styling --- */
+
+.tippy-box[data-theme~='neosubhamoy'] {
+    background-color: #1b2536;
+    color: #FFFFFF;
+}
+
+.tippy-box[data-theme~='neosubhamoy'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #1b2536;
+}
+.tippy-box[data-theme~='neosubhamoy'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #1b2536;
+}
+.tippy-box[data-theme~='neosubhamoy'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #1b2536;
+}
+.tippy-box[data-theme~='neosubhamoy'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #1b2536;
+}
