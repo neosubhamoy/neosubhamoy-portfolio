@@ -11,3 +11,12 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $_ENV['ANALYTICS_ID'] ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?php echo $_ENV['ANALYTICS_ID'] ?>');
+</script>
