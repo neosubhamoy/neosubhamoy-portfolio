@@ -57,7 +57,7 @@ require 'core/query_functions.php';
                         </div>
                         <div class="flex items-center my-4">
                             <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Chat with me on Telegram"><i class="fa-brands fa-telegram"></i></span>
-                            <p class="text-lg font-light cursor-pointer" onclick="window.open('https://t.me/neo_subhamoy', '_blank')">t.me/neo_subhamoy</p>
+                            <p class="text-lg font-light cursor-pointer" onclick="window.open('https://www.t.me/neo_subhamoy', '_blank')">t.me/neo_subhamoy</p>
                         </div>
                     </div>
                 </div>

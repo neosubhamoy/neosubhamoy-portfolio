@@ -147,7 +147,7 @@ CREATE TABLE `quick_actions` (
 
 INSERT INTO `quick_actions` (`id`, `name`, `icon`, `link`, `stag`) VALUES
 (1, 'Send Email', 'xtnsvhie.json', 'mailto:hey@neosubhamoy.com', 'contact'),
-(2, 'Chat Online', 'fdxqrdfe.json', '#', 'contact'),
+(2, 'Chat Online', 'fdxqrdfe.json', 'https://www.t.me/neo_subhamoy', 'contact'),
 (3, 'Source Code', 'lzgmgrnn.json', '#', NULL);
 
 -- --------------------------------------------------------
