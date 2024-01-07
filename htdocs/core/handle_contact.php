@@ -35,7 +35,7 @@ function send_contact_email($name, $email, $message) {
         $mail->SMTPAuth   = true;
         $mail->Username   = $_ENV['SMTP_USER'];
         $mail->Password   = $_ENV['SMTP_PASS'];
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->SMTPSecure = "tls";
         $mail->Port       = $_ENV['SMTP_PORT'];
     
         $mail->setFrom($_ENV['SMTP_USER'], 'contact@neosubhamoy.com');
