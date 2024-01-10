@@ -50,7 +50,7 @@
     </div>
     <hr class="opacity-20 mt-16 mb-5">
     <div class="copyrightsection w-full flex justify-between items-center mt-7 mb-12">
-        <a class="font-cormorant text-4xl font-bold hidden lg:block" href="https://neosubhamoy.xyz">Subhamoy Biswas</a>
+        <a class="font-cormorant text-4xl font-bold hidden lg:block" href="https://neosubhamoy.com">Subhamoy Biswas</a>
         <p class="">&#169; <script>document.write(new Date().getFullYear())</script> - All Rights Reserved<br>Developed with &#10084; in <strong>India</strong></p>
     </div>
 </footer>
