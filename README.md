@@ -6,7 +6,7 @@
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/neosubhamoy/neosubhamoy-portfolio/)
 <br></br>
 
-### 🌟 Tech Stack
+### 📌 Tech Stack
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -15,6 +15,8 @@
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 ### 🛠️ Contributing
+
+Want to be the part of this project? Get started by following this simple steps . . .
 
 1. Clone this repository in your dev server public folder (eg: 'htdocs' for XAMPP Server)
 2. Install node dependencies
@@ -31,6 +33,14 @@ npm run dev
 http://localhost/neosubhamoy-portfolio/htdocs/
 ```
 5. Using a Self Signed SSL in dev server is highly recommended as some of the site features only works with secure https protocol
+
+⭕ Noticed any Bugs? or Want to give me some suggetions? always feel free to open an issue...!!
+
+### 📝 License & Usage
+
+Subhamoy Biswas - Portfolio Website is a Fully Open Sourced Project licensed under MIT License. Anyone can view, modify, use (personal and commercial) or distribute it's sources without any attribution and extra permissions.
+
+**🌟 Liked this project? Please consider giving it a star to show me your appreciation.**
 <br></br>
 <br></br>
 
