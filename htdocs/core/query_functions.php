@@ -6,6 +6,13 @@ function fetch_all_records($conn, $table_name) {
     return $result;
 }
 
+//function to fetch a single record of the given table, cloumn and it's value
+function fetch_a_record($conn, $table_name, $column_name, $column_value) {
+    $sql = "SELECT * FROM $table_name WHERE $column_name = '$column_value'";
+    $result = $conn -> query($sql);
+    return $result;
+}
+
 //function to create an array of all unique project years
 function create_project_years_array($conn) {
     $sql = "SELECT DISTINCT year FROM projects ORDER BY year DESC";
