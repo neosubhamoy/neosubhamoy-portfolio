@@ -3,6 +3,26 @@
 
 let pressedKeys = {};
 
+function getJsonDataset(element) {
+    return new Promise((resolve, reject) => {
+        $.getJSON('assets/dataset.json', function(datasetData) {
+            resolve(datasetData[element]);
+        }).fail(function(jqxhr, textStatus, error) {
+            reject(error);
+        });
+    });
+}
+
+async function redirectToURL(item) {
+    try {
+        const url = await getJsonDataset(item);
+        window.open(url, '_blank');
+        location.reload();
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
 document.addEventListener('keydown', function(event) {
     pressedKeys[event.key] = true;
 
@@ -19,13 +39,13 @@ document.addEventListener('keydown', function(event) {
         window.location.href = basePath + "/contact";
     }
     else if (pressedKeys['q'] && pressedKeys['e']) {
-        window.location.href = "mailto:hey@neosubhamoy.com";
+        redirectToURL('email');
     }
     else if (pressedKeys['q'] && pressedKeys['m']) {
-        window.location.href = "#";
+        redirectToURL('chat');
     }
     else if (pressedKeys['q'] && pressedKeys['s']) {
-        window.location.href = "#";
+        redirectToURL('sources');
     }
 });
 

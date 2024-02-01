@@ -61,7 +61,7 @@ function fetch_page_title($conn, $page_name) {
     }
 }
 
-//function to fetch page title
+//function to fetch quick actions link
 function fetch_quick_action_link($conn, $action_name) {
     $sql = "SELECT link FROM quick_actions WHERE name = '$action_name'";
     $result = $conn -> query($sql);
