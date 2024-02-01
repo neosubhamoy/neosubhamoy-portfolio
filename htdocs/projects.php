@@ -6,6 +6,8 @@ $dotenv->load();
 require 'core/connection.php';
 require 'core/host_config.php';
 require 'core/query_functions.php';
+require 'core/write_dataset.php';
+write_dataset($conn);
 
 $years = create_project_years_array($conn);
 ?>
