@@ -6,13 +6,6 @@ function fetch_all_records($conn, $table_name) {
     return $result;
 }
 
-//function to fetch a single record of the given table, cloumn and it's value
-function fetch_a_record($conn, $table_name, $column_name, $column_value) {
-    $sql = "SELECT * FROM $table_name WHERE $column_name = '$column_value'";
-    $result = $conn -> query($sql);
-    return $result;
-}
-
 //function to create an array of all unique project years
 function create_project_years_array($conn) {
     $sql = "SELECT DISTINCT year FROM projects ORDER BY year DESC";
@@ -65,6 +58,16 @@ function fetch_page_title($conn, $page_name) {
     if($result -> num_rows > 0){
         $row = $result -> fetch_assoc();
         return $row['title'];
+    }
+}
+
+//function to fetch page title
+function fetch_quick_action_link($conn, $action_name) {
+    $sql = "SELECT link FROM quick_actions WHERE name = '$action_name'";
+    $result = $conn -> query($sql);
+    if($result -> num_rows > 0){
+        $row = $result -> fetch_assoc();
+        return $row['link'];
     }
 }
 
