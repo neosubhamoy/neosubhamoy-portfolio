@@ -14,7 +14,7 @@ write_dataset($conn);
     <meta name="description" content="Terms Of Use for Subhamoy Biswas Portfolio">
     <meta property="og:title" content="Terms Of Use - @neo_subhamoy">
     <meta property="og:description" content="Terms Of Use for Subhamoy Biswas Portfolio">
-    <meta property="og:image" content="https://neosubhamoy.com/assets/images/neosubhamoy.jpg">
+    <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
     <title>Terms Of Use - @neo_subhamoy</title>
     <?php require 'assets/_integrate.php';?>
 </head>
@@ -36,7 +36,7 @@ write_dataset($conn);
                 <div class="termscont1 text-accent_three pb-5 mb-10 border-b-[1px] border-b-accent_secondary_transparent">
                     <p class="text-xl text-accent_secondary mb-3">Version 1.0</p>
     
-                    <p>The Subhamoy Biswas Portfolio website located at https://neosubhamoy.com is a copyrighted work belonging to Subhamoy Biswas. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.</p>
+                    <p>The Subhamoy Biswas Portfolio website located at https://<?php echo $domain ?> is a copyrighted work belonging to Subhamoy Biswas. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.</p>
     
                     <p>All such additional terms, guidelines, and rules are incorporated by reference into these Terms.</p>
                     <p>These Terms of Use described the legally binding terms and conditions that oversee your use of the Site.&nbsp;BY LOGGING INTO THE SITE, YOU ARE BEING COMPLIANT THAT THESE TERMS and you represent that you have the authority and capacity to enter into these Terms.&nbsp;YOU SHOULD BE AT LEAST 18 YEARS OF AGE TO ACCESS THE SITE. IF YOU DISAGREE WITH ALL OF THE PROVISION OF THESE TERMS, DO NOT LOG INTO AND/OR USE THE SITE.</p>
@@ -179,7 +179,7 @@ write_dataset($conn);
     
                     <p>Address: Basirhat, North 24 Parganas, West Bengal, India</p>
     
-                    <p>Email: <a href="mailto:hey@neosubhamoy.com">hey@neosubhamoy.com</a></p>
+                    <p>Email: <a href="mailto:hey@<?php echo $domain ?>">hey@<?php echo $domain ?></a></p>
                 </div>
             </div>
         </div>

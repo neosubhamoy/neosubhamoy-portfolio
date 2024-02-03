@@ -14,7 +14,7 @@ write_dataset($conn);
     <meta name="description" content="Privacy Policy for Subhamoy Biswas Portfolio">
     <meta property="og:title" content="Privacy Policy - @neo_subhamoy">
     <meta property="og:description" content="Privacy Policy for Subhamoy Biswas Portfolio">
-    <meta property="og:image" content="https://neosubhamoy.com/assets/images/neosubhamoy.jpg">
+    <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
     <title>Privacy Policy - @neo_subhamoy</title>
     <?php require 'assets/_integrate.php';?>
 </head>
@@ -35,7 +35,7 @@ write_dataset($conn);
             <div class="policycontent w-full bg-bg_secondary rounded-xl px-5 py-7 mt-7">
                 <div class="policycont1 text-accent_three pb-5 mb-10 border-b-[1px] border-b-accent_secondary_transparent">
                     <p>
-                        At Subhamoy Biswas Portfolio, accessible from https://neosubhamoy.com,
+                        At Subhamoy Biswas Portfolio, accessible from https://<?php echo $domain ?>,
                         one of our main priorities is the privacy of our visitors. This Privacy
                         Policy document contains types of information that is collected and
                         recorded by Subhamoy Biswas Portfolio and how we use it.

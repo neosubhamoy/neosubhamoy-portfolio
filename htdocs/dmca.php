@@ -14,7 +14,7 @@ write_dataset($conn);
     <meta name="description" content="DMCA Notice for Subhamoy Biswas Portfolio">
     <meta property="og:title" content="DMCA Notice - @neo_subhamoy">
     <meta property="og:description" content="DMCA Notice for Subhamoy Biswas Portfolio">
-    <meta property="og:image" content="https://neosubhamoy.com/assets/images/neosubhamoy.jpg">
+    <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
     <title>DMCA Notice - @neo_subhamoy</title>
     <?php require 'assets/_integrate.php';?>
 </head>
@@ -34,12 +34,12 @@ write_dataset($conn);
             <p class="text-lg text-accent_three mt-12">Last Updated On: 11th of December 2023</p>
             <div class="dmcacontent w-full bg-bg_secondary rounded-xl px-5 py-7 mt-7">
                 <div class="dmcacont1 text-accent_three pb-5 mb-10 border-b-[1px] border-b-accent_secondary_transparent">
-                    <p>If you require any more information or have any questions regarding this site&#39;s disclaimer, please feel free to contact us by email at <a href="mailto:hey@neosubhamoy.com">hey@neosubhamoy.com</a>.</p>
+                    <p>If you require any more information or have any questions regarding this site&#39;s disclaimer, please feel free to contact us by email at <a href="mailto:hey@<?php echo $domain ?>">hey@<?php echo $domain ?></a>.</p>
                 </div>
                 <div class="dmcacont2 text-accent_three">
                     <h2 class="text-2xl text-accent_secondary my-3">Disclaimers for Subhamoy Biswas Portfolio</h2>
     
-                    <p>All the information on this website - https://neosubhamoy.com - is published in good faith and for general information purpose only. Subhamoy Biswas Portfolio does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (Subhamoy Biswas Portfolio), is strictly at your own risk. Subhamoy Biswas Portfolio will not be liable for any losses and/or damages in connection with the use of our website.</p>
+                    <p>All the information on this website - https://<?php echo $domain ?> - is published in good faith and for general information purpose only. Subhamoy Biswas Portfolio does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (Subhamoy Biswas Portfolio), is strictly at your own risk. Subhamoy Biswas Portfolio will not be liable for any losses and/or damages in connection with the use of our website.</p>
     
                     <p>From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone &#39;bad&#39;.</p>
     

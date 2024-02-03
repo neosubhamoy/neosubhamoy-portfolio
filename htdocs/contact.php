@@ -14,7 +14,7 @@ write_dataset($conn);
     <meta name="description" content="Get in touch with me instantly, contact now">
     <meta property="og:title" content="<?php echo fetch_page_title($conn, "Contact");?>">
     <meta property="og:description" content="Contact with Subhamoy Biswas (@neo_subhamoy) - Full-Stack Web, Android Developer and UI/UX Designer">
-    <meta property="og:image" content="https://neosubhamoy.com/assets/images/neosubhamoy.jpg">
+    <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
     <title><?php echo fetch_page_title($conn, "Contact");?></title>
     <?php require 'assets/_integrate.php';?>
 </head>
@@ -51,7 +51,7 @@ write_dataset($conn);
                         </div>
                         <div class="flex items-center my-4">
                             <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Contact via Email"><i class="fa-solid fa-envelope"></i></span>
-                            <p class="text-lg font-light cursor-pointer" onclick="location.href='mailto:hey@neosubhamoy.com'">hey@neosubhamoy.com</p>
+                            <p class="text-lg font-light cursor-pointer" onclick="location.href='mailto:hey@<?php echo $domain ?>'">hey@<?php echo $domain ?></p>
                         </div>
                         <div class="flex items-center my-4">
                             <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Chat with me on Telegram"><i class="fa-brands fa-telegram"></i></span>

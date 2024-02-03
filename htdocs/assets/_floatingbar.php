@@ -95,7 +95,7 @@
         <p class="self-start text-xl hidden md:block">Scan to Share</p>
         <div class="bg-bg_primary p-10 md:p-5 rounded-lg my-3">
             <div class="qrwrapper aspect-square w-full md:w-[150px]">
-                <img class="w-full hidden" id="pageqrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=https://neosubhamoy.dev&color=38BDF8&bgcolor=0F172A" alt="qrcode">
+                <img class="w-full hidden" id="pageqrcode" src="https://api.qrserver.com/v1/create-qr-code/?data=https://<?php echo $domain ?>&color=38BDF8&bgcolor=0F172A" alt="qrcode">
                 <div id="qrspinnercont" class="qrspinnercont w-full h-full flex justify-center items-center"><div class="spinner border-[3px] border-accent_secondary_transparent border-t-[3px] border-t-accent_primary rounded-[50%] h-[30px] w-[30px] animate-spin"></div></div>
             </div>
         </div>
@@ -105,7 +105,7 @@
     <div class="extrashareopt w-full h-full flex flex-col py-3 px-7 border-t-[1px] md:border-t-[0px] md:border-l-[1px] border-[rgba(255,_255,_255,_0.15)]">
         <p class="text-lg hidden md:block"><i class="fa-solid fa-user-group text-accent_primary"></i>&nbsp; Sharing Options</p>
         <div class="urlinputbar w-full flex justify-between items-center py-2 px-3 my-3 bg-bg_primary rounded-full overflow-hidden">
-            <input id="pageurlinput" class="w-[85%] bg-bg_primary caret-accent_primary text-accent_four font-[300] outline-none" type="text" value="https://neosubhamoy.dev" readonly>
+            <input id="pageurlinput" class="w-[85%] bg-bg_primary caret-accent_primary text-accent_four font-[300] outline-none" type="text" value="https://<?php echo $domain ?>" readonly>
             <button class="urlcopybtn px-3 border-l-[1px] border-accent_secondary_transparent" title="Copy link" onclick="copy_to_clipboard(document.location.href, 'Link')"><i class="fa-regular fa-copy"></i></button>
         </div>
         <p class="text-xs my-3 text-accent_three hidden md:block">SHARE ON</p>
@@ -119,7 +119,7 @@
         <p class="text-xs my-3 text-accent_three hidden md:block">EMBED THIS PAGE</p>
         <div class="group embedpagecode w-full bg-bg_primary p-4 rounded-lg relative hidden md:block">
             <button class="copyembedcode absolute top-3 right-3 px-3 py-2 bg-bg_secondary rounded-lg hover:bg-bg_third transition transform duration-500 hidden group-hover:block" title="Copy code snippet" onclick="copy_to_clipboard(document.getElementById('embedcodetag').innerHTML, 'Code Snippet')"><i class="fa-regular fa-copy"></i></button>
-            <pre class="text-accent_four text-xs whitespace-pre-wrap"><code id="embedcodetag">&lt;iframe&#13;&#10;src="https://neosubhamoy.com"&#13;&#10;height="720"&#13;&#10;width="1280"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
+            <pre class="text-accent_four text-xs whitespace-pre-wrap"><code id="embedcodetag">&lt;iframe&#13;&#10;src="https://<?php echo $domain ?>"&#13;&#10;height="720"&#13;&#10;width="1280"&#13;&#10;title="test iframe"&gt;&lt;/iframe&gt;</code></pre>
         </div>
     </div>
 </div>

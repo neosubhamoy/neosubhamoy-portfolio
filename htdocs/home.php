@@ -14,7 +14,7 @@ write_dataset($conn);
     <meta name="description" content="Official Portfolio Website of Subhamoy Biswas - Full-Stack Web, Android Developer and UI/UX Designer - (Also Reknowned as @neo_subhamoy). | Know More About Him and His WorkExperince">
     <meta property="og:title" content="<?php echo fetch_page_title($conn, "Home");?>">
     <meta property="og:description" content="Official Portfolio Website of Subhamoy Biswas (@neo_subhamoy) - Full-Stack Web, Android Developer and UI/UX Designer">
-    <meta property="og:image" content="https://neosubhamoy.com/assets/images/neosubhamoy.jpg">
+    <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
     <title><?php echo fetch_page_title($conn, "Home");?></title>
     <?php require 'assets/_integrate.php';?>
 </head>
@@ -210,7 +210,7 @@ write_dataset($conn);
             <div class="relative tagline mt-[10rem] mb-[12rem]">
                 <h3 class="text-2xl lg:text-4xl">On a mission to!</h3>
                 <h4 class="text-4xl lg:text-6xl mb-6 mt-1">make the <span class="text-accent_primary font-bold">web</span> more <span class="text-accent_primary font-bold">interesting</span>.</h4>
-                <h5 class="text-base lg:text-xl text-accent_three my-3">Wanna join the journey with me? &nbsp; <span class="lg:hidden"><br></span>email to: <a class="border-b-[2px] border-accent_primary_transparent hover:border-accent_primary transition transform duration-300 cursor-pointer" href="mailto:hey@neosubhamoy.com">hey@neosubhamoy.com</a></h5>
+                <h5 class="text-base lg:text-xl text-accent_three my-3">Wanna join the journey with me? &nbsp; <span class="lg:hidden"><br></span>email to: <a class="border-b-[2px] border-accent_primary_transparent hover:border-accent_primary transition transform duration-300 cursor-pointer" href="mailto:hey@<?php echo $domain ?>">hey@<?php echo $domain ?></a></h5>
                 <div class="absolute w-[300px] top-[-2.5rem] left-2 lg:w-[330px] lg:top-[-3.7rem] lg:left-8">
                     <img src="./assets/images/endsec-bgpattern.svg" alt="patterns">
                 </div>

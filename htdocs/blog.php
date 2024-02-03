@@ -14,7 +14,7 @@ write_dataset($conn);
     <meta name="description" content="Explore my Blog Posts about the evolving Tech">
     <meta property="og:title" content="<?php echo fetch_page_title($conn, "Blog");?>">
     <meta property="og:description" content="Blog of Subhamoy Biswas (@neo_subhamoy) - Full-Stack Web, Android Developer and UI/UX Designer">
-    <meta property="og:image" content="https://neosubhamoy.com/assets/images/neosubhamoy.jpg">
+    <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
     <title><?php echo fetch_page_title($conn, "Blog");?></title>
     <?php require 'assets/_integrate.php';?>
 </head>
