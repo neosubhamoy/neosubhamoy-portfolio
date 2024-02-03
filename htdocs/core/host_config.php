@@ -1,11 +1,12 @@
 <?php
 $currentHost = $_SERVER['HTTP_HOST'];
+$localIP = $_ENV['LOCAL_IP'];
 
 if($currentHost == "localhost") {
     $basePath = "https://localhost/neosubhamoy/htdocs";
 }
-elseif ($currentHost == "192.168.29.177") {
-    $basePath = "https://192.168.29.177/neosubhamoy/htdocs";
+elseif ($currentHost == $localIP) {
+    $basePath = "https://" . $localIP . "/neosubhamoy/htdocs";
 }
 else {
     $basePath = "https://" . $currentHost;
