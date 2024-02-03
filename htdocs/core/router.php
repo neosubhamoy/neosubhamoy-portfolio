@@ -24,7 +24,7 @@ $devRoutes = [
     '/neosubhamoy/htdocs/dmca' => 'dmca.php',
 ];
 
-if ($host == "localhost" || $host == "192.168.29.177") {
+if ($host == "localhost" || $host == $_ENV['LOCAL_IP']) {
     $routes = $devRoutes;
 }
 else {
