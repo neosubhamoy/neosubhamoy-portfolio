@@ -125,7 +125,8 @@ INSERT INTO `projects` (`id`, `name`, `shortdes`, `description`, `link`, `year`,
 (10, 'ProURL', 'URL Management Tool', 'A powerful all-in-one link shortener and management tool webapp', 'https://prourl.eu.org', 2022, NULL),
 (11, 'Adlinkfly Telegram Bot', 'Script', 'A Python based Telegram Bot Script for Adlinlfly PHP Link Shortener Websites', 'https://github.com/techishfellow/adlinkfly-telegram-bot', 2022, NULL),
 (12, 'POCO X3 Pro Splash Maker', 'CLI Tool', 'A CLI tool to create Custom Splash Screen Logo for POCO X3 Pro (vayu) device', 'https://github.com/neosubhamoy/poco-x3-pro-custom-logo-image-maker', 2023, NULL),
-(13, 'NeoSubhamoy Portfolio', 'Website', 'Official portfolio website of Subhamoy Biswas (@neo_subhamoy)', 'https://neosubhamoy.com', 2023, NULL);
+(13, 'NeoSubhamoy Portfolio', 'Website', 'Official portfolio website of Subhamoy Biswas (@neo_subhamoy)', 'https://neosubhamoy.com', 2023, NULL),
+(14, 'pytubePP', 'Python Library', 'A Simple CLI Tool to Download Your Favourite YouTube Videos Effortlessly!', 'https://github.com/neosubhamoy/pytubepp', 2024, NULL);
 
 -- --------------------------------------------------------
 
