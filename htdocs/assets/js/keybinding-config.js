@@ -17,7 +17,9 @@ async function redirectToURL(item) {
     try {
         const url = await getJsonDataset(item);
         window.open(url, '_blank');
-        location.reload();
+        if (!/Firefox/.test(navigator.userAgent)) {
+            location.reload();
+        }
     } catch (error) {
         console.error('Error:', error);
     }
