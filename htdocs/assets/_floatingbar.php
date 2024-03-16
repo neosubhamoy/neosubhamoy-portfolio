@@ -1,6 +1,6 @@
 <div id="floatingwindowwrapper" class="floatingwindowwrapper fixed top-0 left-0 w-screen h-screen z-30 bg-[rgba(0,_0,_0,_0.4)] hidden"></div>
 <div id="phpHostBasePath" class="hidden" data-base-path="<?php echo htmlspecialchars($basePath);?>"></div>
-<div id="searchwindow" class="searchwindow w-[90vw] md:w-[44vw] mx-auto h-[45vh] md:h-[60vh] fixed inset-x-0 top-[30vh] z-40 flex-col items-center bg-bg_secondary rounded-xl overflow-y-scroll no-scrollbar hidden">
+<div id="searchwindow" class="searchwindow w-[90vw] md:w-[44vw] mx-auto h-fit max-h-[45vh] md:max-h-[60vh] fixed inset-x-0 top-[30vh] z-40 flex-col items-center bg-bg_secondary rounded-xl overflow-y-scroll no-scrollbar hidden">
     <div id="defresults" class="defresults w-full flex flex-col justify-start px-2 mt-1">
         <p class="text-xs text-accent_three mt-3 mb-2 mx-1">PAGE NAVIGATION</p>
         <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='<?php echo $basePath ?>'">
