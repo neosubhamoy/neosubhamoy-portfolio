@@ -1,11 +1,9 @@
 <?php
-require 'core/vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable('../');
-$dotenv->load();
-
 require 'core/connection.php';
 require 'core/host_config.php';
 require 'core/query_functions.php';
+require 'core/write_dataset.php';
+write_dataset($conn);
 ?>
 
 <!DOCTYPE html>
