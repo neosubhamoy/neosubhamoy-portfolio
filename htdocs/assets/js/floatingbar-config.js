@@ -182,8 +182,8 @@ function inject_search_results (results, keyword) {
                 <span class="flex items-center">
                     <span class="mx-1 w-[35px] h-[35px] flex justify-center items-center rounded border-[1px] border-accent_secondary_transparent"><p class="text-accent_primary">${result.name.charAt(0).toUpperCase()}</p></span>
                     <span class="flex flex-col">
-                        <h6 class="mx-1">${result.name}</h6>
-                        <p class="mx-1 text-xs text-accent_three">${result.description.slice(0, 35) + '...'}</p>
+                        <h6 class="mx-1 overflow-hidden whitespace-nowrap text-ellipsis max-w-[45vw] md:max-w-[30vw]">${result.name}</h6>
+                        <p class="mx-1 text-xs overflow-hidden whitespace-nowrap text-ellipsis max-w-[45vw] md:max-w-[30vw] text-accent_three">${result.description}</p>
                     </span>
                 </span>
                 <span class="flex items-center mr-1">
