@@ -32,14 +32,18 @@ function isPageActive($pageName, $pageRoute) {
         </a>
         <button class="ml-5 px-3 py-1 border-[2px] border-accent_primary rounded-full hover:rounded-lg hover:shadow-lg hover:shadow-accent_primary_transparent transition transform duration-500" onclick="location.href='<?php echo $basePath . '/contact' ?>'">Let's Talk</button>
     </div>
-    <div class="hamburger mr-3 mt-1 lg:hidden cursor-pointer">
-        <i class="fa-solid fa-bars text-2xl text-accent_primary" onclick="showNavslider()"></i>
+    <div class="hamburger flex flex-col justify-center items-center mr-3 mt-1 lg:hidden cursor-pointer" onclick="showNavslider()">
+        <hr class="w-[25px] border-[1px] border-accent_primary mb-1"></hr>
+        <hr class="w-[25px] border-[1px] border-accent_primary mt-1"></hr>
     </div>
     <div class="slidercontainer hidden flex-col justify-between items-center lg:hidden fixed top-0 left-0 w-screen h-screen overflow-hidden z-50 bg-bg_primary" id="slidercontainer">
         <div class="mobilemenuheader w-full flex flex-col">
             <div class="topnavbarumobile flex justify-between items-center py-5 px-4">
                 <a class="font-cormorant text-4xl font-bold ml-2" href="<?php echo $basePath ?>">Subhamoy</a>
-                <i class="fa-solid fa-xmark text-3xl text-accent_primary mr-3 cursor-pointer" onclick="closeNavslider()"></i>
+                <div class="hamburgerclose flex flex-col justify-center items-center cursor-pointer mr-3" onclick="closeNavslider()">
+                    <hr class="w-[25px] border-[1px] border-accent_primary rotate-45"></hr>
+                    <hr class="w-[25px] border-[1px] border-accent_primary -rotate-45 -translate-y-[1px]"></hr>
+                </div>
             </div>
             <div class="mobilemenu flex flex-col mt-5" id="mobilemenu">
                 <a class="ml-6 mb-4 py-[0.30rem] w-fit relative group" href="<?php echo $basePath ?>">
