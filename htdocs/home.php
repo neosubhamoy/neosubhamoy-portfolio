@@ -25,11 +25,11 @@ write_dataset($conn);
     <div class="homebox w-full px-4 lg:px-[4.5rem]">
         <div class="herosection w-full flex flex-col-reverse justify-center lg:flex-row lg:justify-between items-center mb-3">
             <div class="herotitle w-fit px-2 lg:px-0 lg:mt-16 2xl:mt-24">
-                <p class="text-2xl my-3 lg:my-2" id="helloContainer"></p>
-                <h1 class="text-3xl mt-1 mb-4 lg:mt-2 lg:mb-3 whitespace-nowrap">I'm <span class="text-accent_primary font-bold">Subhamoy</span> <span class="font-bold">Biswas</span></h1>
-                <h2 class="text-lg mt-3 mb-1 lg:mt-2 lg:mb-1 lg:whitespace-nowrap">Full Stacked <span class="text-accent_primary font-bold">Web Designer</span> and <span class="text-accent_primary font-bold">Android Developer</span></h2>
-                <h3 class="text-lg mt-1 mb-3 lg:mt-1 lg:mb-2 lg:whitespace-nowrap">Based on <span class="text-accent_primary font-bold">Kolkata</span>, <span class="font-bold">India</span></h3>
-                <div class="w-full flex justify-start items-center my-7 lg:my-6">
+                <p class="text-2xl my-3 lg:my-2" id="helloContainer" data-aos="fade-right"></p>
+                <h1 class="text-3xl mt-1 mb-4 lg:mt-2 lg:mb-3 whitespace-nowrap" data-aos="fade-right" data-aos-delay="100">I'm <span class="text-accent_primary font-bold">Subhamoy</span> <span class="font-bold">Biswas</span></h1>
+                <h2 class="text-lg mt-3 mb-1 lg:mt-2 lg:mb-1 lg:whitespace-nowrap" data-aos="fade-right" data-aos-delay="150">Full Stacked <span class="text-accent_primary font-bold">Web Designer</span> and <span class="text-accent_primary font-bold">Android Developer</span></h2>
+                <h3 class="text-lg mt-1 mb-3 lg:mt-1 lg:mb-2 lg:whitespace-nowrap" data-aos="fade-right" data-aos-delay="200">Based on <span class="text-accent_primary font-bold">Kolkata</span>, <span class="font-bold">India</span></h3>
+                <div class="w-full flex justify-start items-center my-7 lg:my-6" data-aos="fade-right" data-aos-delay="250">
                     <button class="px-5 py-1 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.alert('Feature coming soon...!')">View CV</button>
                     <i class="text-accent_primary text-2xl cursor-pointer ml-8 mr-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon($conn, 'Facebook')?>" onclick="window.open('<?php echo fetch_social_link($conn, 'Facebook') ?>')"></i>
                     <i class="text-accent_primary text-2xl cursor-pointer mx-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon($conn, 'Instagram')?>" onclick="window.open('<?php echo fetch_social_link($conn, 'Instagram') ?>')"></i>
@@ -37,8 +37,8 @@ write_dataset($conn);
                     <i class="text-accent_primary text-2xl cursor-pointer mx-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon($conn, 'Linkedin')?>" onclick="window.open('<?php echo fetch_social_link($conn, 'Linkedin') ?>')"></i>
                 </div>
                 <div class="scrollinfo hidden lg:block">
-                    <div class="mb-7 mt-10 2xl:mb-10 2xl:mt-16"><div class="border-l-[1px] border-accent_primary_transparent h-20 ml-[0.59rem]"></div></div>
-                    <div class="flex items-center">
+                    <div class="mb-7 mt-10 2xl:mb-10 2xl:mt-16" data-aos="fade-down"><div class="border-l-[1px] border-accent_primary_transparent h-20 ml-[0.59rem]"></div></div>
+                    <div class="flex items-center" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
                         <svg width="20px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
                             <path class="animate-scroll" id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#38BDF8;stroke-width:20px;"/>
                             <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#38BDF8;stroke-width:20px;"/>
@@ -48,20 +48,20 @@ write_dataset($conn);
                 </div>
             </div>
             <div class="heroimage w-full h-full flex justify-center lg:justify-end items-center">
-                <div class="wrapper w-[250px] lg:w-[350px] mb-20 mt-10 lg:mt-0 lg:mr-10 lg:mb-16 z-20">
+                <div class="wrapper w-[250px] lg:w-[350px] mb-20 mt-10 lg:mt-0 lg:mr-10 lg:mb-16 z-20" data-aos="zoom-in">
                     <img class="neosubhamoy" src="./assets/images/neosubhamoy.svg" alt="neosubhamoy">
                 </div>
-                <div class="absolute bg-accent_primary w-[200px] h-[200px] lg:w-[230px] lg:h-[230px] mt-[2.2rem] lg:mr-[6.5rem] lg:mt-[2.5rem] rounded-full shadow-[0px_0px_120px_20px] shadow-accent_primary_transparent lg:blur-lg"></div>
-                <div class="wrapper absolute z-10 top-[10rem] left-[2.5rem] rotate-[15deg] lg:left-auto lg:rotate-0 lg:top-[13rem] lg:right-[27rem] 2xl:top-[15rem] 2xl:right-[27rem]">
+                <div class="absolute bg-accent_primary w-[200px] h-[200px] lg:w-[230px] lg:h-[230px] mt-[2.2rem] lg:mr-[6.5rem] lg:mt-[2.5rem] rounded-full shadow-[0px_0px_120px_20px] shadow-accent_primary_transparent lg:blur-lg" data-aos="zoom-in"></div>
+                <div class="wrapper absolute z-10 top-[10rem] left-[2.5rem] rotate-[15deg] lg:left-auto lg:rotate-0 lg:top-[13rem] lg:right-[27rem] 2xl:top-[15rem] 2xl:right-[27rem]" data-aos="zoom-in-left">
                     <img class="w-[70px] lg:w-[100px]" src="./assets/images/left-blobs.svg" alt="left-blobs">
                 </div>
-                <div class="wrapper absolute z-10 top-[20.5rem] right-[3rem] lg:top-[27rem] lg:right-[5.5rem] 2xl:top-[28.5rem] 2xl:right-[5.5rem]">
+                <div class="wrapper absolute z-10 top-[20.5rem] right-[3rem] lg:top-[27rem] lg:right-[5.5rem] 2xl:top-[28.5rem] 2xl:right-[5.5rem]" data-aos="zoom-in-right">
                     <img class="w-[90px] lg:w-[120px]" src="./assets/images/right-blobs.svg" alt="right-blobs">
                 </div>
             </div>
         </div>
         <div class="aboutsection w-full flex flex-col justify-center items-center">
-            <div class="hoverAnimatedContainer relative w-full p-10 mx-3 mt-[10rem] mb-5 bg-bg_secondary rounded-lg">
+            <div class="hoverAnimatedContainer relative w-full p-10 mx-3 mt-[10rem] mb-5 bg-bg_secondary rounded-lg" data-aos="zoom-in-up" data-aos-duration="700" data-aos-once="true">
                 <h2 class="text-xl font-bold mb-3"><span class="text-accent_primary">About</span> Me</h2>
                 <p class="text-sm text-accent_four">Hey there! I'm Subhamoy, an 18-year-old tech enthusiast, Self-taught Full Stacked Web, Android Developer and UI/UX Designer. Crafting modern Websites and Android apps for more than 5 years. Delivering industry grade user experiences that are not only visually stunning but also intuitive.  Coding is my passion, and I pour my heart and soul into every line of code I write and every pixel I place. The digital realm is my canvas, and I'm determined to leave a lasting impact. So, get ready to witness the extraordinary, redefined future of technology with me</p>
             </div>
