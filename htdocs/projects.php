@@ -190,5 +190,6 @@ $years = create_project_years_array($conn);
     <script type="text/javascript" src="assets/js/floatingbar-config.js"></script>
     <script type="text/javascript" src="assets/js/keybinding-config.js"></script>
     <script type="text/javascript" src="assets/js/tippy-config.js"></script>
+    <script type="text/javascript" src="assets/js/aos-config.js"></script>
 </body>
 </html>

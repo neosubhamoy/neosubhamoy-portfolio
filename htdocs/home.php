@@ -224,5 +224,6 @@ write_dataset($conn);
     <script type="text/javascript" src="assets/js/keybinding-config.js"></script>
     <script type="text/javascript" src="assets/js/tippy-config.js"></script>
     <script type="text/javascript" src="assets/js/core-animation.js"></script>
+    <script type="text/javascript" src="assets/js/aos-config.js"></script>
 </body>
 </html>
