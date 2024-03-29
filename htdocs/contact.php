@@ -47,8 +47,8 @@ write_dataset($conn);
                     <div class="contactinfocont mt-14">
                         <div class="flex items-center my-4">
                             <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Contact via Phone Call"><i class="fa-solid fa-phone"></i></span>
-                            <p class="text-lg font-light">+91 80XXX 26XXX</p>
-                            <button class="bg-accent_primary_transparent text-accent_primary py-[0.15rem] px-2 ml-3 text-xs rounded" onclick="copy_to_clipboard('+91 8016626636', 'Number')">copy</button>
+                            <p class="text-lg font-light" id="phoneNumberCont" onclick="if(document.getElementById('togglePhoneNumber').innerHTML==='hide') { copy_to_clipboard('+91 8016626636', 'Number') }">+91 80XXX 26XXX</p>
+                            <button class="bg-accent_primary_transparent text-accent_primary py-[0.15rem] px-2 ml-3 text-xs rounded" onclick="if(document.getElementById('togglePhoneNumber').innerHTML==='show'){ document.getElementById('togglePhoneNumber').innerHTML='hide'; document.getElementById('phoneNumberCont').innerHTML='+91 80166 26636'; document.getElementById('phoneNumberCont').classList.add('cursor-pointer') } else { document.getElementById('togglePhoneNumber').innerHTML='show'; document.getElementById('phoneNumberCont').innerHTML='+91 80XXX 26XXX'; document.getElementById('phoneNumberCont').classList.remove('cursor-pointer') }" id="togglePhoneNumber">show</button>
                         </div>
                         <div class="flex items-center my-4">
                             <span class="w-[40px] h-[40px] bg-accent_primary text-bg_primary flex justify-center items-center rounded-full mr-5" title="Contact via Email"><i class="fa-solid fa-envelope"></i></span>
