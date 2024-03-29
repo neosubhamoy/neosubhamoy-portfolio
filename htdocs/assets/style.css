@@ -1054,6 +1054,18 @@ video {
   max-height: 45vh;
 }
 
+.min-h-\[10vh\] {
+  min-height: 10vh;
+}
+
+.min-h-\[15vh\] {
+  min-height: 15vh;
+}
+
+.min-h-\[12vh\] {
+  min-height: 12vh;
+}
+
 .w-0 {
   width: 0px;
 }
