@@ -124,6 +124,16 @@ background: #38BDF8;
     transition: transform 0.5s ease-in-out;
 }
 
+.floatingshare-slide-up {
+    transform: translateY(-15vh);
+    transition: transform 0.5s ease-in-out;
+}
+
+.floatingshare-slide-down {
+    transform: translateY(15vh);
+    transition: transform 0.5s ease-in-out;
+}
+
 .floatingbar-click-slide-up {
     transform: translateY(-70vh);
     transition: transform 0.5s ease-in-out;

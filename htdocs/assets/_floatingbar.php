@@ -1,3 +1,17 @@
+<?php
+function isNavPageActive($pageName, $pageRoute) {
+    $currentPage = $_SERVER['PHP_SELF'];
+    $currentRoute = parse_url($_SERVER['REQUEST_URI'])['path'];
+    if (strpos($currentPage, $pageName) !== false || strpos($currentRoute, $pageRoute) !== false) {
+        if ($pageRoute == '/' && ($pos = strrpos($currentRoute, $pageRoute)) !== false && $pos < strlen($currentRoute) - 1) {
+            return '';
+        }
+        return 'w-full';
+    }
+    return '';
+}
+?>
+
 <div id="floatingwindowwrapper" class="floatingwindowwrapper fixed top-0 left-0 w-screen h-screen z-30 bg-[rgba(0,_0,_0,_0.4)] hidden"></div>
 <div id="phpHostBasePath" class="hidden" data-base-path="<?php echo htmlspecialchars($basePath);?>"></div>
 <div id="searchwindow" class="searchwindow w-[90vw] md:w-[44vw] mx-auto h-fit min-h-[15vh] max-h-[45vh] md:max-h-[60vh] fixed inset-x-0 top-[30vh] z-40 flex-col items-center bg-bg_secondary rounded-xl overflow-y-scroll no-scrollbar hidden">
@@ -123,7 +137,7 @@
         </div>
     </div>
 </div>
-<div id="floating-bar" class="fixed inset-x-0 bottom-[7vh] z-[50] flex justify-center items-center">
+<div id="floating-bar" class="fixed inset-x-0 bottom-[7vh] z-[50] hidden lg:flex justify-center items-center">
     <div id="searchbar" class="searchbar bg-bg_secondary rounded-full p-[0.30rem] flex items-center cursor-pointer mx-2 shadow-[0px_0px_30px] shadow-bg_primary hover:shadow-accent_primary_extratransparent transition transform duration-300">
         <button class="bg-accent_primary px-3 py-2 rounded-full"><i class="fa-solid fa-magnifying-glass text-bg_primary"></i></button>
         <p id="searchtext" class="ml-3 mr-4 text-accent_three">Search</p>
@@ -132,4 +146,36 @@
     <button id="sharebutton" class="sharebutton bg-accent_primary px-[0.80rem] py-2 rounded-full mx-2 shadow-[0px_0px_30px] shadow-bg_primary hover:shadow-accent_primary_transparent transition transform duration-300"><i class="fa-solid fa-share-nodes text-bg_primary"></i></button>
     <button id="closebutton" class="closebutton bg-accent_primary px-[0.85rem] py-2 rounded-full mx-2 hover:shadow-[0px_0px_30px] hover:shadow-accent_primary_transparent transition transform duration-300 hidden"><i class="fa-solid fa-xmark text-bg_primary"></i></button>
     <button id="shareclosebutton" class="closebutton bg-accent_primary px-[0.85rem] py-2 rounded-full mx-2 hover:shadow-[0px_0px_30px] hover:shadow-accent_primary_transparent transition transform duration-300 hidden"><i class="fa-solid fa-xmark text-bg_primary"></i></button>
+</div>
+<div id="mobile-floating-bar" class="fixed inset-x-0 bottom-[3vh] z-[50] flex lg:hidden justify-center items-center">
+    <div class="bottomnav w-[90vw] p-3 bg-bg_secondary rounded-xl relative flex justify-around items-center shadow-[0px_0px_30px] shadow-bg_primary">
+        <span class="bottoomnavitem flex flex-col items-center relative" onclick="location.href='<?php echo $basePath ?>'">
+            <lord-icon class="mx-1" src="https://cdn.lordicon.com/cnpvyndp.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
+            <p class="mx-1 text-xs">Home</p>
+            <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('home.php', '/');?>"></span>
+        </span>
+        <span class="bottoomnavitem flex flex-col items-center relative" onclick="location.href='<?php echo $basePath . '/projects' ?>'">
+            <lord-icon class="mx-1" src="https://cdn.lordicon.com/utpmnzxz.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
+            <p class="mx-1 text-xs">Projects</p>
+            <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('projects.php', '/projects');?>"></span>
+        </span>
+        <div class="flex items-center absolute -top-1/2">
+            <button id="mobilesearchbutton" class="searchbutton bg-accent_primary px-5 py-4 rounded-full mx-2 shadow-[0px_0px_30px] shadow-bg_primary transition transform duration-300 border-[8px] border-bg_primary before:content-[''] before:absolute before:top-1/2 before:-left-6 before:w-[20px] before:h-[20px] before:bg-[transparent] before:rounded-tr-full after:shadow-[0px_-10px_0_0_rgb(15,_23,_42)] after:content-[''] after:absolute after:top-1/2 after:-right-6 after:w-[20px] after:h-[20px] after:bg-[transparent] after:rounded-tl-full before:shadow-[0px_-10px_0_0_rgb(15,_23,_42)]"><i class="fa-solid fa-magnifying-glass text-bg_primary"></i></button>
+        </div>
+        <div class="spacer w-[20%]"></div>
+        <span class="bottoomnavitem flex flex-col items-center relative" onclick="location.href='<?php echo $basePath . '/blog' ?>'">
+            <lord-icon class="mx-1" src="https://cdn.lordicon.com/lyrrgrsl.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
+            <p class="mx-1 text-xs">Blog</p>
+            <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('blog.php', '/blog');?>"></span>
+        </span>
+        <span class="bottoomnavitem flex flex-col items-center relative" onclick="location.href='<?php echo $basePath . '/contact' ?>'">
+            <lord-icon class="mx-1" src="https://cdn.lordicon.com/kthelypq.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
+            <p class="mx-1 text-xs">Contact</p>
+            <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('contact.php', '/contact');?>"></span>
+        </span>
+    </div>
+</div>
+<div id="mobile-floating-share" class="fixed right-[1rem] -bottom-[10vh] z-[40] flex lg:hidden justify-center items-center">
+    <button id="mobilesharebutton" class="sharebutton bg-accent_primary px-[1.30rem] py-4 rounded-full mx-2 shadow-[0px_0px_30px] shadow-bg_primary hover:shadow-accent_primary_transparent transition transform duration-300"><i class="fa-solid fa-share-nodes text-bg_primary"></i></button>
+    <button id="mobileshareclose" class="closebutton bg-accent_primary px-[1.35rem] py-4 rounded-full mx-2 shadow-[0px_0px_30px] shadow-bg_primary hover:shadow-accent_primary_transparent transition transform duration-300 hidden"><i class="fa-solid fa-xmark text-bg_primary"></i></button>
 </div>
