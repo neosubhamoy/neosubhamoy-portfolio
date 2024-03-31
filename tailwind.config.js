@@ -19,7 +19,12 @@ module.exports = {
       accent_secondary_transparent: 'rgba(255, 255, 255, 0.30)',
       accent_primary_extratransparent: 'rgba(56, 189, 248, 0.15)',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'radiul-gradient-transparent-secondary': 'radial-gradient(at top right, transparent 65%, #1E293B 35%)',
+        'radiul-gradient-secondary-transparent': 'radial-gradient(at top left, transparent 65%, #1E293B 35%)',
+      },
+    },
   },
   plugins: [],
 }

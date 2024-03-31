@@ -148,31 +148,38 @@ function isNavPageActive($pageName, $pageRoute) {
     <button id="shareclosebutton" class="closebutton bg-accent_primary px-[0.85rem] py-2 rounded-full mx-2 hover:shadow-[0px_0px_30px] hover:shadow-accent_primary_transparent transition transform duration-300 hidden"><i class="fa-solid fa-xmark text-bg_primary"></i></button>
 </div>
 <div id="mobile-floating-bar" class="fixed inset-x-0 bottom-[3vh] z-[50] flex lg:hidden justify-center items-center">
-    <div class="bottomnav w-[90vw] p-3 bg-bg_secondary rounded-xl relative flex justify-around items-center shadow-[0px_0px_30px] shadow-bg_primary">
-        <span class="bottoomnavitem flex flex-col items-center relative" onclick="location.href='<?php echo $basePath ?>'">
-            <lord-icon class="mx-1" src="https://cdn.lordicon.com/cnpvyndp.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
-            <p class="mx-1 text-xs">Home</p>
-            <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('home.php', '/');?>"></span>
-        </span>
-        <span class="bottoomnavitem flex flex-col items-center relative" onclick="location.href='<?php echo $basePath . '/projects' ?>'">
-            <lord-icon class="mx-1" src="https://cdn.lordicon.com/utpmnzxz.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
-            <p class="mx-1 text-xs">Projects</p>
-            <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('projects.php', '/projects');?>"></span>
-        </span>
-        <div class="flex items-center absolute -top-1/2">
-            <button id="mobilesearchbutton" class="searchbutton bg-accent_primary px-5 py-4 rounded-full mx-2 shadow-[0px_0px_30px] shadow-bg_primary transition transform duration-300 border-[8px] border-bg_primary before:content-[''] before:absolute before:top-1/2 before:-left-6 before:w-[20px] before:h-[20px] before:bg-[transparent] before:rounded-tr-full after:shadow-[0px_-10px_0_0_rgb(15,_23,_42)] after:content-[''] after:absolute after:top-1/2 after:-right-6 after:w-[20px] after:h-[20px] after:bg-[transparent] after:rounded-tl-full before:shadow-[0px_-10px_0_0_rgb(15,_23,_42)]"><i class="fa-solid fa-magnifying-glass text-bg_primary"></i></button>
+    <div class="bottomnav w-[90vw] relative flex justify-around items-end">
+        <div class="w-full flex justify-around items-center p-3 bg-bg_secondary rounded-tl-xl rounded-bl-xl rounded-tr-2xl shadow-[0px_0px_30px] shadow-bg_primary">
+            <span class="bottoomnavitem flex flex-col items-center relative cursor-pointer" onclick="location.href='<?php echo $basePath ?>'">
+                <lord-icon class="mx-1" src="https://cdn.lordicon.com/cnpvyndp.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
+                <p class="mx-1 text-xs">Home</p>
+                <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('home.php', '/');?>"></span>
+            </span>
+            <span class="bottoomnavitem flex flex-col items-center relative cursor-pointer" onclick="location.href='<?php echo $basePath . '/projects' ?>'">
+                <lord-icon class="mx-1" src="https://cdn.lordicon.com/utpmnzxz.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
+                <p class="mx-1 text-xs">Projects</p>
+                <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('projects.php', '/projects');?>"></span>
+            </span>
         </div>
-        <div class="spacer w-[20%]"></div>
-        <span class="bottoomnavitem flex flex-col items-center relative" onclick="location.href='<?php echo $basePath . '/blog' ?>'">
-            <lord-icon class="mx-1" src="https://cdn.lordicon.com/lyrrgrsl.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
-            <p class="mx-1 text-xs">Blog</p>
-            <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('blog.php', '/blog');?>"></span>
-        </span>
-        <span class="bottoomnavitem flex flex-col items-center relative" onclick="location.href='<?php echo $basePath . '/contact' ?>'">
-            <lord-icon class="mx-1" src="https://cdn.lordicon.com/kthelypq.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
-            <p class="mx-1 text-xs">Contact</p>
-            <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('contact.php', '/contact');?>"></span>
-        </span>
+        <div class="flex items-center absolute -top-1/2 inset-x-auto">
+            <button id="mobilesearchbutton" class="searchbutton bg-accent_primary px-5 py-4 rounded-full transition transform duration-300 border-[8px] border-[transparent] bg-clip-padding before:content-[''] before:absolute before:top-1/2 before:-left-6 before:w-[20px] before:h-[40px] before:bg-bg_secondary before:rounded-tr-full after:shadow-[0px_-10px_0_0_transparent] after:content-[''] after:absolute after:top-1/2 after:-right-6 after:w-[20px] after:h-[40px] after:bg-bg_secondary after:rounded-tl-full before:shadow-[0px_-10px_0_0_transparent]"><i class="fa-solid fa-magnifying-glass text-bg_primary"></i></button>
+        </div>
+        <div class="spacer w-[120px] bg-bg_secondary p-[1.15rem] relative">
+            <div class="absolute -top-[23px] left-0 w-[35px] h-[25px] bg-radiul-gradient-transparent-secondary"></div>
+            <div class="absolute -top-[23px] right-0 w-[35px] h-[25px] bg-radiul-gradient-secondary-transparent"></div>
+        </div>
+        <div class="w-full flex justify-around items-center p-3 bg-bg_secondary rounded-tr-xl rounded-br-xl rounded-tl-2xl shadow-[0px_0px_30px] shadow-bg_primary">
+            <span class="bottoomnavitem flex flex-col items-center relative cursor-pointer" onclick="location.href='<?php echo $basePath . '/blog' ?>'">
+                <lord-icon class="mx-1" src="https://cdn.lordicon.com/lyrrgrsl.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
+                <p class="mx-1 text-xs">Blog</p>
+                <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('blog.php', '/blog');?>"></span>
+            </span>
+            <span class="bottoomnavitem flex flex-col items-center relative cursor-pointer" onclick="location.href='<?php echo $basePath . '/contact' ?>'">
+                <lord-icon class="mx-1" src="https://cdn.lordicon.com/kthelypq.json" target=".bottoomnavitem" trigger="hover" colors="primary:#38BDF8" style="width:20px"></lord-icon>
+                <p class="mx-1 text-xs">Contact</p>
+                <span class="absolute -bottom-3 left-0 h-[3px] bg-accent_primary transition-all duration-300 rounded-tr-full rounded-tl-full w-0 <?php echo isNavPageActive('contact.php', '/contact');?>"></span>
+            </span>
+        </div>
     </div>
 </div>
 <div id="mobile-floating-share" class="fixed right-[1rem] -bottom-[10vh] z-[40] flex lg:hidden justify-center items-center">
