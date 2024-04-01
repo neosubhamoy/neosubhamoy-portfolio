@@ -283,6 +283,151 @@ background: #38BDF8;
     }
 }
 
+/* --- Mobile Navmenu Styling ---*/
+
+.navbtn-circle-popzooom-in {
+    animation: circlePopZoomIn 0.5s ease-in-out;
+    transform: scale(50);
+}
+
+.navbtn-circle-popzooom-out {
+    animation: circlePopZoomOut 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+.navhamline1-to-cross {
+    animation: hamline1ToCross 0.5s ease-in-out;
+    transform: rotate(45deg) translateY(1px);
+}
+
+.navhamline2-to-cross {
+    animation: hamline2ToCross 0.5s ease-in-out;
+    transform: rotate(-45deg) translateY(-1px);
+}
+
+.navhamline1-to-hamline {
+    animation: hamline1ToHamline 0.5s ease-in-out;
+    transform: rotate(0deg) translateY(0px);
+}
+
+.navhamline2-to-hamline {
+    animation: hamline2ToHamline 0.5s ease-in-out;
+    transform: rotate(0deg) translateY(0px);
+}
+
+.navmenu-item-slide-right {
+    animation: navItemSlideRight 0.5s ease-in-out;
+}
+
+.navmenu-item-sliiide-left {
+    animation: navItemSlideRight 0.5s ease-in-out;
+}
+
+.navmenu-button-scale-up {
+    animation: buttonScaleUp 0.5s ease-in-out;
+}
+
+.navmenu-socials-show-up {
+    animation: socialsShowUp 0.3s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes circlePopZoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(50);
+    }
+}
+
+@keyframes circlePopZoomOut {
+    0% {
+        transform: scale(50);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes hamline1ToCross {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes hamline2ToCross {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes hamline1ToHamline {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes hamline2ToHamline {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes navItemSlideRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes navItemSlideLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes buttonScaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes socialsShowUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* --- Tooltip Styling --- */
 
 .tippy-box[data-theme~='neosubhamoy'] {

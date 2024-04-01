@@ -12,9 +12,9 @@ function isNavPageActive($pageName, $pageRoute) {
 }
 ?>
 
-<div id="floatingwindowwrapper" class="floatingwindowwrapper fixed top-0 left-0 w-screen h-screen z-30 bg-[rgba(0,_0,_0,_0.4)] hidden"></div>
+<div id="floatingwindowwrapper" class="floatingwindowwrapper fixed top-0 left-0 w-screen h-screen z-[80] bg-[rgba(0,_0,_0,_0.4)] hidden"></div>
 <div id="phpHostBasePath" class="hidden" data-base-path="<?php echo htmlspecialchars($basePath);?>"></div>
-<div id="searchwindow" class="searchwindow w-[90vw] md:w-[44vw] mx-auto h-fit min-h-[15vh] max-h-[45vh] md:max-h-[60vh] fixed inset-x-0 top-[30vh] z-40 flex-col items-center bg-bg_secondary rounded-xl overflow-y-scroll no-scrollbar hidden">
+<div id="searchwindow" class="searchwindow w-[90vw] md:w-[44vw] mx-auto h-fit min-h-[15vh] max-h-[45vh] md:max-h-[60vh] fixed inset-x-0 top-[30vh] z-[90] flex-col items-center bg-bg_secondary rounded-xl overflow-y-scroll no-scrollbar hidden">
     <div id="defresults" class="defresults w-full flex flex-col justify-start px-2 mt-1">
         <p class="text-xs text-accent_three mt-3 mb-2 mx-1">PAGE NAVIGATION</p>
         <div class="group resultitem w-full flex justify-between items-center my-1 p-1 cursor-pointer hover:bg-bg_third transition transform duration-200 rounded-lg" onclick="location.href='<?php echo $basePath ?>'">
@@ -104,7 +104,7 @@ function isNavPageActive($pageName, $pageRoute) {
         <div class="spinner border-[4px] border-accent_secondary_transparent border-t-[4px] border-t-accent_primary rounded-[50%] h-[40px] w-[40px] animate-spin"></div>
     </div>
 </div>
-<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-40 justify-between flex-col md:flex-row bg-bg_secondary rounded-xl hidden">
+<div id="sharewindow" class="sharewindow w-[90vw] md:w-[50vw] mx-auto py-6 fixed inset-x-0 bottom-[20vh] z-[100] justify-between flex-col md:flex-row bg-bg_secondary rounded-xl hidden">
     <div class="shareviaqr w-full md:w-[40%] h-full flex flex-col py-3 px-7">
         <p class="self-start text-xl hidden md:block">Scan to Share</p>
         <div class="bg-bg_primary p-10 md:p-5 rounded-lg my-3">
@@ -137,7 +137,7 @@ function isNavPageActive($pageName, $pageRoute) {
         </div>
     </div>
 </div>
-<div id="floating-bar" class="fixed inset-x-0 bottom-[7vh] z-[50] hidden lg:flex justify-center items-center">
+<div id="floating-bar" class="fixed inset-x-0 bottom-[7vh] z-[100] hidden lg:flex justify-center items-center">
     <div id="searchbar" class="searchbar bg-bg_secondary rounded-full p-[0.30rem] flex items-center cursor-pointer mx-2 shadow-[0px_0px_30px] shadow-bg_primary hover:shadow-accent_primary_extratransparent transition transform duration-300">
         <button class="bg-accent_primary px-3 py-2 rounded-full"><i class="fa-solid fa-magnifying-glass text-bg_primary"></i></button>
         <p id="searchtext" class="ml-3 mr-4 text-accent_three">Search</p>
@@ -147,7 +147,7 @@ function isNavPageActive($pageName, $pageRoute) {
     <button id="closebutton" class="closebutton bg-accent_primary px-[0.85rem] py-2 rounded-full mx-2 hover:shadow-[0px_0px_30px] hover:shadow-accent_primary_transparent transition transform duration-300 hidden"><i class="fa-solid fa-xmark text-bg_primary"></i></button>
     <button id="shareclosebutton" class="closebutton bg-accent_primary px-[0.85rem] py-2 rounded-full mx-2 hover:shadow-[0px_0px_30px] hover:shadow-accent_primary_transparent transition transform duration-300 hidden"><i class="fa-solid fa-xmark text-bg_primary"></i></button>
 </div>
-<div id="mobile-floating-bar" class="fixed inset-x-0 bottom-[3vh] z-[50] flex lg:hidden justify-center items-center">
+<div id="mobile-floating-bar" class="fixed inset-x-0 bottom-[3vh] z-40 flex lg:hidden justify-center items-center">
     <div class="bottomnav w-[90vw] relative flex justify-around items-end">
         <div class="w-full flex justify-around items-center p-3 bg-bg_secondary rounded-tl-xl rounded-bl-xl rounded-tr-2xl shadow-[0px_0px_30px] shadow-bg_primary">
             <span class="bottoomnavitem flex flex-col items-center relative cursor-pointer" onclick="location.href='<?php echo $basePath ?>'">
@@ -182,7 +182,7 @@ function isNavPageActive($pageName, $pageRoute) {
         </div>
     </div>
 </div>
-<div id="mobile-floating-share" class="fixed right-[1rem] -bottom-[10vh] z-[40] flex lg:hidden justify-center items-center">
+<div id="mobile-floating-share" class="fixed right-[1rem] -bottom-[10vh] z-[100] flex lg:hidden justify-center items-center">
     <button id="mobilesharebutton" class="sharebutton bg-accent_primary px-[1.30rem] py-4 rounded-full mx-2 shadow-[0px_0px_30px] shadow-bg_primary hover:shadow-accent_primary_transparent transition transform duration-300"><i class="fa-solid fa-share-nodes text-bg_primary"></i></button>
     <button id="mobileshareclose" class="closebutton bg-accent_primary px-[1.35rem] py-4 rounded-full mx-2 shadow-[0px_0px_30px] shadow-bg_primary hover:shadow-accent_primary_transparent transition transform duration-300 hidden"><i class="fa-solid fa-xmark text-bg_primary"></i></button>
 </div>
