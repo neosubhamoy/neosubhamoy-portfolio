@@ -10,9 +10,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://cdn.lordicon.com/lordicon-1.2.0.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="https://unpkg.com/tippy.js@6"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="assets/js/utility-functions.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $_ENV['ANALYTICS_ID'] ?>"></script>
 <script>

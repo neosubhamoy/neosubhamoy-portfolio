@@ -187,6 +187,5 @@ $years = create_project_years_array($conn);
     </div>
     <?php require 'assets/_footer.php';?>
     <?php require 'assets/_commonjs.php';?>
-    <script type="text/javascript" src="assets/js/aos-config.js"></script>
 </body>
 </html>

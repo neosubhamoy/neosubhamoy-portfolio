@@ -115,6 +115,5 @@ write_dataset($conn);
     <?php require 'assets/_commonjs.php';?>
     <script type="text/javascript" src="assets/js/core-animation.js"></script>
     <script type="text/javascript" src="assets/js/contactform-config.js"></script>
-    <script type="text/javascript" src="assets/js/aos-config.js"></script>
 </body>
 </html>

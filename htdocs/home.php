@@ -63,7 +63,7 @@ write_dataset($conn);
         <div class="aboutsection w-full flex flex-col justify-center items-center">
             <div class="hoverAnimatedContainer relative w-full p-10 mx-3 mt-[10rem] mb-5 bg-bg_secondary rounded-lg" data-aos="zoom-in-up" data-aos-duration="700" data-aos-once="true">
                 <h2 class="text-xl font-bold mb-3"><span class="text-accent_primary">About</span> Me</h2>
-                <p class="text-sm text-accent_four">Hey there! I'm Subhamoy, an 18-year-old tech enthusiast, Self-taught Full Stacked Web, Android Developer and UI/UX Designer. Crafting modern Websites and Android apps for more than 5 years. Delivering industry grade user experiences that are not only visually stunning but also intuitive.  Coding is my passion, and I pour my heart and soul into every line of code I write and every pixel I place. The digital realm is my canvas, and I'm determined to leave a lasting impact. So, get ready to witness the extraordinary, redefined future of technology with me</p>
+                <p class="text-sm text-accent_four">Hey there! I'm Subhamoy, an <script type="text/javascript">document.write(calculateYearDiff('2005-04-03'));</script>-year-old tech enthusiast, Self-taught Full Stacked Web, Android Developer and UI/UX Designer. Crafting modern Websites and Android apps for more than <script type="text/javascript">document.write(calculateYearDiff('2018-01-01'));</script>+ years. Delivering industry grade user experiences that are not only visually stunning but also intuitive.  Coding is my passion, and I pour my heart and soul into every line of code I write and every pixel I place. The digital realm is my canvas, and I'm determined to leave a lasting impact. So, get ready to witness the extraordinary, redefined future of technology with me</p>
             </div>
             <h2 class="text-2xl lg:text-3xl font-bold mt-[10rem] lg:mt-[7rem] mb-[2rem]">My <span class="text-accent_primary">Skills</span> and <span class="text-accent_primary">Expertise</span></h2>
             <div class="relative hidden w-[70%] lg:flex justify-center items-center mt-5">
@@ -221,6 +221,5 @@ write_dataset($conn);
     <?php require 'assets/_footer.php';?>
     <?php require 'assets/_commonjs.php';?>
     <script type="text/javascript" src="assets/js/core-animation.js"></script>
-    <script type="text/javascript" src="assets/js/aos-config.js"></script>
 </body>
 </html>
