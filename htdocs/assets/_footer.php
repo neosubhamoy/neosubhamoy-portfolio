@@ -39,9 +39,15 @@
             if($footer_socials -> num_rows > 0) {
                 //show all social links
                 while($footer_social = $footer_socials -> fetch_assoc()) {
-                    echo "
-                    <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' href='".$footer_social['link']."' target='_blank'>".$footer_social['platform']."</a>
-                    ";
+                    if($footer_social['platform'] == "Mastodon") {
+                        echo "
+                        <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' rel='me' href='".$footer_social['link']."' target='_blank'>".$footer_social['platform']."</a>
+                        ";
+                    } else {
+                        echo "
+                        <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' href='".$footer_social['link']."' target='_blank'>".$footer_social['platform']."</a>
+                        ";
+                    }
                 }
             }
 
