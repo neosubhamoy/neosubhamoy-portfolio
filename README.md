@@ -6,6 +6,10 @@
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/neosubhamoy/neosubhamoy-portfolio/)
 <br></br>
 
+### 👀 Preview
+
+<img src="./htdocs/assets/images/neosubhamoy-portfolio.png">
+
 ### 📌 Tech Stack
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -38,7 +42,7 @@ http://localhost/neosubhamoy-portfolio/htdocs/
 
 ### 📝 License & Usage
 
-Subhamoy Biswas - Portfolio Website is a Fully Open Sourced Project licensed under MIT License. Anyone can view, modify, use (personal and commercial) or distribute it's sources without any attribution and extra permissions.
+Subhamoy Biswas - Portfolio Website is a Fully Open Sourced Project licensed under MIT License but still some parts of this website are not allowed to use or distribute without proper permission or attribution. All the contents (eg: informations, blog posts, articles) published in this website and the visual components (eg: layout, design, animations, images, videos, graphics) used in this website are not covered under the MIT License and requires special permission to be used. Using these without prior permission will cause legal actions.
 
 **🌟 Liked this project? Please consider giving it a star to show me your appreciation.**
 <br></br>
