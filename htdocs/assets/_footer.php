@@ -56,7 +56,17 @@
     </div>
     <hr class="opacity-20 mt-16 mb-5">
     <div class="copyrightsection w-full flex justify-between items-center mt-7 mb-12">
-        <a class="font-cormorant text-4xl font-bold hidden lg:block" href="https://<?php echo $domain ?>">Subhamoy Biswas</a>
-        <p class="">&#169; <script>document.write(new Date().getFullYear())</script> - All Rights Reserved<br>Developed with &#10084; in <strong>India</strong></p>
+        <div class="items-center hidden lg:flex">
+            <a class="font-cormorant text-4xl font-bold" href="https://<?php echo $domain ?>">Subhamoy Biswas</a>
+            <span class="ml-5 mt-2">
+                <a href="//www.dmca.com/Protection/Status.aspx?ID=8b6891f8-49be-46fd-83a4-efbc89007880" title="DMCA.com Protection Status" class="dmca-badge"><img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-07.png?ID=8b6891f8-49be-46fd-83a4-efbc89007880"  alt="DMCA.com Protection Status" /></a><script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+            </span>
+        </div>
+        <div class="flex flex-col">
+            <p class="">&#169; <script>document.write(new Date().getFullYear())</script> - All Rights Reserved<br>Developed with &#10084; in <strong>India</strong></p>
+            <span class="mt-3 lg:hidden">
+                <a href="//www.dmca.com/Protection/Status.aspx?ID=8b6891f8-49be-46fd-83a4-efbc89007880" title="DMCA.com Protection Status" class="dmca-badge"><img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-07.png?ID=8b6891f8-49be-46fd-83a4-efbc89007880"  alt="DMCA.com Protection Status" /></a><script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+            </span>
+        </div>
     </div>
 </footer>
