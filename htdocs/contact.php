@@ -17,6 +17,7 @@ write_dataset($conn);
     <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
     <title><?php echo fetch_page_title($conn, "Contact");?></title>
     <?php require 'assets/_integrate.php';?>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="font-lexend bg-bg_primary text-accent_secondary">
     <?php include 'assets/_preloader.php';?>
