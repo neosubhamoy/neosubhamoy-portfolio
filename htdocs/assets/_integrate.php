@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/extra-style.css">
 <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css"/>
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -34,3 +34,16 @@ tippy('#shareclosebutton', {
   touch: false
 });
 
+tippy('.projectitem', {
+  content(reference) {
+    const projectId = reference.getAttribute('data-template');
+    const projectTippyTemplate = document.getElementById(projectId);
+    return projectTippyTemplate.innerHTML;
+  },
+  allowHTML: true,
+  placement: 'right',
+  theme: 'neosubhamoy',
+  animation: 'scale-subtle',
+  touch: false
+});
+

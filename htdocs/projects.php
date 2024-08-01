@@ -2,6 +2,8 @@
 require 'core/connection.php';
 require 'core/host_config.php';
 require 'core/query_functions.php';
+require 'core/github_api_functions.php';
+require 'core/utility_functions.php';
 require 'core/write_dataset.php';
 write_dataset($conn);
 
@@ -95,10 +97,88 @@ $years = create_project_years_array($conn);
                         //fetch all projects by year and show it
                         while ($project = $projects -> fetch_assoc()) {
                             echo "
-                            <a class='projectitem text-accent_three my-2 ml-7 last:mb-3' href='".$project['link']."' target='_blank'>".$project['name'].($project['shortdes'] != "" ? ' - '. $project['shortdes'] : '')."</a>
+                            <a data-template='project".$project['id']."' class='projectitem text-accent_three my-2 ml-7 last:mb-3' href='".$project['link']."' target='_blank'>".$project['name'].($project['shortdes'] != "" ? ' - '. $project['shortdes'] : '')."</a>
+                            <div class='hidden'>
+                                <div id='project".$project['id']."'>
+                                    <div class='p-1'>
+                                        <div class='wrapper rounded-lg overflow-hidden my-1 relative'>
+                                            <img class='opacity-[0.70]' src='".$project['thumbnail']."' alt='".strtolower($project['name'])."'>
+                                            <span class='absolute top-2 left-2 text-sm bg-bg_third rounded-full px-2'>";
+                                            if($project['platform'] === "website") {
+                                                echo "<i class='fa-regular fa-window-maximize'></i> ".$project['platform'];
+                                            } else if ($project['platform'] === "android") {
+                                                echo "<i class='fa-brands fa-android'></i> ".$project['platform'];
+                                            } else if ($project['platform'] === "ios" || $project['platform'] === "macos") {
+                                                echo "<i class='fa-brands fa-apple'></i> ".$project['platform'];
+                                            } else if ($project['platform'] === "windows") {
+                                                echo "<i class='fa-brands fa-windows'></i> ".$project['platform'];
+                                            } else if ($project['platform'] === "linux") {
+                                                echo "<i class='fa-brands fa-linux'></i> ".$project['platform'];
+                                            } else if ($project['platform'] === "crossplatform") {
+                                                echo "<i class='fa-solid fa-shuffle'></i> ".$project['platform'];
+                                            } else if ($project['platform'] === "bot") {
+                                                echo "<i class='fa-solid fa-robot'></i> ".$project['platform'];
+                                            } else if ($project['platform'] === "extention") {
+                                                echo "<i class='fa-solid fa-puzzle-piece'></i> ".$project['platform'];
+                                            }
+                                            echo"
+                                            </span>
+                                            ";
+                                            if($project['is_open_sourced'] && isset($project['repo'])) {
+                                                list($stargazersCount, $forksCount) = fetch_repo_stats($project['repo']);
+                                                if(isset($stargazersCount) && isset($forksCount)) {
+                                                    echo "
+                                                    <div class='absolute bottom-2 left-2 flex items-center'>
+                                                        <span class='text-xs flex items-center bg-bg_third rounded px-2 py-1 mr-2'>
+                                                            <svg class='mr-2 h-4 w-4 text-accent_primary' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'/></svg> ".format_number_in_yt_style($stargazersCount)."
+                                                        </span>
+                                                        <span class='text-xs flex items-center bg-bg_third rounded px-2 py-1'>
+                                                            <svg class='mr-2 h-4 w-4 text-accent_primary' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='18' r='3'/><circle cx='6' cy='6' r='3'/><circle cx='18' cy='6' r='3'/><path d='M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9'/><path d='M12 12v3'/></svg> ".format_number_in_yt_style($forksCount)."
+                                                        </span>
+                                                    </div>
+                                                    ";
+                                                }
+                                            }
+                                            else if($project['user_count']) {
+                                                echo "
+                                                <span class='absolute bottom-2 left-2 text-xs flex items-center bg-bg_third rounded px-2 py-1'>
+                                                    <svg class='mr-2 h-4 w-4 text-accent_primary' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg> ".format_number_in_yt_style($project['user_count'])."+ users
+                                                </span>
+                                                ";
+                                            }
+                                        echo"
+                                        </div>
+                                        <div class='flex justify-between items-center mt-3'>
+                                            <h6 class='text-lg font-bold'>".$project['name']."</h6>
+                                            <span class='projectstatus flex items-center text-xs bg-bg_third rounded-full px-2'>";
+                                            if($project['status'] === "active") {
+                                                echo "<i class='fa-solid fa-circle h-2 w-2 mr-1' style='color: #1fff4f'></i> ".$project['status'];
+                                            }
+                                            else if($project['status'] === "archived") {
+                                                echo "<i class='fa-solid fa-circle h-2 w-2 mr-1' style='color: #ff9e1f'></i> ".$project['status'];
+                                            }
+                                            else if ($project['status'] === "inactive") {
+                                                echo "<i class='fa-solid fa-circle h-2 w-2 mr-1' style='color: #fc3328'></i> ".$project['status'];
+                                            }
+                                            echo"
+                                            </span>
+                                        </div>
+                                        <p class='text-xs text-accent_three my-1'>".$project['description']."</p>
+                                        <div class='flex items-center flex-wrap overflow-hidden'>";
+                                        $stack = explode(",",$project['stack']);
+                                        foreach ($stack as $stack_item) {
+                                            echo "
+                                            <span class='projectstackitem flex items-center text-xs bg-[rgba(255,255,255,0.15)] text-accent_three rounded px-2 mr-2 mt-2'>".$stack_item."</span>
+                                            ";
+                                        }
+                                        echo"
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             ";
                         }
-
+                    
                         echo <<<HTML
                         </div>
                         </div>
