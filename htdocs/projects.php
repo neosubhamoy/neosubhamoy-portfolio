@@ -217,7 +217,7 @@ $years = create_project_years_array($conn);
                 <div class="w-full flex flex-col justify-center items-center mb-12">
                     <?php
 
-                    $featured_projects = fetch_all_records($conn,"featured_projects");
+                    $featured_projects = fetch_featured_projects($conn);
 
                     if($featured_projects -> num_rows > 0){
                         //show top 2 featured projects for sidebar

@@ -71,6 +71,13 @@ function fetch_quick_action_link($conn, $action_name) {
     }
 }
 
+//function to fetch featured projects
+function fetch_featured_projects($conn) {
+    $sql = "SELECT * FROM projects WHERE is_featured = 1";
+    $result = $conn -> query($sql);
+    return $result;
+}
+
 //---functions to fetch search results starts here---
 //from projects table
 function fetch_search_results_projects($conn, $keyword) {
