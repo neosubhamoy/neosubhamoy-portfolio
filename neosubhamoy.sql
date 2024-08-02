@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2023 at 08:21 PM
+-- Generation Time: Aug 02, 2024 at 08:54 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,29 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `neosubhamoy`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `featured_projects`
---
-
-CREATE TABLE `featured_projects` (
-  `id` int(10) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `link` varchar(100) NOT NULL,
-  `thumbnail` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `featured_projects`
---
-
-INSERT INTO `featured_projects` (`id`, `name`, `description`, `link`, `thumbnail`) VALUES
-(1, 'FantasyWalls', 'An open-souced community crafted wallpaper collection app', 'https://techishfellow.weebly.com/fantasywalls-official.html', './assets/images/fantasywalls.jpg'),
-(2, 'ProURL', 'All in one link shortener and management tool webapp', 'https://prourl.eu.org', './assets/images/prourl.jpg'),
-(3, 'AdlinkflyBot', 'A simple-to-use Python based Telegram Bot Script designed to work with Adlinkfly PHP Link Shortener website', 'https://github.com/techishfellow/adlinkfly-telegram-bot', NULL);
 
 -- --------------------------------------------------------
 
@@ -105,28 +82,36 @@ CREATE TABLE `projects` (
   `description` varchar(200) NOT NULL,
   `link` varchar(100) NOT NULL,
   `year` int(4) NOT NULL,
-  `stag` varchar(100) DEFAULT NULL
+  `thumbnail` varchar(200) NOT NULL DEFAULT './assets/images/projects/default.jpg',
+  `stag` varchar(100) DEFAULT NULL,
+  `platform` varchar(100) DEFAULT NULL,
+  `stack` varchar(200) DEFAULT NULL,
+  `status` varchar(100) NOT NULL DEFAULT 'active',
+  `is_featured` int(1) NOT NULL DEFAULT 0,
+  `is_open_sourced` int(1) NOT NULL DEFAULT 0,
+  `repo` varchar(100) DEFAULT NULL,
+  `user_count` bigint(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `projects`
 --
 
-INSERT INTO `projects` (`id`, `name`, `shortdes`, `description`, `link`, `year`, `stag`) VALUES
-(1, 'Techishfellow Website', 'Landingpage', 'A static landing page for The Techishfellow Foundation', 'https://techishfellow.weebly.com', 2018, NULL),
-(2, 'HTML Video Player', 'Script', 'A simple to use browser based local video player', 'https://techishfellow.github.io/html_videoplayer/', 2018, NULL),
-(3, 'NeoMods', 'Android App Store', 'An online App Store for modified android apps', 'https://neomods.ml', 2019, NULL),
-(4, 'QuikLink', 'Link Shortener', 'A database less link shortener webapp', 'https://quik.ml', 2019, NULL),
-(5, 'NxtCountry', 'Android VPN App', 'A multi-layered OpenVPN protocol based VPN app for android', 'https://nxtcountryvpn.ml', 2020, NULL),
-(6, 'TechishNews', 'Trending News Website', 'A trending tech news provider web platform', 'https://techishnews.ml', 2020, NULL),
-(7, 'EzyBlog', 'Blogging Script', 'A simple and easy to deploy blogging website script', 'https://ezyblog.tk', 2021, NULL),
-(8, 'QteeStream', 'P2P Video Streaming', 'A peer-to-peer video sharing platform webapp', 'https://qtee.ml', 2021, NULL),
-(9, 'FantasyWalls', 'Wallpaper App', 'A cloud-based handcrafted wallpaper collection app for android', 'https://techishfellow.weebly.com/fantasywalls-official.html', 2021, NULL),
-(10, 'ProURL', 'URL Management Tool', 'A powerful all-in-one link shortener and management tool webapp', 'https://prourl.eu.org', 2022, NULL),
-(11, 'Adlinkfly Telegram Bot', 'Script', 'A Python based Telegram Bot Script for Adlinlfly PHP Link Shortener Websites', 'https://github.com/techishfellow/adlinkfly-telegram-bot', 2022, NULL),
-(12, 'POCO X3 Pro Splash Maker', 'CLI Tool', 'A CLI tool to create Custom Splash Screen Logo for POCO X3 Pro (vayu) device', 'https://github.com/neosubhamoy/poco-x3-pro-custom-logo-image-maker', 2023, NULL),
-(13, 'NeoSubhamoy Portfolio', 'Website', 'Official portfolio website of Subhamoy Biswas (@neo_subhamoy)', 'https://neosubhamoy.com', 2023, NULL),
-(14, 'pytubePP', 'Python Library', 'A Simple CLI Tool to Download Your Favourite YouTube Videos Effortlessly!', 'https://github.com/neosubhamoy/pytubepp', 2024, NULL);
+INSERT INTO `projects` (`id`, `name`, `shortdes`, `description`, `link`, `year`, `thumbnail`, `stag`, `platform`, `stack`, `status`, `is_featured`, `is_open_sourced`, `repo`, `user_count`) VALUES
+(1, 'Techishfellow Website', 'Landingpage', 'A static landing page for The Techishfellow Foundation', 'https://techishfellow.weebly.com', 2018, './assets/images/projects/techishfellow_website.jpg', NULL, 'website', 'weebly,html,css,javascript', 'inactive', 0, 0, NULL, 1023),
+(2, 'HTML Video Player', 'Script', 'A simple to use browser based local video player', 'https://techishfellow.github.io/html_videoplayer/', 2018, './assets/images/projects/html_videoplayer_script.jpg', NULL, 'website', 'html,css,javascript', 'archived', 0, 1, 'techishfellow/techishfellow.github.io', NULL),
+(3, 'NeoMods', 'Android App Store', 'An online App Store for modified android apps', 'https://neomods.ml', 2019, './assets/images/projects/neomods.jpg', NULL, 'website', 'wordpress,php,mysql,html,css,javascript', 'inactive', 0, 0, NULL, 2371),
+(4, 'QuikLink', 'Link Shortener', 'A database less link shortener webapp', 'https://quik.ml', 2019, './assets/images/projects/quiklink.jpg', NULL, 'website', 'php,html,css,javascript', 'inactive', 0, 0, NULL, 500),
+(5, 'NxtCountry', 'Android VPN App', 'A multi-layered OpenVPN protocol based VPN app for android', 'https://nxtcountryvpn.ml', 2020, './assets/images/projects/nxtvpn.jpg', NULL, 'android', 'java,xml,open vpn', 'inactive', 0, 0, NULL, 1056),
+(6, 'TechishNews', 'Trending News Website', 'A trending tech news provider web platform', 'https://techishnews.ml', 2020, './assets/images/projects/techishnews.jpg', NULL, 'website', 'php,mysql,html,css,javascript', 'inactive', 0, 0, NULL, 1769),
+(7, 'EzyBlog', 'Blogging Script', 'A simple and easy to deploy blogging website script', 'https://ezyblog.tk', 2021, './assets/images/projects/ezyblog.jpg', NULL, 'website', 'php,mysql,html,css,javascript', 'inactive', 0, 0, NULL, 900),
+(8, 'QteeStream', 'P2P Video Streaming', 'A peer-to-peer video sharing platform webapp', 'https://qtee.ml', 2021, './assets/images/projects/qtee_stream.jpg', NULL, 'website', 'html,tailwindcss,jquery,php,mysql', 'archived', 0, 0, NULL, 2461),
+(9, 'FantasyWalls', 'Wallpaper App', 'A cloud-based handcrafted wallpaper collection app for android', 'https://techishfellow.weebly.com/fantasywalls-official.html', 2021, './assets/images/projects/fantasywalls.jpg', NULL, 'android', 'java,xml', 'archived', 1, 0, NULL, 1253),
+(10, 'ProURL', 'URL Management Tool', 'A powerful all-in-one link shortener and management tool webapp', 'https://prourl.eu.org', 2022, './assets/images/projects/prourl.jpg', NULL, 'website', 'html,sass,jquery,php,mysql', 'active', 1, 0, NULL, 3799),
+(11, 'AdlinkflyBot', 'Telegram Bot Script', 'A Python based Telegram Bot Script for Adlinlfly PHP Link Shortener Websites', 'https://github.com/techishfellow/adlinkfly-telegram-bot', 2022, './assets/images/projects/adlinkfly_tgbot.jpg', NULL, 'bot', 'python', 'active', 1, 1, 'techishfellow/adlinkfly-telegram-bot', NULL),
+(12, 'POCO X3 Pro Splasher', 'CLI Tool', 'A CLI tool to create Custom Splash Screen Logo for POCO X3 Pro (vayu) device', 'https://github.com/neosubhamoy/poco-x3-pro-custom-logo-image-maker', 2023, './assets/images/projects/x3p_splasher.jpg', NULL, 'crossplatform', 'batchfile,shell script', 'active', 0, 1, 'neosubhamoy/poco-x3-pro-custom-logo-image-maker', NULL),
+(13, 'Subhamoy Biswas Portfolio', 'Website', 'Official portfolio website of Subhamoy Biswas (@neo_subhamoy)', 'https://neosubhamoy.com', 2023, './assets/images/projects/neosubhamoy_portfolio.jpg', NULL, 'website', 'html,tailwindcss,javascript,php,mysql', 'active', 0, 1, 'neosubhamoy/neosubhamoy-portfolio', NULL),
+(14, 'pytubePP', 'Python Library', 'A Simple CLI Tool to Download Your Favourite YouTube Videos Effortlessly!', 'https://github.com/neosubhamoy/pytubepp', 2024, './assets/images/projects/pytubepp.jpg', NULL, 'crossplatform', 'python', 'active', 0, 1, 'neosubhamoy/pytubepp', NULL);
 
 -- --------------------------------------------------------
 
@@ -207,12 +192,6 @@ INSERT INTO `working_on` (`id`, `title`, `icon`, `icon_color`) VALUES
 --
 
 --
--- Indexes for table `featured_projects`
---
-ALTER TABLE `featured_projects`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `pages`
 --
 ALTER TABLE `pages`
@@ -253,12 +232,6 @@ ALTER TABLE `working_on`
 --
 
 --
--- AUTO_INCREMENT for table `featured_projects`
---
-ALTER TABLE `featured_projects`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
@@ -274,7 +247,7 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `quick_actions`
