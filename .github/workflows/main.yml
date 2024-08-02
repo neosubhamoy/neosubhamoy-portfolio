@@ -19,6 +19,7 @@ jobs:
         
     - name: 🛠️ Run Build Process
       run: |
+        npm install
         npx tailwindcss -o "./htdocs/assets/style.css" --minify
     
     - name: 📦 Update Database
