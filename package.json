@@ -1,7 +1,7 @@
 {
-  "name": "neosubhamoy",
-  "version": "1.0.0",
-  "description": "",
+  "name": "neosubhamoy-portfolio",
+  "version": "2.0.1",
+  "description": "Official Portfolio Website of Subhamoy Biswas (@neo_subhamoy)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "neo_subhamoy",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "tailwindcss": "^3.4.9"
   }
