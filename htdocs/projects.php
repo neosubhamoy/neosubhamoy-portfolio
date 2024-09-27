@@ -118,7 +118,7 @@ $years = create_project_years_array($conn);
                                                 echo "<i class='fa-solid fa-shuffle'></i> ".$project['platform'];
                                             } else if ($project['platform'] === "bot") {
                                                 echo "<i class='fa-solid fa-robot'></i> ".$project['platform'];
-                                            } else if ($project['platform'] === "extention") {
+                                            } else if ($project['platform'] === "extension") {
                                                 echo "<i class='fa-solid fa-puzzle-piece'></i> ".$project['platform'];
                                             }
                                             echo"
