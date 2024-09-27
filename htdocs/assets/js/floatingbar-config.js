@@ -123,7 +123,7 @@ mobileSearchBtn.addEventListener("click", function () {
 
 // when ALT + K shortcut key is pressed
 document.addEventListener("keydown", function(event) {
-    if (event.altKey && event.key === "k") {
+    if ((event.altKey && event.key === "k") || (event.altKey && event.key === "K")) {
         if(!isShareActive) {
             activate_search();
         }
@@ -442,7 +442,7 @@ mobileShareCloseBtn.addEventListener("click", function () {
 
 // when ALT + L shortcut key is pressed
 document.addEventListener("keydown", function(event) {
-    if (event.altKey && event.key === "l") {
+    if ((event.altKey && event.key === "l") || (event.altKey && event.key === "L")) {
         if(!isSearchActive) {
         activate_share();
         }

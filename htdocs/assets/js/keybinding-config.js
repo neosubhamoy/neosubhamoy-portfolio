@@ -28,25 +28,25 @@ async function redirectToURL(item) {
 document.addEventListener('keydown', function(event) {
     pressedKeys[event.key] = true;
 
-    if (pressedKeys['n'] && pressedKeys['h']) {
+    if ((pressedKeys['n'] && pressedKeys['h']) || (pressedKeys['N'] && pressedKeys['H'])) {
         window.location.href = basePath;
     }
-    else if (pressedKeys['n'] && pressedKeys['p']) {
+    else if ((pressedKeys['n'] && pressedKeys['p']) || (pressedKeys['N'] && pressedKeys['P'])) {
         window.location.href = basePath + "/projects";
     }
-    else if (pressedKeys['n'] && pressedKeys['b']) {
+    else if ((pressedKeys['n'] && pressedKeys['b']) || (pressedKeys['N'] && pressedKeys['B']))  {
         window.location.href = basePath + "/blog";
     }
-    else if (pressedKeys['n'] && pressedKeys['c']) {
+    else if ((pressedKeys['n'] && pressedKeys['c']) || (pressedKeys['N'] && pressedKeys['C'])) {
         window.location.href = basePath + "/contact";
     }
-    else if (pressedKeys['q'] && pressedKeys['e']) {
+    else if ((pressedKeys['q'] && pressedKeys['e']) || (pressedKeys['Q'] && pressedKeys['E'])) {
         redirectToURL('email');
     }
-    else if (pressedKeys['q'] && pressedKeys['m']) {
+    else if ((pressedKeys['q'] && pressedKeys['m']) || (pressedKeys['Q'] && pressedKeys['M'])) {
         redirectToURL('chat');
     }
-    else if (pressedKeys['q'] && pressedKeys['s']) {
+    else if ((pressedKeys['q'] && pressedKeys['s']) || (pressedKeys['Q'] && pressedKeys['S'])) {
         redirectToURL('sources');
     }
 });
