@@ -28,7 +28,7 @@ jobs:
         mysql -h ${{ secrets.DB_HOST }} --port 3306 -u${{ secrets.DB_USERNAME }} -p${{ secrets.DB_PASSWORD }} -D${{ secrets.DB_NAME }} -e "source schema/cleanup.sql"
         mysql -h ${{ secrets.DB_HOST }} --port 3306 -u${{ secrets.DB_USERNAME }} -p${{ secrets.DB_PASSWORD }} -D${{ secrets.DB_NAME }} -e "source schema/neosubhamoy.sql"
       
-    - name: 📂 Sync files
+    - name: 📂 Sync Files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.6
       with:
         server: ${{ secrets.FTP_SERVER }}

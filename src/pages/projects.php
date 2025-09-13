@@ -47,7 +47,7 @@ $years = create_project_years_array($conn);
         </div>
         <div class="projectssection w-full flex justify-between items-start mt-32 mb-72 lg:mb-32 px-2 lg:px-0">
             <div class="lefttimeline">
-                <h4 class="text-2xl font-bold mb-10">Projects <span class="text-accent_primary">Timeline</span> by Year</h4>
+                <h4 class="text-2xl font-bold mb-10">Yearly <span class="text-accent_primary">Projects</span> Timeline</h4>
                 <div class="timeline">
                 <?php
 
