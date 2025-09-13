@@ -8,7 +8,7 @@
 
 ### 👀 Preview
 
-<img src="./htdocs/assets/images/neosubhamoy-portfolio.png">
+<img src="./src/assets/images/neosubhamoy-portfolio.png">
 
 ### 📌 Tech Stack
 
@@ -23,9 +23,10 @@
 Want to be the part of this project? Get started by following this simple steps . . .
 
 1. Clone this repository in your dev server public folder (eg: 'htdocs' for XAMPP Server)
-2. Install node dependencies
+2. Install composer and node dependencies
 
 ```code
+composer install
 npm install
 ```
 3. Run development process
@@ -34,7 +35,7 @@ npm run dev
 ```
 4. Website will be running on this url
 ```code
-http://localhost/neosubhamoy-portfolio/htdocs/
+http://localhost/neosubhamoy-portfolio/src/
 ```
 5. Using a Self Signed SSL in dev server is highly recommended as some of the site features only works with secure https protocol
 
@@ -45,8 +46,6 @@ http://localhost/neosubhamoy-portfolio/htdocs/
 Subhamoy Biswas - Portfolio Website is a Fully Open Sourced Project licensed under MIT License but still some parts of this website are not allowed to use or distribute without proper permission or attribution. All the contents (eg: informations, blog posts, articles) published in this website and the visual components (eg: layout, design, animations, images, videos, graphics) used in this website are not covered under the MIT License and requires special permission to be used. Using these without prior permission will cause legal actions.
 
 **🌟 Liked this project? Please consider giving it a star to show me your appreciation.**
-<br></br>
-<br></br>
 
 ****
 
