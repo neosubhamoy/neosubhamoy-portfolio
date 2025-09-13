@@ -1,0 +1,20 @@
+{
+    "name": "neosubhamoy/portfolio",
+    "description": "Official Portfolio Website of Subhamoy Biswas (@neo_subhamoy)",
+    "type": "project",
+    "license": "MIT",
+    "config": {
+        "vendor-dir": "src/vendor"
+    },
+    "authors": [
+        {
+            "name": "neosubhamoy",
+            "email": "hey@neosubhamoy.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "phpmailer/phpmailer": "^6.10"
+    }
+}

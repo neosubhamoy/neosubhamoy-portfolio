@@ -1,3 +1,5 @@
 node_modules/
 .vscode/
 .env
+src/assets/style.css
+src/vendor/
