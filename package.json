@@ -1,6 +1,6 @@
 {
   "name": "neosubhamoy-portfolio",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "Official Portfolio Website of Subhamoy Biswas (@neo_subhamoy)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

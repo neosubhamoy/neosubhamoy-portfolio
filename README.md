@@ -1,10 +1,12 @@
 # Subhamoy Biswas - Portfolio Website
 
 ### Official Portfolio Website of Subhamoy Biswas (@neo_subhamoy)
-[![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/neosubhamoy/neosubhamoy-portfolio/)
-[![verion](https://img.shields.io/badge/version-v2.0.1_beta-yellow.svg?style=flat)](https://github.com/neosubhamoy/neosubhamoy-portfolio/)
+[![status](https://img.shields.io/badge/status-archived-yellow.svg?style=flat)](https://github.com/neosubhamoy/neosubhamoy-portfolio/)
+[![verion](https://img.shields.io/badge/version-v2.0.0-yellow.svg?style=flat)](https://github.com/neosubhamoy/neosubhamoy-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/neosubhamoy/neosubhamoy-portfolio/)
-<br></br>
+
+> [!WARNING]
+> This project is archived and no longer actively maintained. Check-out it's successor: [neosubhamoy-website](https://github.com/neosubhamoy/neosubhamoy-website)
 
 ### 👀 Preview
 
