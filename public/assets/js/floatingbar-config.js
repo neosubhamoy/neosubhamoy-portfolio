@@ -162,7 +162,7 @@ function perform_search() {
     let searchString = searchInput.value;
 
     $.ajax({
-        url: 'core/handle_search.php',
+        url: '/api/search',
         type: 'POST',
         dataType: 'json',
         data: { keyword: searchString },

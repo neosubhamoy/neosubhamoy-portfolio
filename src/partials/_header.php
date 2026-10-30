@@ -73,11 +73,11 @@ function isPageActive($pageName, $pageRoute) {
             <div class="flex justify-center items-center mt-7 text-xl">
                 <?php
 
-                $header_socials = fetch_all_records($conn, "socials");
+                $header_socials = fetch_all_records("socials");
 
-                if($header_socials -> num_rows > 0) {
+                if(!empty($header_socials)) {
                     //show all social links
-                    while($header_social = $header_socials -> fetch_assoc()) {
+                    foreach ($header_socials as $header_social) {
                         echo "
                         <span class='mobnavmenusocials mx-3 z-[75] opacity-0' onclick=\"window.open('".$header_social['link']."')\"><i class='text-accent_primary ".$header_social['icon']."'></i></span>
                         ";

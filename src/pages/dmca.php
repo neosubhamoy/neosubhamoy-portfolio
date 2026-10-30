@@ -1,11 +1,3 @@
-<?php
-require 'core/connection.php';
-require 'core/host_config.php';
-require 'core/query_functions.php';
-require 'core/write_dataset.php';
-write_dataset($conn);
-?>
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -16,12 +8,12 @@ write_dataset($conn);
     <meta property="og:description" content="DMCA Notice for Subhamoy Biswas Portfolio">
     <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
     <title>DMCA Notice - @neo_subhamoy</title>
-    <?php require 'assets/_integrate.php';?>
+    <?php require __DIR__ . '/../partials/_integrate.php';?>
 </head>
 <body class="font-lexend bg-bg_primary text-accent_secondary">
-    <?php include 'assets/_preloader.php';?>
-    <?php include 'assets/_floatingbar.php';?>
-    <?php require 'assets/_header.php';?>
+    <?php include __DIR__ . '/../partials/_preloader.php';?>
+    <?php include __DIR__ . '/../partials/_floatingbar.php';?>
+    <?php require __DIR__ . '/../partials/_header.php';?>
     <div class="dmcabox w-full px-4 lg:px-[4.5rem]">
         <div class="mainsection w-full mt-10 mb-28">
             <div class="dmcaheader w-full flex justify-between items-center">
@@ -71,7 +63,7 @@ write_dataset($conn);
             </div>
         </div>
     </div>
-    <?php require 'assets/_footer.php';?>
-    <?php require 'assets/_commonjs.php';?>
+    <?php require __DIR__ . '/../partials/_footer.php';?>
+    <?php require __DIR__ . '/../partials/_commonjs.php';?>
 </body>
 </html>

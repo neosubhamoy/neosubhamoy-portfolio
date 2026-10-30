@@ -10,7 +10,7 @@
 
 ### 👀 Preview
 
-<img src="./src/assets/images/neosubhamoy-portfolio.png">
+<img src="./public/assets/images/neosubhamoy-portfolio.png">
 
 ### 📌 Tech Stack
 
@@ -18,28 +18,30 @@
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
 ### 🛠️ Contributing
 
 Want to be the part of this project? Get started by following this simple steps . . .
 
-1. Clone this repository in your dev server public folder (eg: 'htdocs' for XAMPP Server)
-2. Install composer and node dependencies
+1. Clone this repository (requires PHP 8.4+, Composer and Node.js)
+2. Install composer and node dependencies, and create a `.env` file from `.env.example`
 
 ```code
 composer install
 npm install
 ```
-3. Run development process
+3. Run the tailwind watcher and the PHP dev server (in two terminals)
 ```code
 npm run dev
+npm run serve
 ```
 4. Website will be running on this url
 ```code
-http://localhost/neosubhamoy-portfolio/src/
+http://localhost:8000
 ```
-5. Using a Self Signed SSL in dev server is highly recommended as some of the site features only works with secure https protocol
+5. Site content (projects, socials, pages, profiles etc.) lives in `data/site.json`
+6. The site is hosted on [Vercel](https://vercel.com) using the [vercel-php](https://github.com/vercel-community/php) runtime (see `vercel.json`), set the variables from `.env.example` in the Vercel project settings
 
 ⭕ Noticed any Bugs? or Want to give me some suggetions? always feel free to open an issue...!!
 

@@ -28,7 +28,7 @@ $(document).ready(function() {
 
                 $(sendBtn).html("Sending....");
                 $.ajax({
-                    url: 'core/handle_contact.php',
+                    url: '/api/contact',
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',

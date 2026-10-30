@@ -1,13 +1,5 @@
 <?php
-require 'core/connection.php';
-require 'core/host_config.php';
-require 'core/query_functions.php';
-require 'core/github_api_functions.php';
-require 'core/utility_functions.php';
-require 'core/write_dataset.php';
-write_dataset($conn);
-
-$years = create_project_years_array($conn);
+$years = create_project_years_array();
 ?>
 
 <!DOCTYPE html>
@@ -16,16 +8,16 @@ $years = create_project_years_array($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="View my Projects and Contributions in Tech">
-    <meta property="og:title" content="<?php echo fetch_page_title($conn, "Projects");?>">
+    <meta property="og:title" content="<?php echo fetch_page_title("Projects");?>">
     <meta property="og:description" content="Projects of Subhamoy Biswas (@neo_subhamoy) - Full-Stack Web, Android Developer and UI/UX Designer">
     <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
-    <title><?php echo fetch_page_title($conn, "Projects");?></title>
-    <?php require 'assets/_integrate.php';?>
+    <title><?php echo fetch_page_title("Projects");?></title>
+    <?php require __DIR__ . '/../partials/_integrate.php';?>
 </head>
 <body class="font-lexend bg-bg_primary text-accent_secondary">
-    <?php include 'assets/_preloader.php';?>
-    <?php include 'assets/_floatingbar.php';?>
-    <?php require 'assets/_header.php';?>
+    <?php include __DIR__ . '/../partials/_preloader.php';?>
+    <?php include __DIR__ . '/../partials/_floatingbar.php';?>
+    <?php require __DIR__ . '/../partials/_header.php';?>
     <div class="projectsbox w-full px-4 lg:px-[4.5rem]">
         <div class="herosection w-full flex flex-col-reverse justify-center lg:flex-row lg:justify-between items-center mb-3">
             <div class="herotitle w-full px-2 lg:px-0 lg:mt-16 lg:mb-10 2xl:mt-24 2xl:mb-32">
@@ -34,13 +26,13 @@ $years = create_project_years_array($conn);
                 <h2 class="text-lg mt-3 mb-1 lg:mt-2 lg:mb-1 lg:whitespace-nowrap" data-aos="fade-right" data-aos-delay="150">I'm just obsessed with <span class="text-accent_primary font-bold">side projects</span> and <span class="text-accent_primary font-bold">open-source</span> stuffs</h2>
                 <h3 class="text-lg mt-1 mb-3 lg:mt-1 lg:mb-2 lg:whitespace-nowrap" data-aos="fade-right" data-aos-delay="200">You can <span class="text-accent_primary font-bold">explore</span> some of <span class="text-accent_primary font-bold">them</span> below</h3>
                 <div class="w-full flex justify-start items-center my-7 lg:my-6" data-aos="fade-right" data-aos-delay="250">
-                    <button class="w-fit px-5 py-1 my-2 mr-2 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('<?php echo fetch_social_link($conn, 'Github') ?>', '_blank')"><i class="text-bg_primary <?php echo fetch_social_icon($conn, 'Github') ?>"></i> Github</button>
-                    <button class="w-fit px-5 py-1 my-2 ml-2 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('<?php echo fetch_social_link($conn, 'XDA Forums') ?>', '_blank')"><i class="text-bg_primary <?php echo fetch_social_icon($conn, 'XDA Forums') ?>"></i> XDA Forums</button>
+                    <button class="w-fit px-5 py-1 my-2 mr-2 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('<?php echo fetch_social_link('Github') ?>', '_blank')"><i class="text-bg_primary <?php echo fetch_social_icon('Github') ?>"></i> Github</button>
+                    <button class="w-fit px-5 py-1 my-2 ml-2 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.open('<?php echo fetch_social_link('XDA Forums') ?>', '_blank')"><i class="text-bg_primary <?php echo fetch_social_icon('XDA Forums') ?>"></i> XDA Forums</button>
                 </div>
             </div>
             <div class="heroimage w-full h-full flex justify-center lg:justify-end items-center mt-10 lg:mt-0">
                 <div class="wrapper w-[250px] lg:w-[350px] mb-20 mt-10 lg:mb-0 lg:mt-16 lg:mr-10 z-20" data-aos="zoom-in">
-                    <img src="./assets/images/projects-heroimage.svg" alt="heroimage">
+                    <img src="/assets/images/projects-heroimage.svg" alt="heroimage">
                 </div>
                 <div class="absolute bg-accent_primary w-[70px] h-[70px] rounded-full shadow-[0px_0px_120px_20px] shadow-accent_primary_transparent blur-2xl mr-0 mb-[2rem] lg:mb-0 lg:mr-[12.5rem] lg:mt-[3.5rem]" data-aos="zoom-in" data-aos-delay="100"></div>
             </div>
@@ -52,7 +44,7 @@ $years = create_project_years_array($conn);
                 <?php
 
                 foreach ($years as $selectedYear) {
-                    $projects = fetch_projects_by_year($conn, $selectedYear);
+                    $projects = fetch_projects_by_year($selectedYear);
 
                     if($projects) {
 
@@ -95,7 +87,7 @@ $years = create_project_years_array($conn);
                         HTML;
 
                         //fetch all projects by year and show it
-                        while ($project = $projects -> fetch_assoc()) {
+                        foreach ($projects as $project) {
                             echo "
                             <a data-template='project".$project['id']."' class='projectitem text-accent_three my-2 ml-7 last:mb-3' href='".$project['link']."' target='_blank'>".$project['name'].($project['shortdes'] != "" ? ' - '. $project['shortdes'] : '')."</a>
                             <div class='hidden'>
@@ -194,11 +186,11 @@ $years = create_project_years_array($conn);
                 <div class="w-full flex flex-col justify-center items-center mb-12">
                     <?php
 
-                    $profiles = fetch_all_records($conn, "profile");
+                    $profiles = fetch_all_records("profile");
 
-                    if($profiles -> num_rows > 0) {
+                    if(!empty($profiles)) {
                         //show all profiles
-                        while($profile = $profiles -> fetch_assoc()) {
+                        foreach ($profiles as $profile) {
                             echo "
                             <div class='w-full flex justify-start items-center bg-bg_secondary p-2 rounded-lg my-2 cursor-pointer hover:bg-bg_third transition transform duration-500' onclick=\"window.open('".$profile['link']."')\">
                                 <div class='wrapper w-[50px] rounded-lg overflow-hidden'><img src='".$profile['photo']."' alt='".str_replace(' ', '', strtolower($profile['name']))."'></div>
@@ -217,12 +209,12 @@ $years = create_project_years_array($conn);
                 <div class="w-full flex flex-col justify-center items-center mb-12">
                     <?php
 
-                    $featured_projects = fetch_featured_projects($conn);
+                    $featured_projects = fetch_featured_projects();
 
-                    if($featured_projects -> num_rows > 0){
+                    if(!empty($featured_projects)){
                         //show top 2 featured projects for sidebar
                         $counter = 0;
-                        while($featured_item = $featured_projects -> fetch_assoc()) {
+                        foreach ($featured_projects as $featured_item) {
                             if ($counter < 2) {
                                 echo "
                                 <div class='group w-[250px] rounded-lg overflow-hidden my-3 relative border-accent_three hover:border-[3px] transition-[border-width] transform duration-100'>
@@ -249,11 +241,11 @@ $years = create_project_years_array($conn);
                 <div class="w-full flex flex-col justify-center flex-wrap mb-12">
                     <?php
 
-                    $working_on = fetch_all_records($conn, "working_on");
+                    $working_on = fetch_all_records("working_on");
 
-                    if($working_on -> num_rows > 0) {
+                    if(!empty($working_on)) {
                         //show all currently working on topics
-                        while($working_on_topic = $working_on -> fetch_assoc()) {
+                        foreach ($working_on as $working_on_topic) {
                             echo"
                             <div class='w-fit my-[0.30rem] text-sm font-bold bg-bg_secondary px-3 py-1 rounded-full'><i class='text-base mr-1 ".$working_on_topic['icon']."' style='color: ".$working_on_topic['icon_color']."'></i> ".$working_on_topic['title']."</div>
                             ";
@@ -265,7 +257,7 @@ $years = create_project_years_array($conn);
             </div>
         </div>
     </div>
-    <?php require 'assets/_footer.php';?>
-    <?php require 'assets/_commonjs.php';?>
+    <?php require __DIR__ . '/../partials/_footer.php';?>
+    <?php require __DIR__ . '/../partials/_commonjs.php';?>
 </body>
 </html>

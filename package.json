@@ -4,8 +4,9 @@
   "description": "Official Portfolio Website of Subhamoy Biswas (@neo_subhamoy)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/assets/style.css --watch",
-    "build": "npx tailwindcss -o ./src/assets/style.css --minify"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/assets/style.css --watch",
+    "build": "npx tailwindcss -o ./public/assets/style.css --minify",
+    "serve": "php -S localhost:8000 -t public dev-router.php"
   },
   "author": "neosubhamoy <hey@neosubhamoy.com>",
   "license": "MIT",

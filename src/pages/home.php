@@ -1,27 +1,19 @@
-<?php
-require 'core/connection.php';
-require 'core/host_config.php';
-require 'core/query_functions.php';
-require 'core/write_dataset.php';
-write_dataset($conn);
-?>
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Official Portfolio Website of Subhamoy Biswas - Full-Stack Web, Android Developer and UI/UX Designer - (Also Reknowned as @neo_subhamoy). | Know More About Him and His WorkExperince">
-    <meta property="og:title" content="<?php echo fetch_page_title($conn, "Home");?>">
+    <meta property="og:title" content="<?php echo fetch_page_title("Home");?>">
     <meta property="og:description" content="Official Portfolio Website of Subhamoy Biswas (@neo_subhamoy) - Full-Stack Web, Android Developer and UI/UX Designer">
     <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
-    <title><?php echo fetch_page_title($conn, "Home");?></title>
-    <?php require 'assets/_integrate.php';?>
+    <title><?php echo fetch_page_title("Home");?></title>
+    <?php require __DIR__ . '/../partials/_integrate.php';?>
 </head>
 <body class="font-lexend bg-bg_primary text-accent_secondary">
-    <?php include 'assets/_preloader.php';?>
-    <?php include 'assets/_floatingbar.php';?>
-    <?php require 'assets/_header.php';?>
+    <?php include __DIR__ . '/../partials/_preloader.php';?>
+    <?php include __DIR__ . '/../partials/_floatingbar.php';?>
+    <?php require __DIR__ . '/../partials/_header.php';?>
     <div class="homebox w-full px-4 lg:px-[4.5rem]">
         <div class="herosection w-full flex flex-col-reverse justify-center lg:flex-row lg:justify-between items-center mb-3">
             <div class="herotitle w-fit px-2 lg:px-0 lg:mt-16 2xl:mt-24">
@@ -31,10 +23,10 @@ write_dataset($conn);
                 <h3 class="text-lg mt-1 mb-3 lg:mt-1 lg:mb-2 lg:whitespace-nowrap" data-aos="fade-right" data-aos-delay="200">Based on <span class="text-accent_primary font-bold">Kolkata</span>, <span class="font-bold">India</span></h3>
                 <div class="w-full flex justify-start items-center my-7 lg:my-6" data-aos="fade-right" data-aos-delay="250">
                     <button class="px-5 py-1 font-bold bg-accent_primary text-bg_primary rounded-full hover:shadow-lg hover:shadow-accent_secondary_transparent hover:bg-accent_secondary hover:rounded-lg transition transform duration-500" onclick="window.alert('Feature coming soon...!')">View CV</button>
-                    <i class="text-accent_primary text-2xl cursor-pointer ml-8 mr-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon($conn, 'Facebook')?>" onclick="window.open('<?php echo fetch_social_link($conn, 'Facebook') ?>')"></i>
-                    <i class="text-accent_primary text-2xl cursor-pointer mx-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon($conn, 'Instagram')?>" onclick="window.open('<?php echo fetch_social_link($conn, 'Instagram') ?>')"></i>
-                    <i class="text-accent_primary text-2xl cursor-pointer mx-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon($conn, 'Twitter')?>" onclick="window.open('<?php echo fetch_social_link($conn, 'Twitter') ?>')"></i>
-                    <i class="text-accent_primary text-2xl cursor-pointer mx-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon($conn, 'Linkedin')?>" onclick="window.open('<?php echo fetch_social_link($conn, 'Linkedin') ?>')"></i>
+                    <i class="text-accent_primary text-2xl cursor-pointer ml-8 mr-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon('Facebook')?>" onclick="window.open('<?php echo fetch_social_link('Facebook') ?>')"></i>
+                    <i class="text-accent_primary text-2xl cursor-pointer mx-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon('Instagram')?>" onclick="window.open('<?php echo fetch_social_link('Instagram') ?>')"></i>
+                    <i class="text-accent_primary text-2xl cursor-pointer mx-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon('Twitter')?>" onclick="window.open('<?php echo fetch_social_link('Twitter') ?>')"></i>
+                    <i class="text-accent_primary text-2xl cursor-pointer mx-3 hover:scale-125 hover:text-accent_secondary transition transform duration-300 <?php echo fetch_social_icon('Linkedin')?>" onclick="window.open('<?php echo fetch_social_link('Linkedin') ?>')"></i>
                 </div>
                 <div class="scrollinfo hidden lg:block">
                     <div class="mb-7 mt-10 2xl:mb-10 2xl:mt-16" data-aos="fade-down"><div class="border-l-[1px] border-accent_primary_transparent h-20 ml-[0.59rem]"></div></div>
@@ -49,14 +41,14 @@ write_dataset($conn);
             </div>
             <div class="heroimage w-full h-full flex justify-center lg:justify-end items-center">
                 <div class="wrapper w-[250px] lg:w-[350px] mb-20 mt-10 lg:mt-0 lg:mr-10 lg:mb-16 z-20" data-aos="zoom-in">
-                    <img class="neosubhamoy" src="./assets/images/neosubhamoy.svg" alt="neosubhamoy">
+                    <img class="neosubhamoy" src="/assets/images/neosubhamoy.svg" alt="neosubhamoy">
                 </div>
                 <div class="absolute bg-accent_primary w-[200px] h-[200px] lg:w-[230px] lg:h-[230px] mt-[2.2rem] lg:mr-[6.5rem] lg:mt-[2.5rem] rounded-full shadow-[0px_0px_120px_20px] shadow-accent_primary_transparent lg:blur-lg" data-aos="zoom-in"></div>
                 <div class="wrapper absolute z-10 top-[10rem] left-[2.5rem] rotate-[15deg] lg:left-auto lg:rotate-0 lg:top-[13rem] lg:right-[27rem] 2xl:top-[15rem] 2xl:right-[27rem]" data-aos="zoom-in-left">
-                    <img class="w-[70px] lg:w-[100px]" src="./assets/images/left-blobs.svg" alt="left-blobs">
+                    <img class="w-[70px] lg:w-[100px]" src="/assets/images/left-blobs.svg" alt="left-blobs">
                 </div>
                 <div class="wrapper absolute z-10 top-[20.5rem] right-[3rem] lg:top-[27rem] lg:right-[5.5rem] 2xl:top-[28.5rem] 2xl:right-[5.5rem]" data-aos="zoom-in-right">
-                    <img class="w-[90px] lg:w-[120px]" src="./assets/images/right-blobs.svg" alt="right-blobs">
+                    <img class="w-[90px] lg:w-[120px]" src="/assets/images/right-blobs.svg" alt="right-blobs">
                 </div>
             </div>
         </div>
@@ -212,14 +204,14 @@ write_dataset($conn);
                 <h4 class="text-4xl lg:text-6xl mb-6 mt-1">make the <span class="text-accent_primary font-bold">web</span> more <span class="text-accent_primary font-bold">interesting</span>.</h4>
                 <h5 class="text-base lg:text-xl text-accent_three my-3">Wanna join the journey with me? &nbsp; <span class="lg:hidden"><br></span>email to: <a class="border-b-[2px] border-accent_primary_transparent hover:border-accent_primary transition transform duration-300 cursor-pointer" href="mailto:hey@<?php echo $domain ?>">hey@<?php echo $domain ?></a></h5>
                 <div class="absolute w-[300px] top-[-2.5rem] left-2 lg:w-[330px] lg:top-[-3.7rem] lg:left-8">
-                    <img src="./assets/images/endsec-bgpattern.svg" alt="patterns">
+                    <img src="/assets/images/endsec-bgpattern.svg" alt="patterns">
                 </div>
                 <div class="w-[35px] h-[35px] rounded-full bg-accent_primary shadow-[0px_0px_150px_20px] shadow-accent_primary_transparent blur-3xl absolute right-0 bottom-[-10rem] lg:right-[-7rem] 2xl:right-[-13rem] lg:bottom-[-6rem]"></div>
             </div>
         </div>
     </div>
-    <?php require 'assets/_footer.php';?>
-    <?php require 'assets/_commonjs.php';?>
-    <script type="text/javascript" src="assets/js/core-animation.js"></script>
+    <?php require __DIR__ . '/../partials/_footer.php';?>
+    <?php require __DIR__ . '/../partials/_commonjs.php';?>
+    <script type="text/javascript" src="/assets/js/core-animation.js"></script>
 </body>
 </html>

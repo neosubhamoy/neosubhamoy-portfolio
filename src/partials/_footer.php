@@ -17,11 +17,11 @@
             <h6 class="font-bold mb-8">Featured</h6>
             <?php
 
-            $featured_projects_footer = fetch_featured_projects($conn);
+            $featured_projects_footer = fetch_featured_projects();
 
-            if($featured_projects_footer -> num_rows > 0) {
+            if(!empty($featured_projects_footer)) {
                 //show all featured projects
-                while($featured_footer_item = $featured_projects_footer -> fetch_assoc()) {
+                foreach ($featured_projects_footer as $featured_footer_item) {
                     echo "
                     <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' href='".$featured_footer_item['link']."' target='_blank'>".$featured_footer_item['name']."</a>
                     ";
@@ -34,11 +34,11 @@
             <h6 class="font-bold mb-8">Follow Me On</h6>
             <?php
 
-            $footer_socials = fetch_all_records($conn, "socials");
+            $footer_socials = fetch_all_records("socials");
             
-            if($footer_socials -> num_rows > 0) {
+            if(!empty($footer_socials)) {
                 //show all social links
-                while($footer_social = $footer_socials -> fetch_assoc()) {
+                foreach ($footer_socials as $footer_social) {
                     if($footer_social['platform'] == "Mastodon") {
                         echo "
                         <a class='text-sm text-accent_three my-1 hover:text-accent_secondary transition transform duration-100' rel='me' href='".$footer_social['link']."' target='_blank'>".$footer_social['platform']."</a>

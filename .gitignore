@@ -1,5 +1,8 @@
 node_modules/
 .vscode/
 .env
-src/assets/style.css
-src/vendor/
+public/assets/style.css
+vendor/
+.vercel
+CLAUDE.md
+.claude

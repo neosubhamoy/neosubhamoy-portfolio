@@ -5,11 +5,7 @@ let pressedKeys = {};
 
 function getJsonDataset(element) {
     return new Promise((resolve, reject) => {
-        $.getJSON('assets/dataset.json', function(datasetData) {
-            resolve(datasetData[element]);
-        }).fail(function(jqxhr, textStatus, error) {
-            reject(error);
-        });
+        (window.siteDataset && element in window.siteDataset) ? resolve(window.siteDataset[element]) : reject(new Error("Unknown dataset item: " + element));
     });
 }
 

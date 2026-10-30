@@ -1,0 +1,434 @@
+{
+    "pages": [
+        {
+            "id": 1,
+            "name": "Home",
+            "title": "Subhamoy Biswas - Portfolio | @neo_subhamoy",
+            "icon": "cnpvyndp.json",
+            "link": "",
+            "stag": null
+        },
+        {
+            "id": 2,
+            "name": "Projects",
+            "title": "My Projects - @neo_subhamoy",
+            "icon": "utpmnzxz.json",
+            "link": "/projects",
+            "stag": null
+        },
+        {
+            "id": 3,
+            "name": "Blog",
+            "title": "My Blog - @neo_subhamoy",
+            "icon": "lyrrgrsl.json",
+            "link": "/blog",
+            "stag": null
+        },
+        {
+            "id": 4,
+            "name": "Contact",
+            "title": "Contact Me - @neo_subhamoy",
+            "icon": "kthelypq.json",
+            "link": "/contact",
+            "stag": "contact"
+        }
+    ],
+    "profile": [
+        {
+            "id": 1,
+            "name": "Subhamoy Biswas",
+            "description": "Personal Profile",
+            "link": "https://github.com/neosubhamoy",
+            "photo": "/assets/images/neosubhamoy.jpg",
+            "stag": null
+        },
+        {
+            "id": 2,
+            "name": "The TechishFellow",
+            "description": "Organization Profile",
+            "link": "https://github.com/techishfellow",
+            "photo": "/assets/images/techishfellow.jpg",
+            "stag": null
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "name": "Techishfellow Website",
+            "shortdes": "Landingpage",
+            "description": "A static landing page for The Techishfellow Foundation",
+            "link": "https://techishfellow.weebly.com",
+            "year": 2018,
+            "thumbnail": "/assets/images/projects/techishfellow_website.jpg",
+            "stag": null,
+            "platform": "website",
+            "stack": "weebly,html,css,javascript",
+            "status": "inactive",
+            "is_featured": false,
+            "is_open_sourced": false,
+            "repo": null,
+            "user_count": 1023
+        },
+        {
+            "id": 2,
+            "name": "HTML Video Player",
+            "shortdes": "Script",
+            "description": "A simple to use browser based local video player",
+            "link": "https://techishfellow.github.io/html_videoplayer/",
+            "year": 2018,
+            "thumbnail": "/assets/images/projects/html_videoplayer_script.jpg",
+            "stag": null,
+            "platform": "website",
+            "stack": "html,css,javascript",
+            "status": "archived",
+            "is_featured": false,
+            "is_open_sourced": true,
+            "repo": "techishfellow/techishfellow.github.io",
+            "user_count": null
+        },
+        {
+            "id": 3,
+            "name": "NeoMods",
+            "shortdes": "Android App Store",
+            "description": "An online App Store for modified android apps",
+            "link": "https://neomods.ml",
+            "year": 2019,
+            "thumbnail": "/assets/images/projects/neomods.jpg",
+            "stag": null,
+            "platform": "website",
+            "stack": "wordpress,php,mysql,html,css,javascript",
+            "status": "inactive",
+            "is_featured": false,
+            "is_open_sourced": false,
+            "repo": null,
+            "user_count": 2371
+        },
+        {
+            "id": 4,
+            "name": "QuikLink",
+            "shortdes": "Link Shortener",
+            "description": "A database less link shortener webapp",
+            "link": "https://quik.ml",
+            "year": 2019,
+            "thumbnail": "/assets/images/projects/quiklink.jpg",
+            "stag": null,
+            "platform": "website",
+            "stack": "php,html,css,javascript",
+            "status": "inactive",
+            "is_featured": false,
+            "is_open_sourced": false,
+            "repo": null,
+            "user_count": 500
+        },
+        {
+            "id": 5,
+            "name": "NxtCountry",
+            "shortdes": "Android VPN App",
+            "description": "A multi-layered OpenVPN protocol based VPN app for android",
+            "link": "https://nxtcountryvpn.ml",
+            "year": 2020,
+            "thumbnail": "/assets/images/projects/nxtvpn.jpg",
+            "stag": null,
+            "platform": "android",
+            "stack": "java,xml,open vpn",
+            "status": "inactive",
+            "is_featured": false,
+            "is_open_sourced": false,
+            "repo": null,
+            "user_count": 1056
+        },
+        {
+            "id": 6,
+            "name": "TechishNews",
+            "shortdes": "Trending News Website",
+            "description": "A trending tech news provider web platform",
+            "link": "https://techishnews.ml",
+            "year": 2020,
+            "thumbnail": "/assets/images/projects/techishnews.jpg",
+            "stag": null,
+            "platform": "website",
+            "stack": "php,mysql,html,css,javascript",
+            "status": "inactive",
+            "is_featured": false,
+            "is_open_sourced": false,
+            "repo": null,
+            "user_count": 1769
+        },
+        {
+            "id": 7,
+            "name": "EzyBlog",
+            "shortdes": "Blogging Script",
+            "description": "A simple and easy to deploy blogging website script",
+            "link": "https://ezyblog.tk",
+            "year": 2021,
+            "thumbnail": "/assets/images/projects/ezyblog.jpg",
+            "stag": null,
+            "platform": "website",
+            "stack": "php,mysql,html,css,javascript",
+            "status": "inactive",
+            "is_featured": false,
+            "is_open_sourced": false,
+            "repo": null,
+            "user_count": 900
+        },
+        {
+            "id": 8,
+            "name": "QteeStream",
+            "shortdes": "P2P Video Streaming",
+            "description": "A peer-to-peer video sharing platform webapp",
+            "link": "https://qtee.ml",
+            "year": 2021,
+            "thumbnail": "/assets/images/projects/qtee_stream.jpg",
+            "stag": null,
+            "platform": "website",
+            "stack": "html,tailwindcss,jquery,php,mysql",
+            "status": "archived",
+            "is_featured": false,
+            "is_open_sourced": false,
+            "repo": null,
+            "user_count": 2461
+        },
+        {
+            "id": 9,
+            "name": "FantasyWalls",
+            "shortdes": "Wallpaper App",
+            "description": "A cloud-based handcrafted wallpaper collection app for android",
+            "link": "https://techishfellow.weebly.com/fantasywalls-official.html",
+            "year": 2021,
+            "thumbnail": "/assets/images/projects/fantasywalls.jpg",
+            "stag": null,
+            "platform": "android",
+            "stack": "java,xml",
+            "status": "archived",
+            "is_featured": true,
+            "is_open_sourced": false,
+            "repo": null,
+            "user_count": 1253
+        },
+        {
+            "id": 10,
+            "name": "ProURL",
+            "shortdes": "URL Management Tool",
+            "description": "A powerful all-in-one link shortener and management tool webapp",
+            "link": "https://prourl.eu.org",
+            "year": 2022,
+            "thumbnail": "/assets/images/projects/prourl.jpg",
+            "stag": null,
+            "platform": "website",
+            "stack": "html,sass,jquery,php,mysql",
+            "status": "active",
+            "is_featured": true,
+            "is_open_sourced": false,
+            "repo": null,
+            "user_count": 3799
+        },
+        {
+            "id": 11,
+            "name": "AdlinkflyBot",
+            "shortdes": "Telegram Bot Script",
+            "description": "A Python based Telegram Bot Script for Adlinlfly PHP Link Shortener Websites",
+            "link": "https://github.com/techishfellow/adlinkfly-telegram-bot",
+            "year": 2022,
+            "thumbnail": "/assets/images/projects/adlinkfly_tgbot.jpg",
+            "stag": null,
+            "platform": "bot",
+            "stack": "python",
+            "status": "active",
+            "is_featured": true,
+            "is_open_sourced": true,
+            "repo": "techishfellow/adlinkfly-telegram-bot",
+            "user_count": null
+        },
+        {
+            "id": 12,
+            "name": "POCO X3 Pro Splasher",
+            "shortdes": "CLI Tool",
+            "description": "A CLI tool to create Custom Splash Screen Logo for POCO X3 Pro (vayu) device",
+            "link": "https://github.com/neosubhamoy/poco-x3-pro-custom-logo-image-maker",
+            "year": 2023,
+            "thumbnail": "/assets/images/projects/x3p_splasher.jpg",
+            "stag": null,
+            "platform": "crossplatform",
+            "stack": "batchfile,shell script",
+            "status": "active",
+            "is_featured": false,
+            "is_open_sourced": true,
+            "repo": "neosubhamoy/poco-x3-pro-custom-logo-image-maker",
+            "user_count": null
+        },
+        {
+            "id": 13,
+            "name": "Subhamoy Biswas Portfolio",
+            "shortdes": "Website",
+            "description": "Official portfolio website of Subhamoy Biswas (@neo_subhamoy)",
+            "link": "https://neosubhamoy.com",
+            "year": 2023,
+            "thumbnail": "/assets/images/projects/neosubhamoy_portfolio.jpg",
+            "stag": null,
+            "platform": "website",
+            "stack": "html,tailwindcss,javascript,php,mysql",
+            "status": "active",
+            "is_featured": false,
+            "is_open_sourced": true,
+            "repo": "neosubhamoy/neosubhamoy-portfolio",
+            "user_count": null
+        },
+        {
+            "id": 14,
+            "name": "PytubePP",
+            "shortdes": "YT Video Downloader CLI",
+            "description": "A Simple CLI Tool to Download Your Favourite YouTube Videos Effortlessly!",
+            "link": "https://github.com/neosubhamoy/pytubepp",
+            "year": 2024,
+            "thumbnail": "/assets/images/projects/pytubepp.jpg",
+            "stag": null,
+            "platform": "crossplatform",
+            "stack": "python",
+            "status": "active",
+            "is_featured": false,
+            "is_open_sourced": true,
+            "repo": "neosubhamoy/pytubepp",
+            "user_count": null
+        },
+        {
+            "id": 15,
+            "name": "PytubePP Extension",
+            "shortdes": "Browser Addon",
+            "description": "A Chrome/Firefox Extension/Addon to Download your Favourite YouTube Videos Effortlessly using Pytube Post Processor CLI",
+            "link": "https://github.com/neosubhamoy/pytubepp-extension",
+            "year": 2024,
+            "thumbnail": "/assets/images/projects/pytubepp_extension.jpg",
+            "stag": null,
+            "platform": "extension",
+            "stack": "html,css,javascript",
+            "status": "active",
+            "is_featured": false,
+            "is_open_sourced": true,
+            "repo": "neosubhamoy/pytubepp-extension",
+            "user_count": null
+        },
+        {
+            "id": 16,
+            "name": "NeoDLP",
+            "shortdes": "Video/Audio Downloader Desktop App",
+            "description": "Cross-platform Video/Audio Downloader Desktop App with Modern UI and Browser Integration",
+            "link": "https://github.com/neosubhamoy/neodlp",
+            "year": 2025,
+            "thumbnail": "/assets/images/projects/neodlp.jpg",
+            "stag": null,
+            "platform": "crossplatform",
+            "stack": "tauri,rust,react,typescript,shadcn",
+            "status": "active",
+            "is_featured": true,
+            "is_open_sourced": true,
+            "repo": "neosubhamoy/neodlp",
+            "user_count": null
+        }
+    ],
+    "quick_actions": [
+        {
+            "id": 1,
+            "name": "Send Email",
+            "icon": "xtnsvhie.json",
+            "link": "mailto:hey@neosubhamoy.com",
+            "stag": "contact"
+        },
+        {
+            "id": 2,
+            "name": "Chat Online",
+            "icon": "fdxqrdfe.json",
+            "link": "https://www.t.me/neo_subhamoy",
+            "stag": "contact"
+        },
+        {
+            "id": 3,
+            "name": "Source Code",
+            "icon": "lzgmgrnn.json",
+            "link": "https://github.com/neosubhamoy/neosubhamoy-portfolio",
+            "stag": null
+        }
+    ],
+    "socials": [
+        {
+            "id": 1,
+            "platform": "Instagram",
+            "icon": "fa-brands fa-instagram",
+            "link": "https://instagram.com/neo_subhamoy",
+            "stag": "ig"
+        },
+        {
+            "id": 2,
+            "platform": "Github",
+            "icon": "fa-brands fa-github",
+            "link": "https://github.com/neosubhamoy",
+            "stag": null
+        },
+        {
+            "id": 3,
+            "platform": "Linkedin",
+            "icon": "fa-brands fa-linkedin",
+            "link": "https://www.linkedin.com/in/neo-subhamoy",
+            "stag": null
+        },
+        {
+            "id": 4,
+            "platform": "Facebook",
+            "icon": "fa-brands fa-facebook",
+            "link": "https://www.facebook.com/profile.php?id=100076097318726",
+            "stag": "fb"
+        },
+        {
+            "id": 5,
+            "platform": "Twitter",
+            "icon": "fa-brands fa-x-twitter",
+            "link": "https://twitter.com/neo_subhamoy",
+            "stag": "x"
+        },
+        {
+            "id": 6,
+            "platform": "Mastodon",
+            "icon": "fa-brands fa-mastodon",
+            "link": "https://mastodon.social/@neo_subhamoy",
+            "stag": null
+        },
+        {
+            "id": 7,
+            "platform": "XDA Forums",
+            "icon": "fa-solid fa-meteor",
+            "link": "https://xdaforums.com/m/neo_subhamoy.12646695/",
+            "stag": null
+        }
+    ],
+    "working_on": [
+        {
+            "id": 1,
+            "title": "React Web Development",
+            "icon": "fa-brands fa-react",
+            "icon_color": "#38BDF8"
+        },
+        {
+            "id": 2,
+            "title": "Android OS & Apps",
+            "icon": "fa-brands fa-android",
+            "icon_color": "#3FF989"
+        },
+        {
+            "id": 3,
+            "title": "Automation & Python",
+            "icon": "fa-brands fa-python",
+            "icon_color": "#CD6CFB"
+        },
+        {
+            "id": 4,
+            "title": "Javascript Library",
+            "icon": "fa-brands fa-js",
+            "icon_color": "#DCDF3F"
+        },
+        {
+            "id": 5,
+            "title": "AI & ML",
+            "icon": "fa-solid fa-robot",
+            "icon_color": "#EC4B4B"
+        }
+    ]
+}

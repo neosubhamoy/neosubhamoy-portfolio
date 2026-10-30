@@ -3,7 +3,7 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  content: ["./src/**/*.{php,html,js}"],
+  content: ["./src/**/*.php", "./public/assets/js/**/*.js"],
   theme: {
     fontFamily: {
       'poppins': ['"Poppins"', 'sans-serif'],

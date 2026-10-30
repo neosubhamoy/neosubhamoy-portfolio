@@ -3,9 +3,6 @@
     "description": "Official Portfolio Website of Subhamoy Biswas (@neo_subhamoy)",
     "type": "project",
     "license": "MIT",
-    "config": {
-        "vendor-dir": "src/vendor"
-    },
     "authors": [
         {
             "name": "neosubhamoy",
@@ -14,6 +11,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
+        "php": ">=8.4",
         "vlucas/phpdotenv": "^5.7",
         "phpmailer/phpmailer": "^6.12"
     }

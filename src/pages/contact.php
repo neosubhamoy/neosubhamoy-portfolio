@@ -1,28 +1,20 @@
-<?php
-require 'core/connection.php';
-require 'core/host_config.php';
-require 'core/query_functions.php';
-require 'core/write_dataset.php';
-write_dataset($conn);
-?>
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Get in touch with me instantly, contact now">
-    <meta property="og:title" content="<?php echo fetch_page_title($conn, "Contact");?>">
+    <meta property="og:title" content="<?php echo fetch_page_title("Contact");?>">
     <meta property="og:description" content="Contact with Subhamoy Biswas (@neo_subhamoy) - Full-Stack Web, Android Developer and UI/UX Designer">
     <meta property="og:image" content="https://<?php echo $domain ?>/assets/images/neosubhamoy.jpg">
-    <title><?php echo fetch_page_title($conn, "Contact");?></title>
-    <?php require 'assets/_integrate.php';?>
+    <title><?php echo fetch_page_title("Contact");?></title>
+    <?php require __DIR__ . '/../partials/_integrate.php';?>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="font-lexend bg-bg_primary text-accent_secondary">
-    <?php include 'assets/_preloader.php';?>
-    <?php include 'assets/_floatingbar.php';?>
-    <?php require 'assets/_header.php';?>
+    <?php include __DIR__ . '/../partials/_preloader.php';?>
+    <?php include __DIR__ . '/../partials/_floatingbar.php';?>
+    <?php require __DIR__ . '/../partials/_header.php';?>
     <div class="contactbox w-full px-4 lg:px-[4.5rem] flex flex-col items-center">
         <div class="herosection w-full flex flex-col-reverse justify-center lg:flex-row lg:justify-between items-center mb-3">
             <div class="herotitle w-full lg:w-auto px-2 lg:px-0 lg:mt-16 lg:mb-10 2xl:mt-24 2xl:mb-32">
@@ -36,7 +28,7 @@ write_dataset($conn);
             </div>
             <div class="heroimage w-full h-full flex justify-center lg:justify-end items-center mt-10 lg:mt-0">
                 <div class="wrapper w-[250px] lg:w-[350px] mb-20 mt-10 lg:mb-0 lg:mt-5 lg:mr-10 z-20" data-aos="zoom-in">
-                    <img src="./assets/images/contact-heroimage.svg" alt="heroimage">
+                    <img src="/assets/images/contact-heroimage.svg" alt="heroimage">
                 </div>
                 <div class="absolute bg-accent_primary w-[70px] h-[70px] rounded-full shadow-[0px_0px_120px_20px] shadow-accent_primary_transparent blur-2xl mr-0 mb-[2rem] lg:mb-0 lg:mr-[12.5rem] lg:mt-[3.5rem]" data-aos="zoom-in" data-aos-delay="100"></div>
             </div>
@@ -72,7 +64,7 @@ write_dataset($conn);
                         </span>
                         <div class="flex items-center mt-3">
                             <div class="wrapper w-[200px] lg:w-[100px] rounded-xl overflow-hidden">
-                                <img src="assets/images/basirhat.webp" alt="basirhat">
+                                <img src="/assets/images/basirhat.webp" alt="basirhat">
                             </div>
                             <div class="ml-5">
                                 <h5 class="">Basirhat, West Bengal, India, 743411</h5>
@@ -112,9 +104,9 @@ write_dataset($conn);
             </div>
         </div>
     </div>
-    <?php require 'assets/_footer.php';?>
-    <?php require 'assets/_commonjs.php';?>
-    <script type="text/javascript" src="assets/js/core-animation.js"></script>
-    <script type="text/javascript" src="assets/js/contactform-config.js"></script>
+    <?php require __DIR__ . '/../partials/_footer.php';?>
+    <?php require __DIR__ . '/../partials/_commonjs.php';?>
+    <script type="text/javascript" src="/assets/js/core-animation.js"></script>
+    <script type="text/javascript" src="/assets/js/contactform-config.js"></script>
 </body>
 </html>

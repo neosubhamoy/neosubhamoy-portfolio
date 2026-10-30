@@ -2,7 +2,7 @@
 // function to fetch star and fork count of the given github repo
 function fetch_repo_stats($repoName) {
     $url = "https://api.github.com/repos/" . $repoName;
-    $token = $_ENV['GITHUB_ACCESS_TOKEN'];
+    $token = env('GITHUB_ACCESS_TOKEN');
     $ch = curl_init();
     
     curl_setopt($ch, CURLOPT_URL, $url);
