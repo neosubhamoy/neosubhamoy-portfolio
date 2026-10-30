@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=8.4",
-        "vlucas/phpdotenv": "^5.7",
-        "phpmailer/phpmailer": "^6.12"
+        "vlucas/phpdotenv": "^5.8",
+        "phpmailer/phpmailer": "^7.1"
     }
 }

@@ -5,12 +5,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx tailwindcss -i ./src/input.css -o ./public/assets/style.css --watch",
-    "build": "npx tailwindcss -o ./public/assets/style.css --minify",
+    "build": "npx tailwindcss -o ./public/assets/style.css --minify"
+,
     "serve": "php -S localhost:8000 -t public dev-router.php"
   },
   "author": "neosubhamoy <hey@neosubhamoy.com>",
   "license": "MIT",
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.19"
   }
 }
